@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Porty</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    h1 { color: #1a2830; font-size: 28px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
+    h2 { color: #1a2830; font-size: 20px; margin-top: 32px; }
+    .meta { color: #666; font-size: 14px; margin-bottom: 32px; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    a { color: #2E8B57; }
+    .highlight { background: #f0f7f4; border-left: 4px solid #2E8B57; padding: 16px; border-radius: 4px; margin: 16px 0; }
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .lang-btn {
+      padding: 6px 16px;
+      border: 2px solid #2E8B57;
+      border-radius: 20px;
+      background: none;
+      color: #2E8B57;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .lang-btn.active {
+      background: #2E8B57;
+      color: #fff;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="lang-en" class="lang-section active">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: March 18, 2026 &nbsp;|&nbsp; App: Porty - Portfolio Tracker</p>
+
+    <div class="highlight">
+      Porty respects your privacy. This policy explains what data we collect, how we use it, and how we protect it.
+    </div>
+
+    <h2>1. Data We Collect</h2>
+    <p>Porty collects the following data:</p>
+    <ul>
+      <li><strong>Account information:</strong> Email address and password (stored encrypted). If you sign in with Google, we receive your Google user ID and email address.</li>
+      <li><strong>Portfolio data:</strong> Assets you add to the app (ticker symbol, quantity, purchase price). This data belongs solely to you.</li>
+      <li><strong>App preferences:</strong> Language, theme, display currency, sorting preferences, and similar settings.</li>
+      <li><strong>Profile photo:</strong> If you choose to set a profile picture, the image is stored securely and linked to your account.</li>
+    </ul>
+
+    <h2>2. How We Use Your Data</h2>
+    <p>Collected data is used only for the following purposes:</p>
+    <ul>
+      <li>Creating and authenticating your account</li>
+      <li>Syncing your portfolio data across devices</li>
+      <li>Remembering your app preferences</li>
+      <li>Technical operations necessary for the app to function</li>
+    </ul>
+    <p>We do not share, sell, or use your data for advertising purposes.</p>
+
+    <h2>3. Camera and Photo Library</h2>
+    <p>Porty requests access to your camera and photo library only when you choose to set or update your profile picture. This permission is optional — you may decline it without affecting any other functionality of the app.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>Porty uses the following third-party services:</p>
+    <ul>
+      <li><strong>Supabase:</strong> Used for user authentication and secure storage of portfolio data. Supabase is GDPR and SOC 2 compliant.</li>
+      <li><strong>Google OAuth:</strong> Used for the optional "Sign in with Google" feature. Google's privacy policy applies.</li>
+      <li><strong>Financial data providers:</strong> Third-party APIs are used to fetch real-time stock prices, exchange rates, and commodity prices. Only anonymous price queries are sent to these APIs — no personal data is transmitted.</li>
+    </ul>
+
+    <h2>5. Data Security</h2>
+    <ul>
+      <li>All data is transmitted using TLS/SSL encryption.</li>
+      <li>Passwords are never stored in plain text; industry-standard hashing algorithms are used.</li>
+      <li>Sensitive credentials are stored on-device using Expo Secure Store (iOS Keychain / Android Keystore).</li>
+    </ul>
+
+    <h2>6. Data Retention and Deletion</h2>
+    <p>You can delete your account at any time. Upon deletion, all portfolio data and personal information are permanently removed.</p>
+    <p>To request account deletion: <a href="mailto:support@portyapp.com">support@portyapp.com</a></p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Porty is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+    <h2>8. Advertising</h2>
+    <p>Porty does not use any ad networks. No advertisements are shown in the app.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>This privacy policy may be updated. Significant changes will be announced via an in-app notification. The current policy is always available at this page.</p>
+
+    <h2>10. Contact</h2>
+    <p>For privacy-related questions:</p>
+    <ul>
+      <li>Email: <a href="mailto:support@portyapp.com">support@portyapp.com</a></li>
+    </ul>
+
+    <hr style="margin-top:48px; border:none; border-top:1px solid #eee;">
+    <p style="color:#999; font-size:13px;">© 2026 Porty. All rights reserved.</p>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div id="lang-tr" class="lang-section">
+    <h1>Gizlilik Politikası</h1>
+    <p class="meta">Son güncelleme: 18 Mart 2026 &nbsp;|&nbsp; Uygulama: Porty - Portföy Takip</p>
+
+    <div class="highlight">
+      Porty, kullanıcılarının gizliliğine saygı duyar. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve nasıl koruduğumuzu açıklamaktadır.
+    </div>
+
+    <h2>1. Toplanan Veriler</h2>
+    <p>Porty uygulaması aşağıdaki verileri toplamaktadır:</p>
+    <ul>
+      <li><strong>Hesap bilgileri:</strong> E-posta adresi ve şifre (şifrelenmiş olarak saklanır). Google ile giriş yapılması durumunda Google tarafından sağlanan kullanıcı kimliği ve e-posta adresi.</li>
+      <li><strong>Portföy verileri:</strong> Kullanıcının uygulamaya eklediği varlık bilgileri (hisse kodu, miktar, alış fiyatı). Bu veriler yalnızca ilgili kullanıcıya aittir.</li>
+      <li><strong>Uygulama tercihleri:</strong> Dil, tema, görüntüleme para birimi ve sıralama gibi kullanıcı tercihleri.</li>
+      <li><strong>Profil fotoğrafı:</strong> Profil fotoğrafı belirlemeyi tercih etmeniz durumunda görsel güvenli şekilde saklanır ve hesabınıza bağlanır.</li>
+    </ul>
+
+    <h2>2. Verilerin Kullanımı</h2>
+    <p>Toplanan veriler yalnızca şu amaçlarla kullanılmaktadır:</p>
+    <ul>
+      <li>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması</li>
+      <li>Portföy verilerinin cihazlar arasında senkronize edilmesi</li>
+      <li>Uygulama tercihlerinin hatırlanması</li>
+      <li>Uygulamanın daha iyi çalışması için gerekli teknik işlemler</li>
+    </ul>
+    <p>Kullanıcı verileri üçüncü taraflarla paylaşılmaz, satılmaz veya reklam amaçlı kullanılmaz.</p>
+
+    <h2>3. Kamera ve Fotoğraf Erişimi</h2>
+    <p>Porty, kamera ve fotoğraf galerisine yalnızca profil fotoğrafı eklemek veya güncellemek istediğinizde erişim talep eder. Bu izin isteğe bağlıdır; reddetmeniz durumunda uygulamanın diğer işlevleri etkilenmez.</p>
+
+    <h2>4. Üçüncü Taraf Hizmetler</h2>
+    <p>Porty aşağıdaki üçüncü taraf hizmetlerinden yararlanmaktadır:</p>
+    <ul>
+      <li><strong>Supabase:</strong> Kullanıcı kimlik doğrulaması ve portföy verilerinin güvenli depolanması için kullanılmaktadır. Supabase, GDPR ve SOC 2 uyumlu bir platformdur.</li>
+      <li><strong>Google OAuth:</strong> Opsiyonel Google ile giriş özelliği için kullanılmaktadır. Google'ın gizlilik politikası geçerlidir.</li>
+      <li><strong>Finansal veri sağlayıcıları:</strong> Gerçek zamanlı hisse fiyatları, döviz kurları ve emtia fiyatları için üçüncü taraf API'leri kullanılmaktadır. Bu API'lere yalnızca anonim fiyat sorguları iletilmektedir; kişisel veri aktarımı söz konusu değildir.</li>
+    </ul>
+
+    <h2>5. Veri Güvenliği</h2>
+    <ul>
+      <li>Tüm veriler TLS/SSL şifrelemesi ile iletilmektedir.</li>
+      <li>Şifreler hiçbir zaman düz metin olarak saklanmamakta, endüstri standardı hash algoritmaları kullanılmaktadır.</li>
+      <li>Hassas kimlik bilgileri cihazda Expo Secure Store (iOS Keychain / Android Keystore) ile şifreli olarak saklanmaktadır.</li>
+    </ul>
+
+    <h2>6. Veri Saklama ve Silme</h2>
+    <p>Kullanıcılar hesaplarını istedikleri zaman silebilirler. Hesap silindiğinde tüm portföy verileri ve kişisel bilgiler kalıcı olarak silinmektedir.</p>
+    <p>Hesap silme talebi için: <a href="mailto:support@portyapp.com">support@portyapp.com</a></p>
+
+    <h2>7. Çocukların Gizliliği</h2>
+    <p>Porty, 13 yaşın altındaki çocuklara yönelik değildir ve bu yaş grubundan bilerek veri toplamaz.</p>
+
+    <h2>8. Reklamlar</h2>
+    <p>Porty, herhangi bir reklam ağı kullanmamaktadır. Uygulamada reklam gösterilmemektedir.</p>
+
+    <h2>9. Politika Değişiklikleri</h2>
+    <p>Bu gizlilik politikası güncellenebilir. Önemli değişiklikler uygulama içinde bildirim yoluyla duyurulacaktır. Güncel politikaya her zaman bu sayfadan ulaşabilirsiniz.</p>
+
+    <h2>10. İletişim</h2>
+    <p>Gizlilik ile ilgili sorularınız için:</p>
+    <ul>
+      <li>E-posta: <a href="mailto:support@portyapp.com">support@portyapp.com</a></li>
+    </ul>
+
+    <hr style="margin-top:48px; border:none; border-top:1px solid #eee;">
+    <p style="color:#999; font-size:13px;">© 2026 Porty. Tüm hakları saklıdır.</p>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
