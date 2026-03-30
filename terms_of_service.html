@@ -1,53 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porty - Terms of Service</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fdfdfd; }
-        h1 { color: #000; font-size: 2.2rem; margin-bottom: 8px; }
-        h2 { color: #000; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 16px; }
-        .last-updated { color: #666; font-size: 0.9rem; margin-bottom: 40px; }
-        .lang-section { margin-top: 80px; padding-top: 60px; border-top: 4px solid #000; }
-        .contact-box { background: #f4f4f4; padding: 24px; border-radius: 16px; margin-top: 40px; border: 1px solid #e1e1e1; }
-        p { margin-bottom: 16px; font-size: 1.05rem; }
-        ul { margin-bottom: 24px; }
-        li { margin-bottom: 8px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — Porty</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      color: #2E3537;
+      line-height: 1.7;
+    }
+    h1 { color: #2E3537; font-size: 28px; border-bottom: 2px solid #EBEBEB; padding-bottom: 12px; }
+    h2 { color: #2E3537; font-size: 20px; margin-top: 32px; }
+    .meta { color: #8E9195; font-size: 14px; margin-bottom: 32px; }
+    ul { padding-left: 24px; }
+    li { margin-bottom: 6px; }
+    a { color: #28BC3E; }
+    .highlight { background: #E7F0F2; border-left: 4px solid #28BC3E; padding: 16px; border-radius: 4px; margin: 16px 0; }
+    .lang-switcher {
+      margin-bottom: 32px;
+    }
+    .lang-select {
+      padding: 8px 16px;
+      border: 2px solid #28BC3E;
+      border-radius: 12px;
+      background-color: #fff;
+      color: #28BC3E;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2328BC3E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
 </head>
 <body>
-    <section>
-        <h1>Terms of Service</h1>
-        <p class="last-updated">Last Updated: March 30, 2026</p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By access and use the Porty Application, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
-        
-        <h2>2. Description of Service</h2>
-        <p>Porty is a stock and asset tracking platform. We provide tools to monitor your portfolio and market data for informational purposes only. We do not provide financial advice.</p>
+  <div class="lang-switcher">
+    <select class="lang-select" onchange="setLang(this.value)">
+      <option value="en">English</option>
+      <option value="tr">Türkçe</option>
+      <option value="de">Deutsch</option>
+    </select>
+  </div>
 
-        <h2>3. User Responsibilities</h2>
-        <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+  <!-- ENGLISH -->
+  <div id="lang-en" class="lang-section active">
+    <h1>Terms of Service</h1>
+    <p class="meta">Last updated: March 30, 2026 &nbsp;|&nbsp; App: Porty</p>
 
-        <h2>4. Data Accuracy</h2>
-        <p>While we strive for accuracy, Porty does not guarantee the precision or completeness of market data shown in the app. Users should verify data through official sources before making investment decisions.</p>
-    </section>
-
-    <div class="contact-box">
-        <strong>Contact and Support:</strong><br><br>
-        Email: porty@rubeeks.co<br>
-        Owner: Selçuk Sevindik
+    <div class="highlight">
+      By using Porty, you agree to these terms. Please read them carefully to understand your rights and responsibilities.
     </div>
 
-    <div class="lang-section">
-        <h1>Kullanım Koşulları</h1>
-        <p class="last-updated">Son Güncelleme: 30 Mart 2026</p>
-        <p>Porty Uygulamasını kullanarak bu Kullanım Koşullarını kabul etmiş sayılırsınız. Bu şartları kabul etmiyorsanız lütfen hizmetlerimizi kullanmayınız.</p>
-        
-        <h2>1. Hizmet Tanımı</h2>
-        <p>Porty, bir hisse senedi ve varlık takip platformudur. Portföyünüzü ve piyasa verilerini izlemeniz için araçlar sağlarız. Verilen bilgiler sadece bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.</p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading or using the Porty application, these terms will automatically apply to you. You should make sure that you read them carefully before using the app.</p>
+
+    <h2>2. Use of the App</h2>
+    <ul>
+      <li><strong>Account:</strong> You are responsible for maintaining the confidentiality of your account credentials.</li>
+      <li><strong>Content:</strong> Porty is a portfolio tracking tool. Data you enter is for your personal use and information only.</li>
+      <li><strong>Restrictions:</strong> You may not attempt to extract the source code of the app, nor should you try to translate the app into other languages or make derivative versions.</li>
+    </ul>
+
+    <h2>3. Disclaimer</h2>
+    <p>Porty provides financial data and tracking tools "as is". We are not financial advisors. All investment decisions are your own responsibility. We do not guarantee the accuracy or timeliness of the data provided by third-party APIs.</p>
+
+    <h2>4. Termination</h2>
+    <p>We may terminate or suspend access to our service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+    <h2>5. Changes to Terms</h2>
+    <p>We reserve the right to update these terms at any time. Significant changes will be communicated through the app.</p>
+
+    <h2>6. Contact</h2>
+    <p>If you have any questions about these Terms, please contact us at <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
+
+    <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
+    <p style="color:#B8B8B8; font-size:13px;">© 2026 Porty. All rights reserved.</p>
+  </div>
+
+  <!-- DEUTSCH -->
+  <div id="lang-de" class="lang-section">
+    <h1>Nutzungsbedingungen</h1>
+    <p class="meta">Zuletzt aktualisiert: 30. März 2026 &nbsp;|&nbsp; App: Porty</p>
+
+    <div class="highlight">
+      Durch die Nutzung von Porty erklären Sie sich mit diesen Bedingungen einverstanden. Bitte lesen Sie diese sorgfältig durch, um Ihre Rechte und Pflichten zu verstehen.
     </div>
+
+    <h2>1. Akzeptanz der Bedingungen</h2>
+    <p>Durch das Herunterladen oder die Nutzung der Porty-Anwendung gelten diese Bedingungen automatisch für Sie. Sie sollten sicherstellen, dass Sie diese vor der Nutzung der App sorgfältig lesen.</p>
+
+    <h2>2. Nutzung der App</h2>
+    <ul>
+      <li><strong>Konto:</strong> Sie sind für die Geheimhaltung Ihrer Zugangsdaten verantwortlich.</li>
+      <li><strong>Inhalt:</strong> Porty ist ein Portfolio-Tracking-Tool. Die von Ihnen eingegebenen Daten dienen ausschließlich Ihrer persönlichen Nutzung und Information.</li>
+      <li><strong>Einschränkungen:</strong> Sie dürfen nicht versuchen, den Quellcode der App zu extrahieren, noch sollten Sie versuchen, die App in andere Sprachen zu übersetzen oder abgeleitete Versionen zu erstellen.</li>
+    </ul>
+
+    <h2>3. Haftungsausschluss</h2>
+    <p>Porty stellt Finanzdaten und Tracking-Tools "wie besehen" zur Verfügung. Wir sind keine Finanzberater. Alle Anlageentscheidungen liegen in Ihrer eigenen Verantwortung. Wir garantieren nicht für die Richtigkeit oder Aktualität der von Drittanbietern bereitgestellten Daten.</p>
+
+    <h2>4. Kündigung</h2>
+    <p>Wir können den Zugang zu unserem Dienst sofort, ohne vorherige Ankündigung oder Haftung, aus jedem beliebigen Grund kündigen oder suspendieren, einschließlich, aber nicht beschränkt auf den Fall, dass Sie gegen die Bedingungen verstoßen.</p>
+
+    <h2>5. Änderungen der Bedingungen</h2>
+    <p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu aktualisieren. Wesentliche Änderungen werden über die App mitgeteilt.</p>
+
+    <h2>6. Kontakt</h2>
+    <p>Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
+
+    <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
+    <p style="color:#B8B8B8; font-size:13px;">© 2026 Porty. Alle Rechte vorbehalten.</p>
+  </div>
+
+  <!-- TÜRKÇE -->
+  <div id="lang-tr" class="lang-section">
+    <h1>Kullanım Koşulları</h1>
+    <p class="meta">Son güncelleme: 30 Mart 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
+
+    <div class="highlight">
+      Porty'yi kullanarak bu koşulları kabul etmiş sayılırsınız. Lütfen haklarınızı ve sorumluluklarınızı anlamak için dikkatlice okuyunuz.
+    </div>
+
+    <h2>1. Koşulların Kabulü</h2>
+    <p>Porty uygulamasını indirerek veya kullanarak, bu şartlar sizin için otomatik olarak geçerli olacaktır. Uygulamayı kullanmadan önce bunları dikkatlice okuduğunuzdan emin olmalısınız.</p>
+
+    <h2>2. Uygulamanın Kullanımı</h2>
+    <ul>
+      <li><strong>Hesap:</strong> Hesap bilgilerinizin gizliliğini korumaktan siz sorumlusunuz.</li>
+      <li><strong>İçerik:</strong> Porty bir portföy takip aracıdır. Girdiğiniz veriler yalnızca kişisel kullanımınız ve bilgilendirme amaçlıdır.</li>
+      <li><strong>Kısıtlamalar:</strong> Uygulamanın kaynak kodunu çıkarmaya çalışmamalı, uygulamayı başka dillere çevirmeye veya türev versiyonlarını oluşturmaya çalışmamalısınız.</li>
+    </ul>
+
+    <h2>3. Feragatname</h2>
+    <p>Porty, finansal verileri ve takip araçlarını "olduğu gibi" sunar. Finansal danışman değiliz. Tüm yatırım kararları sizin sorumluluğunuzdadır. Üçüncü taraf API'ler tarafından sağlanan verilerin doğruluğunu veya güncelliğini garanti etmiyoruz.</p>
+
+    <h2>4. Fesih</h2>
+    <p>Koşulları ihlal etmeniz durumu da dahil olmak üzere, herhangi bir nedenle önceden bildirimde bulunmaksızın veya sorumluluk kabul etmeksizin hizmetimize erişimi derhal sonlandırabilir veya askıya alabiliriz.</p>
+
+    <h2>5. Koşul Değişiklikleri</h2>
+    <p>Bu koşulları herhangi bir zamanda güncelleme hakkımızı saklı tutuyoruz. Önemli değişiklikler uygulama üzerinden bildirilecektir.</p>
+
+    <h2>6. İletişim</h2>
+    <p>Bu Koşullar hakkında herhangi bir sorunuz varsa, lütfen bizimle <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a> adresinden iletişime geçin.</p>
+
+    <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
+    <p style="color:#B8B8B8; font-size:13px;">© 2026 Porty. Tüm hakları saklıdır.</p>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
+
 </body>
 </html>
