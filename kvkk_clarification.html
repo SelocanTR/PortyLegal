@@ -20,6 +20,9 @@
     li { margin-bottom: 6px; }
     a { color: #28BC3E; }
     .highlight { background: #E7F0F2; border-left: 4px solid #28BC3E; padding: 16px; border-radius: 4px; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: #F5F5F5; text-align: left; padding: 10px 12px; font-size: 14px; border: 1px solid #EBEBEB; }
+    td { padding: 10px 12px; font-size: 14px; border: 1px solid #EBEBEB; vertical-align: top; }
   </style>
 </head>
 <body>
@@ -34,34 +37,82 @@
     </div>
 
     <h2>1. Veri Sorumlusu</h2>
-    <p>Veri Sorumlusu: Selçuk Sevindik (Rubeeks)</p>
-    <p>İletişim: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
+    <p>
+      <strong>Unvan:</strong> Selçuk Sevindik (Rubeeks)<br>
+      <strong>İletişim:</strong> <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a>
+    </p>
 
-    <h2>2. İşlenen Kişisel Veriler</h2>
-    <p>Adınız, e-posta adresiniz, cihaz bilgileriniz ve portföy verileriniz, uygulama hizmetlerinin sunulması için işlenmektedir.</p>
+    <h2>2. İşlenen Kişisel Verilerin Kategorileri</h2>
+    <table>
+      <tr><th>Kategori</th><th>Veriler</th></tr>
+      <tr><td><strong>Kimlik verisi</strong></td><td>Ad-soyad (isteğe bağlı), e-posta adresi</td></tr>
+      <tr><td><strong>Finansal veri</strong></td><td>Portföye eklenen varlık sembolleri, miktarlar, alış fiyatları</td></tr>
+      <tr><td><strong>Görsel veri</strong></td><td>Profil fotoğrafı (kullanıcı tercihine bağlı)</td></tr>
+      <tr><td><strong>Teknik veri</strong></td><td>Cihaz türü, işletim sistemi sürümü, uygulama sürümü, oturum belirteçleri</td></tr>
+      <tr><td><strong>Tercih verisi</strong></td><td>Dil, tema, para birimi gibi uygulama ayarları</td></tr>
+    </table>
 
-    <h2>3. Kişisel Verilerin İşlenme Amacı</h2>
-    <ul>
-      <li>Kullanıcı hesabı oluşturulması ve üyeliğin yönetimi</li>
-      <li>Varlık takibi ve portföy yönetim hizmetlerinin sunulması</li>
-      <li>Uygulama tercihlerinin kaydedilmesi ve senkronizasyonu</li>
-      <li>Mevzuattan kaynaklanan yükümlülüklerin yerine getirilmesi</li>
-    </ul>
+    <h2>3. İşlenme Amaçları ve Hukuki Dayanakları</h2>
+    <table>
+      <tr><th>Amaç</th><th>KVKK m.5 Hukuki Dayanağı</th></tr>
+      <tr><td>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması</td><td>Sözleşmenin kurulması veya ifası (m.5/2-c)</td></tr>
+      <tr><td>Portföy verilerinin senkronizasyonu ve sunulması</td><td>Sözleşmenin ifası (m.5/2-c)</td></tr>
+      <tr><td>Uygulama tercihlerinin kaydedilmesi</td><td>Meşru menfaat (m.5/2-f)</td></tr>
+      <tr><td>Teknik hata tespiti ve uygulama iyileştirme</td><td>Meşru menfaat (m.5/2-f)</td></tr>
+      <tr><td>Mevzuat yükümlülüklerinin yerine getirilmesi</td><td>Kanuni yükümlülük (m.5/2-ç)</td></tr>
+    </table>
+    <p>Kişisel verileriniz; profilleme, davranışsal reklam veya otomatik karar verme amacıyla <strong>kullanılmamaktadır</strong>.</p>
 
     <h2>4. Kişisel Verilerin Aktarılması</h2>
-    <p>Verileriniz, yalnızca uygulama altyapısını sağlayan Supabase (bulut depolama) platformuna, veri güvenliği standartlarına uygun olarak aktarılmaktadır. Reklam verenlerle veya üçüncü taraf veri simsarlarıyla paylaşım yapılmamaktadır.</p>
-
-    <h2>5. Veri Sahibi Olarak Haklarınız</h2>
-    <p>KVKK'nın 11. maddesi uyarınca bize başvurarak:</p>
+    <p><strong>Yurt içi aktarım:</strong> Kişisel verileriniz yurt içindeki üçüncü taraflarla paylaşılmamaktadır.</p>
+    <p><strong>Yurt dışı aktarım:</strong> Uygulama altyapısı ABD merkezli <strong>Supabase Inc.</strong> tarafından sağlanmaktadır. Verileriniz KVKK m.9 kapsamında aşağıdaki önlemler çerçevesinde aktarılmaktadır:</p>
     <ul>
-      <li>Verilerinizin işlenip işlenmediğini öğrenme</li>
-      <li>Kişisel verilerinizin silinmesini veya yok edilmesini isteme</li>
-      <li>Hatalı verilerin düzeltilmesini talep etme</li>
-      <li>İşleme faaliyetlerine itiraz etme haklarına sahipsiniz.</li>
+      <li>AES-256 şifreleme ve TLS 1.2+ protokolleri uygulanmaktadır.</li>
+      <li>Aktarım, sözleşmenin ifası zorunluluğuna veya ilgili kişinin açık rızasına dayanmaktadır.</li>
+    </ul>
+    <p>Verileriniz reklam verenlerle, veri simsarlarıyla veya diğer üçüncü taraflarla <strong>kesinlikle paylaşılmamaktadır</strong>.</p>
+
+    <h2>5. Saklanma Süresi</h2>
+    <ul>
+      <li>Hesabınız aktif olduğu sürece verileriniz saklanır.</li>
+      <li>Hesabınızı silmeniz halinde tüm kişisel verileriniz <strong>30 gün</strong> içinde kalıcı olarak silinir veya anonim hale getirilir.</li>
+      <li>Mevzuattan kaynaklanan zorunlu saklama yükümlülükleri saklıdır.</li>
     </ul>
 
-    <h2>6. İletişim</h2>
-    <p>Haklarınızla ilgili taleplerinizi <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a> adresine iletebilirsiniz.</p>
+    <h2>6. Veri Güvenliği</h2>
+    <p>Kişisel verilerinizin korunması için uygulanan teknik ve idari tedbirler:</p>
+    <ul>
+      <li>Şifreli iletişim (TLS/HTTPS)</li>
+      <li>Kimlik doğrulama verilerinin şifreli saklanması (bcrypt/hashing)</li>
+      <li>Row-Level Security (RLS) ile kullanıcıya özel erişim kontrolü</li>
+      <li>Güvenlik ihlali tespit edilmesi halinde etkilenen kullanıcılar <strong>72 saat</strong> içinde bilgilendirilir.</li>
+    </ul>
+
+    <h2>7. Haklarınız (KVKK m.11)</h2>
+    <p><a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a> adresine "KVKK Başvurusu" konusuyla e-posta göndererek aşağıdaki haklarınızı kullanabilirsiniz:</p>
+    <ul>
+      <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+      <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+      <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+      <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri öğrenme</li>
+      <li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme</li>
+      <li>KVKK m.7 kapsamında silinmesini veya yok edilmesini isteme</li>
+      <li>Düzeltme/silme işlemlerinin üçüncü kişilere bildirilmesini talep etme</li>
+      <li>Otomatik sistemler aracılığıyla aleyhinize sonuç doğuran işlemlere itiraz etme</li>
+      <li>Kanuna aykırı işleme nedeniyle zararın tazminini talep etme</li>
+    </ul>
+    <p>Başvurularınız en geç <strong>30 gün</strong> içinde ücretsiz sonuçlandırılır.</p>
+
+    <h2>8. KVK Kurulu'na Şikayet Hakkı</h2>
+    <p>Başvurunuzun reddedilmesi, cevabın yetersiz bulunması veya süresinde yanıt verilmemesi halinde; veri sorumlusunun cevabını öğrendiğiniz tarihten itibaren <strong>30 gün</strong> ve her halükarda başvuru tarihinden itibaren <strong>60 gün</strong> içinde KVK Kurulu'na şikayette bulunabilirsiniz.</p>
+    <p>KVK Kurulu: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p>
+
+    <h2>9. Başvuru</h2>
+    <p>
+      Taleplerinizi kimliğinizi doğrulayan bilgilerle birlikte iletebilirsiniz:<br>
+      <strong>E-posta:</strong> <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a><br>
+      <strong>Konu satırı:</strong> "KVKK Başvurusu"
+    </p>
 
     <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
     <p style="color:#B8B8B8; font-size:13px;">© 2026 Porty. Tüm hakları saklıdır.</p>

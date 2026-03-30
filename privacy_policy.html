@@ -20,6 +20,9 @@
     li { margin-bottom: 6px; }
     a { color: #28BC3E; }
     .highlight { background: #E7F0F2; border-left: 4px solid #28BC3E; padding: 16px; border-radius: 4px; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th { background: #F5F5F5; text-align: left; padding: 10px 12px; font-size: 14px; border: 1px solid #EBEBEB; }
+    td { padding: 10px 12px; font-size: 14px; border: 1px solid #EBEBEB; vertical-align: top; }
     .lang-switcher {
       margin-bottom: 32px;
     }
@@ -60,19 +63,30 @@
     <p class="meta">Last updated: March 30, 2026 &nbsp;|&nbsp; App: Porty</p>
 
     <div class="highlight">
-      Porty respects your privacy. This policy explains what data we collect, how we use it, and how we protect it.
+      Porty respects your privacy. This policy explains what data we collect, how we use it, and how we protect it. Porty is intended for users aged 13 and older. We do not knowingly collect data from children under 13.
     </div>
 
     <h2>1. Data We Collect</h2>
     <p>Porty collects the following data:</p>
     <ul>
-      <li><strong>Account information:</strong> Email address and password (stored encrypted). If you sign in with Google, we receive your Google user ID and email address.</li>
+      <li><strong>Account information:</strong> Email address and password (stored encrypted). If you sign in with Google, we receive only your Google user ID and email address — no contacts, calendar, or other Google data.</li>
       <li><strong>Portfolio data:</strong> Assets you add to the app (ticker symbol, quantity, purchase price). This data belongs solely to you.</li>
-      <li><strong>App preferences:</strong> Language, theme, display currency, and settings.</li>
-      <li><strong>Profile photo:</strong> If you choose to set a profile picture, the image is stored securely and linked to your account.</li>
+      <li><strong>App preferences:</strong> Language, theme, display currency, and settings (stored locally and synced to your account).</li>
+      <li><strong>Profile photo:</strong> If you choose to set a profile picture, the image is stored securely and linked only to your account.</li>
+      <li><strong>Technical data:</strong> Device type, operating system version, app version, and session tokens for authentication purposes.</li>
     </ul>
 
-    <h2>2. How We Use Your Data</h2>
+    <h2>2. Legal Basis for Processing</h2>
+    <table>
+      <tr><th>Purpose</th><th>Legal Basis (GDPR Art. 6)</th></tr>
+      <tr><td>Account creation and authentication</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+      <tr><td>Portfolio data sync across devices</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
+      <tr><td>Saving app preferences</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+      <tr><td>Technical error detection and improvement</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+      <tr><td>Compliance with legal obligations</td><td>Legal obligation (Art. 6(1)(c))</td></tr>
+    </table>
+
+    <h2>3. How We Use Your Data</h2>
     <p>Collected data is used only for the following purposes:</p>
     <ul>
       <li>Creating and authenticating your account</li>
@@ -80,12 +94,46 @@
       <li>Remembering your app preferences</li>
       <li>Technical operations necessary for the app to function</li>
     </ul>
-    <p>We do not share, sell, or use your data for advertising purposes.</p>
+    <p>We do <strong>not</strong> share, sell, or use your data for advertising or profiling purposes.</p>
 
-    <h2>3. Your Rights</h2>
-    <p>Under GDPR and KVKK, you have the right to access, rectify, or delete your data at any time. You can delete your account directly inside the app settings.</p>
+    <h2>4. Third-Party Services</h2>
+    <p>Porty uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong>Supabase Inc. (USA):</strong> Cloud database and authentication infrastructure. Data is transmitted over TLS and stored with AES-256 encryption. Supabase acts as a data processor under our instructions.</li>
+      <li><strong>Financial data APIs:</strong> Market prices and asset information are fetched from third-party financial data providers. Only ticker symbols are sent to these APIs — no personal account data is shared.</li>
+      <li><strong>Google Sign-In:</strong> If used, Google provides only your user ID and email address. No other Google account data is accessed.</li>
+    </ul>
 
-    <h2>4. Contact</h2>
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li>Your data is retained for as long as your account is active.</li>
+      <li>When you delete your account, all personal data is permanently deleted or anonymized within <strong>30 days</strong>.</li>
+      <li>Retention periods required by law are exempt from early deletion.</li>
+    </ul>
+
+    <h2>6. Data Security</h2>
+    <p>We implement technical and organizational measures to protect your data:</p>
+    <ul>
+      <li>All data transmitted over HTTPS/TLS</li>
+      <li>Passwords stored using bcrypt hashing — never in plain text</li>
+      <li>Row-Level Security (RLS) ensures users can only access their own data</li>
+      <li>In the event of a data breach affecting your personal data, you will be notified within <strong>72 hours</strong> of discovery.</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+    <p>Under GDPR and KVKK, you have the following rights:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of your personal data</li>
+      <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
+      <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
+      <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format</li>
+      <li><strong>Objection:</strong> Object to processing based on legitimate interest</li>
+      <li><strong>Restriction:</strong> Request that we restrict processing of your data</li>
+    </ul>
+    <p>You can delete your account directly from app settings. For other requests, contact us at <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a>. We will respond within <strong>30 days</strong>.</p>
+    <p>You also have the right to lodge a complaint with your local data protection authority (e.g., your national DPA under GDPR, or the KVK Kurulu in Turkey).</p>
+
+    <h2>8. Contact</h2>
     <p>For privacy-related questions: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
 
     <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
@@ -98,32 +146,75 @@
     <p class="meta">Zuletzt aktualisiert: 30. März 2026 &nbsp;|&nbsp; App: Porty</p>
 
     <div class="highlight">
-      Porty respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche Daten wir erheben, wie wir sie verwenden und wie wir sie schützen.
+      Porty respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche Daten wir erheben, wie wir sie verwenden und wie wir sie schützen. Porty richtet sich an Nutzer ab 13 Jahren.
     </div>
 
     <h2>1. Von uns erhobene Daten</h2>
     <p>Porty erhebt die folgenden Daten:</p>
     <ul>
-      <li><strong>Kontoinformationen:</strong> E-Mail-Adresse und Passwort (verschlüsselt gespeichert). Wenn Sie sich mit Google anmelden, erhalten wir Ihre Google-Benutzer-ID und E-Mail-Adresse.</li>
-      <li><strong>Portfolio-Daten:</strong> Vermögenswerte, die Sie der App hinzufügen (Tickersymbol, Menge, Kaufpreis). Diese Daten gehören ausschließlich Ihnen.</li>
-      <li><strong>App-Einstellungen:</strong> Sprache, Thema, Anzeigewährung und Einstellungen.</li>
-      <li><strong>Profilfoto:</strong> Wenn Sie ein Profilbild festlegen, wird das Bild sicher gespeichert und mit Ihrem Konto verknüpft.</li>
+      <li><strong>Kontoinformationen:</strong> E-Mail-Adresse und Passwort (verschlüsselt gespeichert). Bei Google-Anmeldung erhalten wir ausschließlich Ihre Google-Benutzer-ID und E-Mail-Adresse.</li>
+      <li><strong>Portfolio-Daten:</strong> Von Ihnen hinzugefügte Vermögenswerte (Tickersymbol, Menge, Kaufpreis). Diese Daten gehören ausschließlich Ihnen.</li>
+      <li><strong>App-Einstellungen:</strong> Sprache, Thema, Anzeigewährung und Einstellungen (lokal gespeichert und mit Ihrem Konto synchronisiert).</li>
+      <li><strong>Profilfoto:</strong> Wenn Sie ein Profilbild festlegen, wird das Bild sicher gespeichert und ausschließlich mit Ihrem Konto verknüpft.</li>
+      <li><strong>Technische Daten:</strong> Gerätetyp, Betriebssystemversion, App-Version und Sitzungstoken für Authentifizierungszwecke.</li>
     </ul>
 
-    <h2>2. Wie wir Ihre Daten verwenden</h2>
-    <p>Die erhobenen Daten werden nur für die folgenden Zwecke verwendet:</p>
+    <h2>2. Rechtsgrundlage der Verarbeitung</h2>
+    <table>
+      <tr><th>Zweck</th><th>Rechtsgrundlage (DSGVO Art. 6)</th></tr>
+      <tr><td>Kontoerstellung und Authentifizierung</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
+      <tr><td>Synchronisierung von Portfolio-Daten</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
+      <tr><td>Speichern von App-Einstellungen</td><td>Berechtigte Interessen (Art. 6(1)(f))</td></tr>
+      <tr><td>Technische Fehlerkennung und Verbesserung</td><td>Berechtigte Interessen (Art. 6(1)(f))</td></tr>
+      <tr><td>Einhaltung gesetzlicher Pflichten</td><td>Rechtliche Verpflichtung (Art. 6(1)(c))</td></tr>
+    </table>
+
+    <h2>3. Wie wir Ihre Daten verwenden</h2>
+    <p>Die erhobenen Daten werden ausschließlich für folgende Zwecke verwendet:</p>
     <ul>
       <li>Erstellung und Authentifizierung Ihres Kontos</li>
       <li>Synchronisierung Ihrer Portfoliodaten über Geräte hinweg</li>
       <li>Speichern Ihrer App-Einstellungen</li>
       <li>Technische Vorgänge, die für das Funktionieren der App erforderlich sind</li>
     </ul>
-    <p>Wir teilen, verkaufen oder nutzen Ihre Daten nicht für Werbezwecke.</p>
+    <p>Wir teilen, verkaufen oder nutzen Ihre Daten <strong>nicht</strong> für Werbe- oder Profilierungszwecke.</p>
 
-    <h2>3. Ihre Rechte</h2>
-    <p>Gemäß DSGVO (GDPR) und KVKK haben Sie das Recht, jederzeit auf Ihre Daten zuzugreifen, sie zu berichtigen oder zu löschen. Sie können Ihr Konto direkt in den App-Einstellungen löschen.</p>
+    <h2>4. Drittanbieter-Dienste</h2>
+    <ul>
+      <li><strong>Supabase Inc. (USA):</strong> Cloud-Datenbank und Authentifizierungsinfrastruktur. Daten werden über TLS übertragen und mit AES-256 verschlüsselt gespeichert.</li>
+      <li><strong>Finanzmarkt-APIs:</strong> Kursdaten werden von Drittanbietern abgerufen. Es werden ausschließlich Tickersymbole übermittelt — keine personenbezogenen Daten.</li>
+      <li><strong>Google Sign-In:</strong> Nur Benutzer-ID und E-Mail-Adresse werden übertragen. Kein Zugriff auf weitere Google-Kontodaten.</li>
+    </ul>
 
-    <h2>4. Kontakt</h2>
+    <h2>5. Datenspeicherung</h2>
+    <ul>
+      <li>Ihre Daten werden gespeichert, solange Ihr Konto aktiv ist.</li>
+      <li>Nach Löschung Ihres Kontos werden alle personenbezogenen Daten innerhalb von <strong>30 Tagen</strong> dauerhaft gelöscht oder anonymisiert.</li>
+      <li>Gesetzliche Aufbewahrungspflichten bleiben unberührt.</li>
+    </ul>
+
+    <h2>6. Datensicherheit</h2>
+    <ul>
+      <li>Alle Daten werden über HTTPS/TLS übertragen</li>
+      <li>Passwörter werden mit bcrypt gehasht gespeichert — niemals im Klartext</li>
+      <li>Row-Level Security (RLS) stellt sicher, dass Nutzer nur auf ihre eigenen Daten zugreifen können</li>
+      <li>Im Falle einer Datenpanne werden betroffene Nutzer innerhalb von <strong>72 Stunden</strong> benachrichtigt.</li>
+    </ul>
+
+    <h2>7. Ihre Rechte</h2>
+    <p>Gemäß DSGVO haben Sie folgende Rechte:</p>
+    <ul>
+      <li><strong>Auskunft:</strong> Kopie Ihrer personenbezogenen Daten anfordern</li>
+      <li><strong>Berichtigung:</strong> Unrichtige oder unvollständige Daten korrigieren lassen</li>
+      <li><strong>Löschung:</strong> Löschung Ihrer Daten verlangen ("Recht auf Vergessenwerden")</li>
+      <li><strong>Datenübertragbarkeit:</strong> Daten in einem strukturierten, maschinenlesbaren Format erhalten</li>
+      <li><strong>Widerspruch:</strong> Der Verarbeitung auf Basis berechtigter Interessen widersprechen</li>
+      <li><strong>Einschränkung:</strong> Einschränkung der Verarbeitung Ihrer Daten verlangen</li>
+    </ul>
+    <p>Sie können Ihr Konto direkt in den App-Einstellungen löschen. Für sonstige Anfragen wenden Sie sich an <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a>. Wir antworten innerhalb von <strong>30 Tagen</strong>.</p>
+    <p>Sie haben auch das Recht, eine Beschwerde bei Ihrer zuständigen Datenschutzbehörde einzureichen.</p>
+
+    <h2>8. Kontakt</h2>
     <p>Bei Fragen zum Datenschutz: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
 
     <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
@@ -136,31 +227,75 @@
     <p class="meta">Son güncelleme: 30 Mart 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
 
     <div class="highlight">
-      Porty, kullanıcılarının gizliliğine saygı duyar. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve nasıl koruduğumuzu açıklamaktadır.
+      Porty, kullanıcılarının gizliliğine saygı duyar. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve nasıl koruduğumuzu açıklamaktadır. Porty, 13 yaş ve üzeri kullanıcılara yöneliktir.
     </div>
 
     <h2>1. Toplanan Veriler</h2>
     <p>Porty uygulaması aşağıdaki verileri toplamaktadır:</p>
     <ul>
-      <li><strong>Hesap bilgileri:</strong> E-posta adresi ve şifre (şifrelenmiş olarak saklanır). Google ile giriş yapılması durumunda kullanıcı kimliği ve e-posta adresi.</li>
+      <li><strong>Hesap bilgileri:</strong> E-posta adresi ve şifre (şifrelenmiş olarak saklanır). Google ile giriş yapılması durumunda yalnızca kullanıcı kimliği ve e-posta adresi alınır; başka Google verisi erişilmez.</li>
       <li><strong>Portföy verileri:</strong> Eklediğiniz varlık bilgileri (sembol, miktar, fiyat). Bu veriler yalnızca size aittir.</li>
-      <li><strong>Uygulama tercihleri:</strong> Dil, tema ve para birimi gibi kullanıcı tercihleri.</li>
-      <li><strong>Profil fotoğrafı:</strong> Tercih etmeniz durumunda profil fotoğrafınız güvenli şekilde saklanır.</li>
+      <li><strong>Uygulama tercihleri:</strong> Dil, tema ve para birimi gibi tercihler (yerel olarak saklanır ve hesabınızla senkronize edilir).</li>
+      <li><strong>Profil fotoğrafı:</strong> Tercih etmeniz durumunda profil fotoğrafınız güvenli şekilde saklanır ve yalnızca hesabınıza bağlanır.</li>
+      <li><strong>Teknik veriler:</strong> Cihaz türü, işletim sistemi sürümü, uygulama sürümü ve kimlik doğrulama amaçlı oturum belirteçleri.</li>
     </ul>
 
-    <h2>2. Verilerin Kullanımı</h2>
+    <h2>2. İşlemenin Hukuki Dayanağı</h2>
+    <table>
+      <tr><th>Amaç</th><th>GDPR / KVKK Hukuki Dayanağı</th></tr>
+      <tr><td>Hesap oluşturma ve kimlik doğrulama</td><td>Sözleşmenin ifası</td></tr>
+      <tr><td>Portföy verilerinin cihazlar arası senkronizasyonu</td><td>Sözleşmenin ifası</td></tr>
+      <tr><td>Uygulama tercihlerinin kaydedilmesi</td><td>Meşru menfaat</td></tr>
+      <tr><td>Teknik hata tespiti ve iyileştirme</td><td>Meşru menfaat</td></tr>
+      <tr><td>Yasal yükümlülüklerin yerine getirilmesi</td><td>Kanuni yükümlülük</td></tr>
+    </table>
+
+    <h2>3. Verilerin Kullanımı</h2>
     <p>Toplanan veriler yalnızca şu amaçlarla kullanılmaktadır:</p>
     <ul>
       <li>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması</li>
       <li>Verilerin cihazlar arasında senkronize edilmesi</li>
       <li>Uygulama tercihlerinin hatırlanması</li>
+      <li>Uygulamanın çalışması için gerekli teknik işlemler</li>
     </ul>
-    <p>Kullanıcı verileri üçüncü taraflarla paylaşılmaz, satılmaz veya reklam amaçlı kullanılmaz.</p>
+    <p>Kullanıcı verileri üçüncü taraflarla paylaşılmaz, satılmaz veya reklam ya da profilleme amacıyla <strong>kesinlikle kullanılmaz</strong>.</p>
 
-    <h2>3. Haklarınız</h2>
-    <p>GDPR ve KVKK uyarınca, verilerinize erişme, düzeltme veya silme hakkına sahipsiniz. Hesabınızı uygulama içinden silebilirsiniz.</p>
+    <h2>4. Üçüncü Taraf Hizmetler</h2>
+    <ul>
+      <li><strong>Supabase Inc. (ABD):</strong> Bulut veritabanı ve kimlik doğrulama altyapısı. Veriler TLS üzerinden iletilir, AES-256 şifrelemeyle saklanır.</li>
+      <li><strong>Finansal veri API'leri:</strong> Piyasa fiyatları üçüncü taraf sağlayıcılardan çekilir. Bu API'lere yalnızca varlık sembolleri gönderilir; kişisel veri paylaşılmaz.</li>
+      <li><strong>Google ile Giriş:</strong> Yalnızca kullanıcı kimliği ve e-posta adresi alınır. Diğer Google hesap verilerine erişilmez.</li>
+    </ul>
 
-    <h2>4. İletişim</h2>
+    <h2>5. Verilerin Saklanma Süresi</h2>
+    <ul>
+      <li>Hesabınız aktif olduğu sürece verileriniz saklanır.</li>
+      <li>Hesabınızı silmeniz halinde tüm kişisel verileriniz <strong>30 gün</strong> içinde kalıcı olarak silinir veya anonim hale getirilir.</li>
+      <li>Mevzuattan kaynaklanan zorunlu saklama süreleri saklıdır.</li>
+    </ul>
+
+    <h2>6. Veri Güvenliği</h2>
+    <ul>
+      <li>Tüm veriler HTTPS/TLS üzerinden iletilir</li>
+      <li>Şifreler bcrypt ile hashlenerek saklanır; asla düz metin olarak tutulmaz</li>
+      <li>Row-Level Security (RLS) ile kullanıcılar yalnızca kendi verilerine erişebilir</li>
+      <li>Güvenlik ihlali tespit edilmesi halinde etkilenen kullanıcılar <strong>72 saat</strong> içinde bilgilendirilir.</li>
+    </ul>
+
+    <h2>7. Haklarınız</h2>
+    <p>GDPR ve KVKK uyarınca aşağıdaki haklara sahipsiniz:</p>
+    <ul>
+      <li><strong>Erişim:</strong> Kişisel verilerinizin bir kopyasını talep etme</li>
+      <li><strong>Düzeltme:</strong> Hatalı veya eksik verilerin düzeltilmesini isteme</li>
+      <li><strong>Silme:</strong> Verilerinizin silinmesini talep etme ("unutulma hakkı")</li>
+      <li><strong>Taşınabilirlik:</strong> Verilerinizi yapılandırılmış, makine okunabilir formatta alma</li>
+      <li><strong>İtiraz:</strong> Meşru menfaate dayalı işlemeye itiraz etme</li>
+      <li><strong>Kısıtlama:</strong> Verilerinizin işlenmesini kısıtlatma</li>
+    </ul>
+    <p>Hesabınızı uygulama ayarlarından silebilirsiniz. Diğer talepler için <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a> adresine başvurabilirsiniz. Talepler en geç <strong>30 gün</strong> içinde yanıtlanır.</p>
+    <p>Ayrıca KVK Kurulu'na (<a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a>) veya ilgili veri koruma otoritesine şikayette bulunma hakkına sahipsiniz.</p>
+
+    <h2>8. İletişim</h2>
     <p>Gizlilik ile ilgili sorularınız için: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
 
     <hr style="margin-top:48px; border:none; border-top:1px solid #EBEBEB;">
