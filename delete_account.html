@@ -1,155 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delete Account — Porty</title>
+  <title>Delete Account — Porty Finance</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 32px 24px;
-      color: #1a1a1a;
-      line-height: 1.7;
+    body { 
+      background-color: #CAD3DD !important; 
+      font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+      margin: 0; padding: 0; -webkit-font-smoothing: antialiased;
     }
-    h1 { color: #1a2830; font-size: 28px; border-bottom: 2px solid #eee; padding-bottom: 12px; }
-    h2 { color: #1a2830; font-size: 20px; margin-top: 32px; }
-    .meta { color: #666; font-size: 14px; margin-bottom: 32px; }
+    .wrapper { padding: 40px 20px; background-color: #CAD3DD !important; }
+    .container { 
+      max-width: 800px; margin: 0 auto; 
+      background-color: #FFFFFF !important; 
+      border-radius: 24px; overflow: hidden; 
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important; 
+      border: 1px solid #EBEBEB !important; 
+    }
+    .header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #F5F5F5; }
+    .logo-img { width: 160px; height: auto; display: block; margin: 0 auto; }
+    .content { padding: 40px; color: #2E3537; line-height: 1.7; }
+    
+    h1 { color: #2E3537; font-size: 28px; margin-top: 0; }
+    h2 { color: #2E3537; font-size: 20px; margin-top: 32px; }
+    .meta { color: #8E9195; font-size: 14px; margin-bottom: 24px; }
     ul, ol { padding-left: 24px; }
     li { margin-bottom: 8px; }
-    a { color: #2E8B57; }
-    .highlight { background: #f0f7f4; border-left: 4px solid #2E8B57; padding: 16px; border-radius: 4px; margin: 16px 0; }
-    .warning { background: #fff8f0; border-left: 4px solid #e07b2a; padding: 16px; border-radius: 4px; margin: 16px 0; }
-    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-    th, td { text-align: left; padding: 10px 14px; border: 1px solid #e0e0e0; font-size: 15px; }
-    th { background: #f5f5f5; font-weight: 600; }
-    .lang-switcher { display: flex; gap: 8px; margin-bottom: 32px; }
-    .lang-btn {
-      padding: 6px 16px;
-      border: 2px solid #2E8B57;
-      border-radius: 20px;
-      background: none;
-      color: #2E8B57;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
+    a { color: #286DC2; text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+    
+    .highlight { background: #F8F9FA; border-left: 4px solid #286DC2; padding: 16px; border-radius: 8px; margin: 24px 0; color: #4B5563; }
+    .warning { background: #FFF7F7; border-left: 4px solid #E31F2F; padding: 16px; border-radius: 8px; margin: 24px 0; color: #B91C1C; }
+    
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+    th { background: #F9FAFB; text-align: left; padding: 12px; border: 1px solid #E5E7EB; color: #374151; }
+    td { padding: 12px; border: 1px solid #E5E7EB; vertical-align: top; color: #4B5563; }
+
+    .lang-switcher { margin-bottom: 24px; text-align: right; }
+    .lang-select {
+      padding: 10px 20px; border: 1px solid #E5E7EB; border-radius: 12px;
+      background-color: #fff; color: #374151; font-size: 14px; font-weight: 600;
+      cursor: pointer; outline: none; appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
-    .lang-btn.active { background: #2E8B57; color: #fff; }
+    
     .lang-section { display: none; }
     .lang-section.active { display: block; }
+    
+    .footer { padding: 32px 40px; text-align: center; font-size: 13px; color: #8E9195 !important; border-top: 1px solid #F5F5F5; }
   </style>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header">
+        <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+      </div>
+      
+      <div class="content">
+        <div class="lang-switcher">
+          <select class="lang-select" onchange="setLang(this.value)">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+          </select>
+        </div>
 
-  <div class="lang-switcher">
-    <button class="lang-btn active" onclick="setLang('en')">English</button>
-    <button class="lang-btn" onclick="setLang('tr')">Türkçe</button>
-  </div>
+        <!-- ENGLISH -->
+        <div id="lang-en" class="lang-section active">
+          <h1>Delete Your Account</h1>
+          <p class="meta">App: Porty Finance &nbsp;|&nbsp; Developer: Porty</p>
 
-  <!-- ENGLISH -->
-  <div id="lang-en" class="lang-section active">
-    <h1>Delete Your Account</h1>
-    <p class="meta">App: Porty - Portfolio Tracker &nbsp;|&nbsp; Developer: Porty</p>
+          <div class="highlight">
+            You can request to delete your Porty account and all associated data at any time. Follow the steps below.
+          </div>
 
-    <div class="highlight">
-      You can request to delete your Porty account and all associated data at any time. Follow the steps below.
+          <h2>Option 1 — Delete from the App (Instant)</h2>
+          <ol>
+            <li>Open the Porty app and sign in.</li>
+            <li>Tap your profile icon in the top right corner.</li>
+            <li>Go to <strong>Settings</strong>.</li>
+            <li>Scroll down and tap <strong>Delete Account</strong>.</li>
+            <li>Confirm the deletion when prompted.</li>
+          </ol>
+
+          <h2>Option 2 — Request via Email</h2>
+          <p>If you are unable to access the app, send a deletion request to:</p>
+          <div class="highlight">
+            <strong>Email:</strong> <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a><br>
+            <strong>Subject:</strong> Account Deletion Request<br>
+            <strong>Include:</strong> The email address associated with your account
+          </div>
+          <p>We will process your request within <strong>7 business days</strong>.</p>
+
+          <h2>What Gets Deleted</h2>
+          <table>
+            <thead>
+              <tr><th>Data Type</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Account credentials (email, name)</td><td>Permanently deleted</td></tr>
+              <tr><td>Portfolio data (assets, prices)</td><td>Permanently deleted</td></tr>
+              <tr><td>App preferences & settings</td><td>Permanently deleted</td></tr>
+            </tbody>
+          </table>
+
+          <div class="warning">
+            <strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your portfolio data will be lost.
+          </div>
+        </div>
+
+        <!-- TÜRKÇE -->
+        <div id="lang-tr" class="lang-section">
+          <h1>Hesabınızı Silin</h1>
+          <p class="meta">Uygulama: Porty Finance &nbsp;|&nbsp; Geliştirici: Porty</p>
+
+          <div class="highlight">
+            Porty hesabınızı ve ilişkili tüm verilerinizi istediğiniz zaman silme talebinde bulunabilirsiniz. Aşağıdaki adımları takip edin.
+          </div>
+
+          <h2>Seçenek 1 — Uygulama Üzerinden Silme (Anında)</h2>
+          <ol>
+            <li>Porty uygulamasını açın ve giriş yapın.</li>
+            <li>Sağ üst köşedeki profil ikonuna dokunun.</li>
+            <li><strong>Ayarlar</strong>'a gidin.</li>
+            <li>Aşağı kaydırın ve <strong>Hesabı Sil</strong>'e dokunun.</li>
+            <li>Açılan onay ekranında silme işlemini onaylayın.</li>
+          </ol>
+
+          <h2>Seçenek 2 — E-posta ile Talep</h2>
+          <p>Uygulamaya erişemiyorsanız silme talebinizi şu adrese gönderin:</p>
+          <div class="highlight">
+            <strong>E-posta:</strong> <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a><br>
+            <strong>Konu:</strong> Hesap Silme Talebi<br>
+            <strong>Ekleyin:</strong> Hesabınıza bağlı e-posta adresi
+          </div>
+          <p>Talebiniz <strong>7 iş günü</strong> içinde işleme alınacaktır.</p>
+
+          <h2>Silinen Veriler</h2>
+          <table>
+            <thead>
+              <tr><th>Veri Türü</th><th>İşlem</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Hesap bilgileri (e-posta, ad-soyad)</td><td>Kalıcı olarak silinir</td></tr>
+              <tr><td>Portföy verileri (varlıklar, fiyatlar)</td><td>Kalıcı olarak silinir</td></tr>
+              <tr><td>Uygulama tercihleri ve ayarlar</td><td>Kalıcı olarak silinir</td></tr>
+            </tbody>
+          </table>
+
+          <div class="warning">
+            <strong>Uyarı:</strong> Hesap silme işlemi kalıcıdır ve geri alınamaz. Tüm portföy verileriniz silinecektir.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        © 2026 Porty Finance. Tüm hakları saklıdır.
+      </div>
     </div>
-
-    <h2>Option 1 — Delete from the App</h2>
-    <ol>
-      <li>Open the Porty app and sign in.</li>
-      <li>Tap your profile icon in the top right corner.</li>
-      <li>Go to <strong>Settings</strong>.</li>
-      <li>Scroll down and tap <strong>Delete Account</strong>.</li>
-      <li>Confirm the deletion when prompted.</li>
-    </ol>
-
-    <h2>Option 2 — Request via Email</h2>
-    <p>If you are unable to access the app, send a deletion request to:</p>
-    <div class="highlight">
-      <strong>Email:</strong> <a href="mailto:support@portyapp.com">support@portyapp.com</a><br>
-      <strong>Subject:</strong> Account Deletion Request<br>
-      <strong>Include:</strong> The email address associated with your account
-    </div>
-    <p>We will process your request within <strong>7 business days</strong>.</p>
-
-    <h2>What Gets Deleted</h2>
-    <table>
-      <tr><th>Data</th><th>Action</th></tr>
-      <tr><td>Account credentials (email, password)</td><td>Permanently deleted</td></tr>
-      <tr><td>Portfolio data (assets, quantities, prices)</td><td>Permanently deleted</td></tr>
-      <tr><td>Profile photo</td><td>Permanently deleted</td></tr>
-      <tr><td>App preferences (theme, language, currency)</td><td>Permanently deleted</td></tr>
-    </table>
-
-    <div class="warning">
-      <strong>Note:</strong> Account deletion is permanent and cannot be undone. All your portfolio data will be lost.
-    </div>
-
-    <h2>Contact</h2>
-    <p>For any questions: <a href="mailto:support@portyapp.com">support@portyapp.com</a></p>
-
-    <hr style="margin-top:48px; border:none; border-top:1px solid #eee;">
-    <p style="color:#999; font-size:13px;">© 2026 Porty. All rights reserved. &nbsp;|&nbsp; <a href="privacy_policy.html">Privacy Policy</a></p>
-  </div>
-
-  <!-- TÜRKÇE -->
-  <div id="lang-tr" class="lang-section">
-    <h1>Hesabınızı Silin</h1>
-    <p class="meta">Uygulama: Porty - Portföy Takip &nbsp;|&nbsp; Geliştirici: Porty</p>
-
-    <div class="highlight">
-      Porty hesabınızı ve ilişkili tüm verilerinizi istediğiniz zaman silme talebinde bulunabilirsiniz. Aşağıdaki adımları takip edin.
-    </div>
-
-    <h2>Seçenek 1 — Uygulama Üzerinden Silme</h2>
-    <ol>
-      <li>Porty uygulamasını açın ve giriş yapın.</li>
-      <li>Sağ üst köşedeki profil ikonuna dokunun.</li>
-      <li><strong>Ayarlar</strong>'a gidin.</li>
-      <li>Aşağı kaydırın ve <strong>Hesabı Sil</strong>'e dokunun.</li>
-      <li>Açılan onay ekranında silme işlemini onaylayın.</li>
-    </ol>
-
-    <h2>Seçenek 2 — E-posta ile Talep</h2>
-    <p>Uygulamaya erişemiyorsanız silme talebinizi şu adrese gönderin:</p>
-    <div class="highlight">
-      <strong>E-posta:</strong> <a href="mailto:support@portyapp.com">support@portyapp.com</a><br>
-      <strong>Konu:</strong> Hesap Silme Talebi<br>
-      <strong>Ekleyin:</strong> Hesabınıza bağlı e-posta adresi
-    </div>
-    <p>Talebiniz <strong>7 iş günü</strong> içinde işleme alınacaktır.</p>
-
-    <h2>Silinen Veriler</h2>
-    <table>
-      <tr><th>Veri</th><th>İşlem</th></tr>
-      <tr><td>Hesap bilgileri (e-posta, şifre)</td><td>Kalıcı olarak silindi</td></tr>
-      <tr><td>Portföy verileri (varlıklar, miktarlar, fiyatlar)</td><td>Kalıcı olarak silindi</td></tr>
-      <tr><td>Profil fotoğrafı</td><td>Kalıcı olarak silindi</td></tr>
-      <tr><td>Uygulama tercihleri (tema, dil, para birimi)</td><td>Kalıcı olarak silindi</td></tr>
-    </table>
-
-    <div class="warning">
-      <strong>Not:</strong> Hesap silme işlemi kalıcıdır ve geri alınamaz. Tüm portföy verileriniz silinecektir.
-    </div>
-
-    <h2>İletişim</h2>
-    <p>Sorularınız için: <a href="mailto:support@portyapp.com">support@portyapp.com</a></p>
-
-    <hr style="margin-top:48px; border:none; border-top:1px solid #eee;">
-    <p style="color:#999; font-size:13px;">© 2026 Porty. Tüm hakları saklıdır. &nbsp;|&nbsp; <a href="privacy_policy.html">Gizlilik Politikası</a></p>
   </div>
 
   <script>
     function setLang(lang) {
       document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
       document.getElementById('lang-' + lang).classList.add('active');
-      document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
     }
   </script>
-
 </body>
 </html>
