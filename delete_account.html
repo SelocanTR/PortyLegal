@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delete Account — Porty Finance</title>
   <style>
-    body { 
-      background-color: #CAD3DD !important; 
-      font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    body {
+      background-color: #CAD3DD !important;
+      font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0; padding: 0; -webkit-font-smoothing: antialiased;
     }
     .wrapper { padding: 40px 20px; background-color: #CAD3DD !important; }
-    .container { 
-      max-width: 800px; margin: 0 auto; 
-      background-color: #FFFFFF !important; 
-      border-radius: 24px; overflow: hidden; 
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important; 
-      border: 1px solid #EBEBEB !important; 
+    .container {
+      max-width: 800px; margin: 0 auto;
+      background-color: #FFFFFF !important;
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+      border: 1px solid #EBEBEB !important;
     }
     .header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #F5F5F5; }
     .logo-img { width: 160px; height: auto; display: block; margin: 0 auto; }
     .content { padding: 40px; color: #2E3537; line-height: 1.7; }
-    
+
     h1 { color: #2E3537; font-size: 28px; margin-top: 0; }
     h2 { color: #2E3537; font-size: 20px; margin-top: 32px; }
     .meta { color: #8E9195; font-size: 14px; margin-bottom: 24px; }
@@ -29,10 +29,10 @@
     li { margin-bottom: 8px; }
     a { color: #286DC2; text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
-    
+
     .highlight { background: #F8F9FA; border-left: 4px solid #286DC2; padding: 16px; border-radius: 8px; margin: 24px 0; color: #4B5563; }
     .warning { background: #FFF7F7; border-left: 4px solid #E31F2F; padding: 16px; border-radius: 8px; margin: 24px 0; color: #B91C1C; }
-    
+
     table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
     th { background: #F9FAFB; text-align: left; padding: 12px; border: 1px solid #E5E7EB; color: #374151; }
     td { padding: 12px; border: 1px solid #E5E7EB; vertical-align: top; color: #4B5563; }
@@ -46,10 +46,10 @@
       background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     }
-    
+
     .lang-section { display: none; }
     .lang-section.active { display: block; }
-    
+
     .footer { padding: 32px 40px; text-align: center; font-size: 13px; color: #8E9195 !important; border-top: 1px solid #F5F5F5; }
   </style>
 </head>
@@ -59,12 +59,13 @@
       <div class="header">
         <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
       </div>
-      
+
       <div class="content">
         <div class="lang-switcher">
           <select class="lang-select" onchange="setLang(this.value)">
             <option value="en">English</option>
             <option value="tr">Türkçe</option>
+            <option value="de">Deutsch</option>
           </select>
         </div>
 
@@ -103,12 +104,68 @@
             <tbody>
               <tr><td>Account credentials (email, name)</td><td>Permanently deleted</td></tr>
               <tr><td>Portfolio data (assets, prices)</td><td>Permanently deleted</td></tr>
-              <tr><td>App preferences & settings</td><td>Permanently deleted</td></tr>
+              <tr><td>Goal data (targets, milestones)</td><td>Permanently deleted</td></tr>
+              <tr><td>App preferences &amp; settings</td><td>Permanently deleted</td></tr>
             </tbody>
           </table>
 
           <div class="warning">
-            <strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your portfolio data will be lost.
+            <strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your portfolio and goal data will be lost.
+          </div>
+
+          <h2>Subscription Notice</h2>
+          <div class="highlight">
+            Deleting your Porty account does <strong>not</strong> automatically cancel an active subscription. You must cancel your subscription separately through your <strong>Apple App Store</strong> or <strong>Google Play</strong> account settings to avoid future charges. After account deletion, RevenueCat may retain anonymized purchase records as required by applicable law.
+          </div>
+        </div>
+
+        <!-- DEUTSCH -->
+        <div id="lang-de" class="lang-section">
+          <h1>Konto löschen</h1>
+          <p class="meta">App: Porty Finance &nbsp;|&nbsp; Entwickler: Porty</p>
+
+          <div class="highlight">
+            Sie können jederzeit die Löschung Ihres Porty-Kontos und aller zugehörigen Daten beantragen. Folgen Sie den nachstehenden Schritten.
+          </div>
+
+          <h2>Option 1 — Direkt in der App (sofort)</h2>
+          <ol>
+            <li>Öffnen Sie die Porty-App und melden Sie sich an.</li>
+            <li>Tippen Sie oben rechts auf Ihr Profilbild.</li>
+            <li>Gehen Sie zu <strong>Einstellungen</strong>.</li>
+            <li>Scrollen Sie nach unten und tippen Sie auf <strong>Konto löschen</strong>.</li>
+            <li>Bestätigen Sie die Löschung in der Abfrage.</li>
+          </ol>
+
+          <h2>Option 2 — Per E-Mail</h2>
+          <p>Wenn Sie keinen Zugang zur App haben, senden Sie eine Löschanfrage an:</p>
+          <div class="highlight">
+            <strong>E-Mail:</strong> <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a><br>
+            <strong>Betreff:</strong> Kontolöschungsanfrage<br>
+            <strong>Bitte angeben:</strong> Die mit Ihrem Konto verknüpfte E-Mail-Adresse
+          </div>
+          <p>Wir bearbeiten Ihre Anfrage innerhalb von <strong>7 Werktagen</strong>.</p>
+
+          <h2>Was wird gelöscht</h2>
+          <table>
+            <thead>
+              <tr><th>Datentyp</th><th>Maßnahme</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Kontodaten (E-Mail, Name)</td><td>Dauerhaft gelöscht</td></tr>
+              <tr><td>Portfoliodaten (Assets, Preise)</td><td>Dauerhaft gelöscht</td></tr>
+              <tr><td>Zieldaten (Ziele, Meilensteine)</td><td>Dauerhaft gelöscht</td></tr>
+              <tr><td>App-Einstellungen &amp; Präferenzen</td><td>Dauerhaft gelöscht</td></tr>
+            </tbody>
+          </table>
+
+          <div class="warning">
+            <strong>Warnung:</strong> Die Kontolöschung ist dauerhaft und kann nicht rückgängig gemacht werden. Alle Ihre Portfolio- und Zieldaten gehen verloren.
+          </div>
+
+          <h2>Hinweis zum Abonnement</h2>
+          <div class="highlight">
+            Das Löschen Ihres Porty-Kontos kündigt ein aktives Abonnement <strong>nicht</strong> automatisch. Sie müssen Ihr Abonnement separat über Ihre <strong>Apple App Store</strong>- oder <strong>Google Play</strong>-Kontoeinstellungen kündigen, um zukünftige Abbuchungen zu vermeiden. Nach der Kontolöschung kann RevenueCat anonymisierte Kaufdaten aufbewahren, soweit dies gesetzlich erforderlich ist.
           </div>
         </div>
 
@@ -147,12 +204,18 @@
             <tbody>
               <tr><td>Hesap bilgileri (e-posta, ad-soyad)</td><td>Kalıcı olarak silinir</td></tr>
               <tr><td>Portföy verileri (varlıklar, fiyatlar)</td><td>Kalıcı olarak silinir</td></tr>
+              <tr><td>Hedef verileri (hedefler, kilometre taşları)</td><td>Kalıcı olarak silinir</td></tr>
               <tr><td>Uygulama tercihleri ve ayarlar</td><td>Kalıcı olarak silinir</td></tr>
             </tbody>
           </table>
 
           <div class="warning">
-            <strong>Uyarı:</strong> Hesap silme işlemi kalıcıdır ve geri alınamaz. Tüm portföy verileriniz silinecektir.
+            <strong>Uyarı:</strong> Hesap silme işlemi kalıcıdır ve geri alınamaz. Tüm portföy ve hedef verileriniz silinecektir.
+          </div>
+
+          <h2>Abonelik Uyarısı</h2>
+          <div class="highlight">
+            Porty hesabınızı silmek, aktif aboneliğinizi <strong>otomatik olarak iptal etmez</strong>. Gelecekteki ücretlendirmelerden kaçınmak için aboneliğinizi ayrıca <strong>Apple App Store</strong> veya <strong>Google Play</strong> hesap ayarlarınızdan iptal etmeniz gerekmektedir. Hesap silindikten sonra RevenueCat, geçerli mevzuatın gerektirdiği ölçüde anonim satın alma kayıtlarını saklayabilir.
           </div>
         </div>
       </div>
