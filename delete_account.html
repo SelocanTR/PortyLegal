@@ -18,8 +18,9 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
       border: 1px solid #EBEBEB !important;
     }
-    .header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #F5F5F5; }
-    .logo-img { width: 160px; height: auto; display: block; margin: 0 auto; }
+    .header { padding: 24px 40px 20px; border-bottom: 1px solid #F5F5F5; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo-img { width: 160px; height: auto; display: block; margin: 0; }
     .content { padding: 40px; color: #2E3537; line-height: 1.7; }
 
     h1 { color: #2E3537; font-size: 28px; margin-top: 0; }
@@ -37,7 +38,7 @@
     th { background: #F9FAFB; text-align: left; padding: 12px; border: 1px solid #E5E7EB; color: #374151; }
     td { padding: 12px; border: 1px solid #E5E7EB; vertical-align: top; color: #4B5563; }
 
-    .lang-switcher { margin-bottom: 24px; text-align: right; }
+    .lang-switcher { margin-bottom: 0; text-align: right; display: flex; align-items: center; }
     .lang-select {
       padding: 10px 20px; border: 1px solid #E5E7EB; border-radius: 12px;
       background-color: #fff; color: #374151; font-size: 14px; font-weight: 600;
@@ -56,20 +57,20 @@
 <body>
   <div class="wrapper">
     <div class="container">
-      <div class="header">
-        <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
-      </div>
-
-      <div class="content">
-        <div class="lang-switcher">
-          <select class="lang-select" onchange="setLang(this.value)">
-            <option value="en">English</option>
-            <option value="tr">Türkçe</option>
-            <option value="de">Deutsch</option>
-          </select>
+            <div class="header">
+        <div class="header-inner">
+          <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+          <div class="lang-switcher">
+            <select class="lang-select" onchange="setLang(this.value)">
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
         </div>
-
-        <!-- ENGLISH -->
+      </div>
+      
+      <div class="content">
         <div id="lang-en" class="lang-section active">
           <h1>Delete Your Account</h1>
           <p class="meta">App: Porty Finance &nbsp;|&nbsp; Developer: Porty</p>
@@ -105,6 +106,7 @@
               <tr><td>Account credentials (email, name)</td><td>Permanently deleted</td></tr>
               <tr><td>Portfolio data (assets, prices)</td><td>Permanently deleted</td></tr>
               <tr><td>Goal data (targets, milestones)</td><td>Permanently deleted</td></tr>
+              <tr><td>AI insight data (generated analyses and related outputs)</td><td>Permanently deleted</td></tr>
               <tr><td>App preferences &amp; settings</td><td>Permanently deleted</td></tr>
             </tbody>
           </table>
@@ -119,7 +121,6 @@
           </div>
         </div>
 
-        <!-- DEUTSCH -->
         <div id="lang-de" class="lang-section">
           <h1>Konto löschen</h1>
           <p class="meta">App: Porty Finance &nbsp;|&nbsp; Entwickler: Porty</p>
@@ -130,7 +131,7 @@
 
           <h2>Option 1 — Direkt in der App (sofort)</h2>
           <ol>
-            <li>Öffnen Sie die Porty-App und melden Sie sich an.</li>
+            <li>Ã–ffnen Sie die Porty-App und melden Sie sich an.</li>
             <li>Tippen Sie oben rechts auf Ihr Profilbild.</li>
             <li>Gehen Sie zu <strong>Einstellungen</strong>.</li>
             <li>Scrollen Sie nach unten und tippen Sie auf <strong>Konto löschen</strong>.</li>
@@ -155,6 +156,7 @@
               <tr><td>Kontodaten (E-Mail, Name)</td><td>Dauerhaft gelöscht</td></tr>
               <tr><td>Portfoliodaten (Assets, Preise)</td><td>Dauerhaft gelöscht</td></tr>
               <tr><td>Zieldaten (Ziele, Meilensteine)</td><td>Dauerhaft gelöscht</td></tr>
+              <tr><td>KI-Analysedaten (erzeugte Analysen und zugehörige Ausgaben)</td><td>Dauerhaft gelöscht</td></tr>
               <tr><td>App-Einstellungen &amp; Präferenzen</td><td>Dauerhaft gelöscht</td></tr>
             </tbody>
           </table>
@@ -169,7 +171,6 @@
           </div>
         </div>
 
-        <!-- TÜRKÇE -->
         <div id="lang-tr" class="lang-section">
           <h1>Hesabınızı Silin</h1>
           <p class="meta">Uygulama: Porty Finance &nbsp;|&nbsp; Geliştirici: Porty</p>
@@ -178,7 +179,7 @@
             Porty hesabınızı ve ilişkili tüm verilerinizi istediğiniz zaman silme talebinde bulunabilirsiniz. Aşağıdaki adımları takip edin.
           </div>
 
-          <h2>Seçenek 1 — Uygulama Üzerinden Silme (Anında)</h2>
+          <h2>Seçenek 1 — Uygulama Ãœzerinden Silme (Anında)</h2>
           <ol>
             <li>Porty uygulamasını açın ve giriş yapın.</li>
             <li>Sağ üst köşedeki profil ikonuna dokunun.</li>
@@ -205,6 +206,7 @@
               <tr><td>Hesap bilgileri (e-posta, ad-soyad)</td><td>Kalıcı olarak silinir</td></tr>
               <tr><td>Portföy verileri (varlıklar, fiyatlar)</td><td>Kalıcı olarak silinir</td></tr>
               <tr><td>Hedef verileri (hedefler, kilometre taşları)</td><td>Kalıcı olarak silinir</td></tr>
+              <tr><td>AI analiz verileri (üretilen analizler ve ilişkili çıktılar)</td><td>Kalıcı olarak silinir</td></tr>
               <tr><td>Uygulama tercihleri ve ayarlar</td><td>Kalıcı olarak silinir</td></tr>
             </tbody>
           </table>
@@ -234,3 +236,6 @@
   </script>
 </body>
 </html>
+
+
+

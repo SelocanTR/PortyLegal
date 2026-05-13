@@ -18,8 +18,9 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important; 
       border: 1px solid #EBEBEB !important; 
     }
-    .header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #F5F5F5; }
-    .logo-img { width: 160px; height: auto; display: block; margin: 0 auto; }
+    .header { padding: 24px 40px 20px; border-bottom: 1px solid #F5F5F5; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo-img { width: 160px; height: auto; display: block; margin: 0; }
     .content { padding: 40px; color: #2E3537; line-height: 1.7; }
     
     h1 { color: #2E3537; font-size: 28px; margin-top: 0; }
@@ -32,7 +33,7 @@
     
     .highlight { background: #F8F9FA; border-left: 4px solid #286DC2; padding: 16px; border-radius: 8px; margin: 24px 0; color: #4B5563; }
     
-    .lang-switcher { margin-bottom: 24px; text-align: right; }
+    .lang-switcher { margin-bottom: 0; text-align: right; display: flex; align-items: center; }
     .lang-select {
       padding: 10px 20px; border: 1px solid #E5E7EB; border-radius: 12px;
       background-color: #fff; color: #374151; font-size: 14px; font-weight: 600;
@@ -52,22 +53,22 @@
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+        <div class="header-inner">
+          <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+          <div class="lang-switcher">
+            <select class="lang-select" onchange="setLang(this.value)">
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+        </div>
       </div>
       
       <div class="content">
-        <div class="lang-switcher">
-          <select class="lang-select" onchange="setLang(this.value)">
-            <option value="en">English</option>
-            <option value="tr">Türkçe</option>
-            <option value="de">Deutsch</option>
-          </select>
-        </div>
-
-        <!-- ENGLISH -->
         <div id="lang-en" class="lang-section active">
           <h1>Terms of Service</h1>
-          <p class="meta">Last updated: April 18, 2026 &nbsp;|&nbsp; App: Porty</p>
+          <p class="meta">Last updated: May 13, 2026 &nbsp;|&nbsp; App: Porty</p>
 
           <div class="highlight">
             By using Porty, you agree to these terms. Please read them carefully to understand your rights and responsibilities. Porty is intended for users aged 13 and older.
@@ -80,7 +81,7 @@
           <h2>2. Use of the App</h2>
           <ul>
             <li><strong>Account:</strong> You are responsible for maintaining the confidentiality of your account credentials. You are responsible for all activity that occurs under your account.</li>
-            <li><strong>Content:</strong> Porty is a portfolio tracking tool. The data you enter is for your personal use and informational purposes only.</li>
+            <li><strong>Content:</strong> Porty is a portfolio tracking and analysis tool. The data you enter is for your personal use and informational purposes only.</li>
             <li><strong>Eligibility:</strong> You must be at least 13 years old to use Porty.</li>
             <li><strong>Restrictions:</strong> You may not reverse-engineer, decompile, or extract the source code of the app or use the app for any unlawful purpose.</li>
           </ul>
@@ -89,8 +90,8 @@
           <p>The Porty name, logo, design, and all original content within the app are the intellectual property of Selçuk Sevindik (Rubeeks) and are protected by applicable copyright and trademark laws.</p>
 
           <h2>4. Financial Disclaimer</h2>
-          <p>Porty provides financial data and portfolio tracking tools <strong>"as is"</strong>, for informational purposes only. We are not licensed financial advisors, brokers, or investment professionals. Nothing in this app constitutes financial, investment, legal, or tax advice.</p>
-          <p>All investment decisions are made solely at your own risk and responsibility. We do not guarantee the accuracy, completeness, or timeliness of market data provided by third-party APIs.</p>
+          <p>Porty provides financial data, portfolio tracking tools, and AI-generated insight content <strong>"as is"</strong>, for informational and educational purposes only. We are not licensed financial advisors, brokers, or investment professionals. Nothing in this app constitutes financial, investment, legal, or tax advice.</p>
+          <p>All investment decisions are made solely at your own risk and responsibility. We do not guarantee the accuracy, completeness, or timeliness of market data provided by third-party APIs. AI outputs and cited third-party analyst references are informational only and are not recommendations.</p>
 
           <h2>5. Service Availability and Liability</h2>
           <p>We strive to keep Porty available at all times, but we do not guarantee uninterrupted or error-free service.</p>
@@ -99,8 +100,8 @@
           <h2>6. Pricing and Subscriptions</h2>
           <p>Porty offers both free and premium paid tiers.</p>
           <p><strong>Free tier:</strong> Core portfolio tracking features are available at no charge.</p>
-          <p><strong>Free Trial:</strong> New users may be eligible for a free trial of Porty Premium. The trial period and eligibility are determined at the time of sign-up. The trial automatically converts to a paid subscription unless cancelled before the trial ends.</p>
-          <p><strong>Porty Premium:</strong> Advanced features — including Goal Analytics &amp; Milestones, Financial Freedom Day Prediction, Passive Income Tracking, Portfolio Risk Analysis, Market Growth &amp; Return Analysis, Scenario Simulator, BigMac/Gold/Global Indices, Black Theme, and all future premium features — are available via a paid subscription.</p>
+          <p><strong>Free Trial:</strong> Eligible new users may receive a <strong>14-day</strong> free trial of Porty Premium. Eligibility is determined at sign-up. Unless cancelled before the trial ends, the subscription renews as a paid subscription through the selected store account.</p>
+          <p><strong>Porty Premium:</strong> Advanced features — including AI Insights (portfolio risk, rebalance, thesis review, behavioral analysis, and analyst-based alerts), Goal Analytics &amp; Milestones, Financial Freedom Day Prediction, Passive Income Tracking, Portfolio Risk Analysis, Market Growth &amp; Return Analysis, Scenario Simulator, BigMac/Gold/Global Indices, premium themes, and all future premium features — are available via a paid subscription.</p>
           <p>Subscriptions are offered on a <strong>monthly</strong> or <strong>annual</strong> basis. Pricing is displayed in the app at the time of purchase and may vary by region and platform.</p>
           <ul>
             <li>Subscriptions automatically renew unless cancelled at least <strong>24 hours</strong> before the end of the current billing period.</li>
@@ -123,10 +124,9 @@
           <p>If you have any questions about these Terms, please contact us at <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
         </div>
 
-        <!-- DEUTSCH -->
         <div id="lang-de" class="lang-section">
           <h1>Nutzungsbedingungen</h1>
-          <p class="meta">Zuletzt aktualisiert: 18. April 2026 &nbsp;|&nbsp; App: Porty</p>
+          <p class="meta">Zuletzt aktualisiert: 13. Mai 2026 &nbsp;|&nbsp; App: Porty</p>
 
           <div class="highlight">
             Durch die Nutzung von Porty erklären Sie sich mit diesen Bedingungen einverstanden. Porty richtet sich an Nutzer ab 13 Jahren.
@@ -138,7 +138,7 @@
           <h2>2. Nutzung der App</h2>
           <ul>
             <li><strong>Konto:</strong> Sie sind für die Geheimhaltung Ihrer Zugangsdaten verantwortlich.</li>
-            <li><strong>Inhalt:</strong> Porty ist ein Portfolio-Tracking-Tool. Die von Ihnen eingegebenen Daten dienen ausschließlich Ihrer persönlichen Nutzung.</li>
+            <li><strong>Inhalt:</strong> Porty ist ein Portfolio-Tracking- und Analyse-Tool. Die von Ihnen eingegebenen Daten dienen ausschließlich Ihrer persönlichen Nutzung.</li>
             <li><strong>Mindestalter:</strong> Sie müssen mindestens 13 Jahre alt sein, um Porty zu nutzen.</li>
             <li><strong>Einschränkungen:</strong> Sie dürfen den Quellcode der App nicht dekompilieren oder extrahieren.</li>
           </ul>
@@ -147,8 +147,8 @@
           <p>Der Name Porty, das Logo, das Design und alle originalen Inhalte der App sind geistiges Eigentum von Selçuk Sevindik (Rubeeks).</p>
 
           <h2>4. Finanzrechtlicher Haftungsausschluss</h2>
-          <p>Porty stellt Finanzdaten und Portfolio-Tracking-Tools <strong>"wie besehen"</strong> ausschließlich zu Informationszwecken zur Verfügung.</p>
-          <p>Alle Anlageentscheidungen werden ausschließlich auf Ihr eigenes Risiko und Ihre eigene Verantwortung getroffen.</p>
+          <p>Porty stellt Finanzdaten, Portfolio-Tracking-Tools und KI-generierte Einblicke <strong>"wie besehen"</strong> ausschließlich zu Informations- und Bildungszwecken zur Verfügung.</p>
+          <p>Alle Anlageentscheidungen werden ausschließlich auf Ihr eigenes Risiko und Ihre eigene Verantwortung getroffen. KI-Ausgaben und zitierte Analystenreferenzen Dritter sind rein informativ und keine Empfehlungen.</p>
 
           <h2>5. Dienstverfügbarkeit und Haftung</h2>
           <p>Wir bemühen uns um eine kontinuierliche Verfügbarkeit von Porty, können dies jedoch nicht garantieren.</p>
@@ -156,8 +156,8 @@
           <h2>6. Preise und Abonnements</h2>
           <p>Porty bietet sowohl kostenlose als auch kostenpflichtige Premium-Funktionen an.</p>
           <p><strong>Kostenlose Version:</strong> Die Kernfunktionen zum Portfolio-Tracking sind kostenlos verfügbar.</p>
-          <p><strong>Kostenlose Testversion:</strong> Neue Nutzer können eine kostenlose Testversion von Porty Premium erhalten. Dauer und Berechtigung werden bei der Registrierung festgelegt. Die Testversion wird automatisch in ein kostenpflichtiges Abonnement umgewandelt, sofern sie nicht vorher gekündigt wird.</p>
-          <p><strong>Porty Premium:</strong> Erweiterte Funktionen — einschließlich Zielanalysen &amp; Meilensteine, Freiheitstag-Vorhersage, Passiveinkommen-Tracking, Portfolio-Risikoanalyse, Marktrendanalyse &amp; Leistungsanalyse, Szenario-Simulator, BigMac-/Gold-/Weltindizes, Schwarzes Theme und alle zukünftigen Premium-Funktionen — sind über ein kostenpflichtiges Abonnement erhältlich.</p>
+          <p><strong>Kostenlose Testversion:</strong> Berechtigte neue Nutzer können eine <strong>14-tägige</strong> kostenlose Testversion von Porty Premium erhalten. Die Berechtigung wird bei der Registrierung festgelegt. Die Testversion wird automatisch in ein kostenpflichtiges Abonnement umgewandelt, sofern sie nicht vorher gekündigt wird.</p>
+          <p><strong>Porty Premium:</strong> Erweiterte Funktionen — einschließlich AI Insights (Portfolio-Risiko, Rebalancing, Thesenprüfung, Verhaltensanalyse und analystenbasierte Warnungen), Zielanalysen &amp; Meilensteine, Freiheitstag-Vorhersage, Passiveinkommen-Tracking, Portfolio-Risikoanalyse, Marktrendanalyse &amp; Leistungsanalyse, Szenario-Simulator, BigMac-/Gold-/Weltindizes, Premium-Themes und alle zukünftigen Premium-Funktionen — sind über ein kostenpflichtiges Abonnement erhältlich.</p>
           <p>Abonnements sind monatlich oder jährlich verfügbar. Die Preise werden in der App zum Zeitpunkt des Kaufs angezeigt.</p>
           <ul>
             <li>Abonnements verlängern sich automatisch, sofern sie nicht mindestens <strong>24 Stunden</strong> vor Ende der aktuellen Laufzeit gekündigt werden.</li>
@@ -170,7 +170,7 @@
           <h2>7. Kündigung</h2>
           <p>Wir können Ihren Zugang sofort sperren, wenn Sie gegen diese Bedingungen verstoßen.</p>
 
-          <h2>8. Änderungen der Bedingungen</h2>
+          <h2>8. Ã„nderungen der Bedingungen</h2>
           <p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu aktualisieren.</p>
 
           <h2>9. Anwendbares Recht</h2>
@@ -180,10 +180,9 @@
           <p>Bei Fragen zu diesen Bedingungen: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
         </div>
 
-        <!-- TÜRKÇE -->
         <div id="lang-tr" class="lang-section">
           <h1>Kullanım Koşulları</h1>
-          <p class="meta">Son güncelleme: 18 Nisan 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
+          <p class="meta">Son güncelleme: 13 Mayıs 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
 
           <div class="highlight">
             Porty'yi kullanarak bu koşulları kabul etmiş sayılırsınız. Lütfen haklarınızı ve sorumluluklarınızı anlamak için dikkatlice okuyunuz. Porty, 13 yaş ve üzeri kullanıcılara yöneliktir.
@@ -195,7 +194,7 @@
           <h2>2. Uygulamanın Kullanımı</h2>
           <ul>
             <li><strong>Hesap:</strong> Hesap bilgilerinizin gizliliğini korumaktan ve hesabınız altındaki tüm faaliyetlerden siz sorumlusunuz.</li>
-            <li><strong>İçerik:</strong> Porty bir portföy takip aracıdır. Girdiğiniz veriler yalnızca kişisel kullanımınız ve bilgilendirme amaçlıdır.</li>
+            <li><strong>İçerik:</strong> Porty bir portföy takip ve analiz aracıdır. Girdiğiniz veriler yalnızca kişisel kullanımınız ve bilgilendirme amaçlıdır.</li>
             <li><strong>Yaş sınırı:</strong> Porty'yi kullanmak için en az 13 yaşında olmanız gerekmektedir.</li>
             <li><strong>Kısıtlamalar:</strong> Uygulamanın kaynak kodunu çıkarmaya veya tersine mühendislik uygulamaya çalışmamalısınız.</li>
           </ul>
@@ -204,22 +203,22 @@
           <p>Porty adı, logosu, tasarımı ve uygulama içindeki tüm özgün içerik, Selçuk Sevindik (Rubeeks) adına tescilli fikri mülkiyettir.</p>
 
           <h2>4. Finansal Feragatname</h2>
-          <p>Porty, finansal verileri ve portföy takip araçlarını yalnızca bilgilendirme amacıyla <strong>"olduğu gibi"</strong> sunar. Lisanslı bir finansal danışman, broker veya yatırım uzmanı değiliz.</p>
-          <p>Tüm yatırım kararları tamamen sizin risk ve sorumluluğunuzdadır. Üçüncü taraf API'lerden sağlanan piyasa verilerinin doğruluğunu garanti etmiyoruz.</p>
+          <p>Porty, finansal verileri, portföy takip araçlarını ve AI tarafından üretilen içgörüleri yalnızca bilgilendirme ve eğitim amacıyla <strong>"olduğu gibi"</strong> sunar. Lisanslı bir finansal danışman, broker veya yatırım uzmanı değiliz.</p>
+          <p>Tüm yatırım kararları tamamen sizin risk ve sorumluluğunuzdadır. Ãœçüncü taraf API'lerden sağlanan piyasa verilerinin doğruluğunu garanti etmiyoruz. AI çıktıları ve üçüncü taraf analist referansları tavsiye niteliğinde değildir.</p>
 
           <h2>5. Hizmet Sürekliliği ve Sorumluluk Sınırı</h2>
           <p>Porty'nin kesintisiz çalışması için çaba göstermekteyiz; ancak kesintisiz veya hatasız hizmet garantisi vermemekteyiz.</p>
 
-          <h2>6. Ücretlendirme ve Abonelik</h2>
+          <h2>6. Ãœcretlendirme ve Abonelik</h2>
           <p>Porty hem ücretsiz hem de ücretli premium özellikler sunmaktadır.</p>
-          <p><strong>Ücretsiz plan:</strong> Temel portföy takip özellikleri ücretsiz olarak kullanılabilir.</p>
-          <p><strong>Ücretsiz Deneme:</strong> Yeni kullanıcılar Porty Premium için ücretsiz deneme süresinden yararlanabilir. Deneme süresi ve uygunluk koşulları kayıt sırasında belirlenir. Deneme süresi sona ermeden iptal edilmezse ücretli aboneliğe dönüşür.</p>
-          <p><strong>Porty Premium:</strong> Gelişmiş özellikler — Hedef Analizi ve Kilometre Taşları, Finansal Özgürlük Günü Tahmini, Pasif Gelir Takibi, Portföy Risk Analizi, Piyasa Getirisi ve Performans Analizi, Senaryo Simülatörü, BigMac/Altın/Küresel Endeksler, Siyah Tema ve gelecekteki tüm premium özellikler — ücretli abonelik aracılığıyla sunulmaktadır.</p>
+          <p><strong>Ãœcretsiz plan:</strong> Temel portföy takip özellikleri ücretsiz olarak kullanılabilir.</p>
+          <p><strong>Ãœcretsiz Deneme:</strong> Uygun yeni kullanıcılar Porty Premium için <strong>14 günlük</strong> ücretsiz deneme alabilir. Uygunluk kayıt sırasında belirlenir. Deneme süresi sona ermeden iptal edilmezse ücretli aboneliğe dönüşür.</p>
+          <p><strong>Porty Premium:</strong> Gelişmiş özellikler — AI Insights (portföy risk, rebalans, tez incelemesi, davranışsal analiz ve analist bazlı uyarılar), Hedef Analizi ve Kilometre Taşları, Finansal Ã–zgürlük Günü Tahmini, Pasif Gelir Takibi, Portföy Risk Analizi, Piyasa Getirisi ve Performans Analizi, Senaryo Simülatörü, BigMac/Altın/Küresel Endeksler, premium temalar ve gelecekteki tüm premium özellikler — ücretli abonelik aracılığıyla sunulmaktadır.</p>
           <p>Abonelikler <strong>aylık</strong> veya <strong>yıllık</strong> olarak sunulmaktadır. Fiyatlar, satın alma anında uygulama içinde gösterilir ve bölgeye göre farklılık gösterebilir.</p>
           <ul>
             <li>Mevcut dönemin bitiminden en az <strong>24 saat</strong> önce iptal edilmezse abonelikler otomatik olarak yenilenir.</li>
             <li>Abonelik yönetimi ve iptali <strong>Apple App Store</strong> veya <strong>Google Play</strong> hesap ayarlarınız üzerinden yapılmaktadır.</li>
-            <li>Ödemeler, satın alma onayı üzerine App Store veya Google Play hesabınıza yansıtılır.</li>
+            <li>Ã–demeler, satın alma onayı üzerine App Store veya Google Play hesabınıza yansıtılır.</li>
             <li>Kısmen kullanılmış abonelik dönemleri için geçerli mevzuatın veya platform politikalarının gerektirdiği durumlar dışında iade yapılmamaktadır.</li>
             <li>Uygulama içi satın almalar Apple Inc. veya Google LLC tarafından işlenmektedir. Abonelik yönetimi <strong>RevenueCat</strong> aracılığıyla sağlanmaktadır.</li>
           </ul>
@@ -252,3 +251,6 @@
   </script>
 </body>
 </html>
+
+
+

@@ -18,8 +18,9 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important; 
       border: 1px solid #EBEBEB !important; 
     }
-    .header { padding: 40px 0 20px; text-align: center; border-bottom: 1px solid #F5F5F5; }
-    .logo-img { width: 160px; height: auto; display: block; margin: 0 auto; }
+    .header { padding: 24px 40px 20px; border-bottom: 1px solid #F5F5F5; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo-img { width: 160px; height: auto; display: block; margin: 0; }
     .content { padding: 40px; color: #2E3537; line-height: 1.7; }
     
     h1 { color: #2E3537; font-size: 28px; margin-top: 0; }
@@ -36,7 +37,7 @@
     th { background: #F9FAFB; text-align: left; padding: 12px; border: 1px solid #E5E7EB; color: #374151; }
     td { padding: 12px; border: 1px solid #E5E7EB; vertical-align: top; color: #4B5563; }
 
-    .lang-switcher { margin-bottom: 24px; text-align: right; }
+    .lang-switcher { margin-bottom: 0; text-align: right; display: flex; align-items: center; }
     .lang-select {
       padding: 10px 20px; border: 1px solid #E5E7EB; border-radius: 12px;
       background-color: #fff; color: #374151; font-size: 14px; font-weight: 600;
@@ -55,23 +56,23 @@
 <body>
   <div class="wrapper">
     <div class="container">
-      <div class="header">
-        <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+            <div class="header">
+        <div class="header-inner">
+          <img src="https://mgjsbfjdczybekwlktpb.supabase.co/storage/v1/object/public/avatars/LightModeLogo.png" class="logo-img" alt="Porty Logo">
+          <div class="lang-switcher">
+            <select class="lang-select" onchange="setLang(this.value)">
+              <option value="en">English</option>
+              <option value="tr">Türkçe</option>
+              <option value="de">Deutsch</option>
+            </select>
+          </div>
+        </div>
       </div>
       
       <div class="content">
-        <div class="lang-switcher">
-          <select class="lang-select" onchange="setLang(this.value)">
-            <option value="en">English</option>
-            <option value="tr">Türkçe</option>
-            <option value="de">Deutsch</option>
-          </select>
-        </div>
-
-        <!-- ENGLISH -->
         <div id="lang-en" class="lang-section active">
           <h1>Privacy Policy</h1>
-          <p class="meta">Last updated: April 18, 2026 &nbsp;|&nbsp; App: Porty</p>
+          <p class="meta">Last updated: May 13, 2026 &nbsp;|&nbsp; App: Porty</p>
 
           <div class="highlight">
             Porty respects your privacy. This policy explains what data we collect, how we use it, and how we protect it. Porty is intended for users aged 13 and older. We do not knowingly collect data from children under 13.
@@ -85,6 +86,7 @@
             <li><strong>App preferences:</strong> Language, theme, display currency, and settings (stored locally and synced to your account).</li>
             <li><strong>Profile photo:</strong> If you choose to set a profile picture, the image is stored securely and linked only to your account.</li>
             <li><strong>Goal data:</strong> Financial goals you set (target amounts, asset types, time horizons) and milestone progress. This data belongs solely to you.</li>
+            <li><strong>AI insight data:</strong> AI-generated analyses, prompts and outputs derived from your portfolio, goal and transaction data, along with cited public analyst/source metadata used to generate those insights.</li>
             <li><strong>Usage data:</strong> In-app activity such as screens visited and actions taken, collected to improve the app experience. This data is linked to your account.</li>
             <li><strong>Subscription data:</strong> Your subscription status and entitlement records, managed through RevenueCat. This includes anonymized transaction identifiers — no payment card data is stored by Porty.</li>
             <li><strong>Technical data:</strong> Device type, operating system version, app version, and session tokens for authentication purposes.</li>
@@ -99,6 +101,7 @@
               <tr><td>Account creation and authentication</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
               <tr><td>Portfolio data sync across devices</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
               <tr><td>Saving app preferences</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
+              <tr><td>Generating requested AI insights and maintaining related quotas/logs</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
               <tr><td>Technical error detection and improvement</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
               <tr><td>Subscription management and purchase processing</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
               <tr><td>Compliance with legal obligations</td><td>Legal obligation (Art. 6(1)(c))</td></tr>
@@ -110,17 +113,19 @@
           <ul>
             <li>Creating and authenticating your account</li>
             <li>Syncing your portfolio and goal data across devices</li>
+            <li>Generating personalized AI insights and behavioral observations you request</li>
             <li>Remembering your app preferences</li>
             <li>Processing and verifying your subscription status</li>
             <li>Technical operations necessary for the app to function</li>
           </ul>
-          <p>We do <strong>not</strong> share, sell, or use your data for advertising or profiling purposes.</p>
+          <p>We do <strong>not</strong> share, sell, or use your data for advertising or third-party profiling purposes. Limited in-app analysis of portfolio, goal, and transaction data may be performed to generate educational AI insights and behavioral observations.</p>
 
           <h2>4. Third-Party Services</h2>
           <p>Porty uses the following third-party services to operate:</p>
           <ul>
             <li><strong>Supabase Inc. (USA):</strong> Cloud database and authentication infrastructure. Data is transmitted over TLS and stored with AES-256 encryption. Supabase acts as a data processor under our instructions.</li>
             <li><strong>Financial data APIs:</strong> Market prices and asset information are fetched from third-party financial data providers. Only ticker symbols are sent to these APIs — no personal account data is shared.</li>
+            <li><strong>Google LLC / Gemini API (USA):</strong> AI analysis generation. Portfolio, goal, transaction and asset-context data necessary for the AI insights you request may be sent to this service. Grounded source links and public analyst references may also be retrieved.</li>
             <li><strong>Apple / Google Sign-In:</strong> If used, we receive only your user ID, name, and email address. No other account data is accessed.</li>
             <li><strong>RevenueCat Inc. (USA):</strong> Subscription management and in-app purchase processing. RevenueCat receives your app user ID and subscription/entitlement status. No payment card data is passed through RevenueCat — payments are handled directly by Apple or Google.</li>
           </ul>
@@ -158,10 +163,9 @@
           <p>For privacy-related questions: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
         </div>
 
-        <!-- DEUTSCH -->
         <div id="lang-de" class="lang-section">
           <h1>Datenschutzerklärung</h1>
-          <p class="meta">Zuletzt aktualisiert: 18. April 2026 &nbsp;|&nbsp; App: Porty</p>
+          <p class="meta">Zuletzt aktualisiert: 13. Mai 2026 &nbsp;|&nbsp; App: Porty</p>
 
           <div class="highlight">
             Porty respektiert Ihre Privatsphäre. Diese Richtlinie erklärt, welche Daten wir erheben, wie wir sie verwenden und wie wir sie schützen. Porty richtet sich an Nutzer ab 13 Jahren.
@@ -175,6 +179,7 @@
             <li><strong>App-Einstellungen:</strong> Sprache, Thema, Anzeigewährung und Einstellungen (lokal gespeichert und mit Ihrem Konto synchronisiert).</li>
             <li><strong>Profilfoto:</strong> Wenn Sie ein Profilbild festlegen, wird das Bild sicher gespeichert und ausschließlich mit Ihrem Konto verknüpft.</li>
             <li><strong>Zieldaten:</strong> Von Ihnen festgelegte Finanzziele (Zielbeträge, Asset-Typen, Zeithorizonte) und Meilensteinfortschritte. Diese Daten gehören ausschließlich Ihnen.</li>
+            <li><strong>KI-Analysedaten:</strong> KI-generierte Analysen, Eingaben und Ausgaben auf Basis Ihrer Portfolio-, Ziel- und Transaktionsdaten sowie öffentlich zitierte Analysten-/Quellenmetadaten.</li>
             <li><strong>Nutzungsdaten:</strong> In-App-Aktivitäten wie besuchte Seiten und durchgeführte Aktionen zur Verbesserung der App. Diese Daten sind mit Ihrem Konto verknüpft.</li>
             <li><strong>Abonnementdaten:</strong> Ihr Abonnementstatus und Berechtigungsdaten, verwaltet durch RevenueCat. Dies umfasst anonymisierte Transaktionskennungen — keine Zahlungskartendaten werden von Porty gespeichert.</li>
             <li><strong>Technische Daten:</strong> Gerätetyp, Betriebssystemversion, App-Version und Sitzungstoken für Authentifizierungszwecke.</li>
@@ -189,6 +194,7 @@
               <tr><td>Kontoerstellung und Authentifizierung</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
               <tr><td>Synchronisierung von Portfolio-Daten</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
               <tr><td>Speichern von App-Einstellungen</td><td>Berechtigte Interessen (Art. 6(1)(f))</td></tr>
+              <tr><td>Erstellung angeforderter KI-Analysen und zugehöriger Quoten/Logs</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
               <tr><td>Technische Fehlerkennung und Verbesserung</td><td>Berechtigte Interessen (Art. 6(1)(f))</td></tr>
               <tr><td>Abonnementverwaltung und Kaufabwicklung</td><td>Vertragserfüllung (Art. 6(1)(b))</td></tr>
               <tr><td>Einhaltung gesetzlicher Pflichten</td><td>Rechtliche Verpflichtung (Art. 6(1)(c))</td></tr>
@@ -200,16 +206,18 @@
           <ul>
             <li>Erstellung und Authentifizierung Ihres Kontos</li>
             <li>Synchronisierung Ihrer Portfolio- und Zieldaten über Geräte hinweg</li>
+            <li>Erstellung angeforderter personalisierter KI-Einblicke und Verhaltensbeobachtungen</li>
             <li>Speichern Ihrer App-Einstellungen</li>
-            <li>Verarbeitung und Überprüfung Ihres Abonnementstatus</li>
+            <li>Verarbeitung und Ãœberprüfung Ihres Abonnementstatus</li>
             <li>Technische Vorgänge, die für das Funktionieren der App erforderlich sind</li>
           </ul>
-          <p>Wir teilen, verkaufen oder nutzen Ihre Daten <strong>nicht</strong> für Werbe- oder Profilierungszwecke.</p>
+          <p>Wir teilen, verkaufen oder nutzen Ihre Daten <strong>nicht</strong> für Werbung oder Drittanbieter-Profilierungszwecke. Eine begrenzte In-App-Analyse von Portfolio-, Ziel- und Transaktionsdaten kann erfolgen, um edukative KI-Einblicke und Verhaltensbeobachtungen zu erzeugen.</p>
 
           <h2>4. Drittanbieter-Dienste</h2>
           <ul>
             <li><strong>Supabase Inc. (USA):</strong> Cloud-Datenbank und Authentifizierungsinfrastruktur. Daten werden über TLS übertragen und mit AES-256 verschlüsselt gespeichert.</li>
             <li><strong>Finanzmarkt-APIs:</strong> Kursdaten werden von Drittanbeitern abgerufen. Es werden ausschließlich Tickersymbole übermittelt — keine personenbezogenen Daten.</li>
+            <li><strong>Google LLC / Gemini API (USA):</strong> Erstellung von KI-Analysen. Für angeforderte KI-Einblicke können erforderliche Portfolio-, Ziel-, Transaktions- und Asset-Kontextdaten an diesen Dienst übermittelt werden. Zusätzlich können Quellen- und Analystenlinks abgerufen werden.</li>
             <li><strong>Apple / Google Sign-In:</strong> Nur Benutzer-ID, Name und E-Mail-Adresse werden übertragen. Kein Zugriff auf weitere Kontodaten.</li>
             <li><strong>RevenueCat Inc. (USA):</strong> Abonnementverwaltung und In-App-Kaufabwicklung. RevenueCat erhält Ihre App-Benutzer-ID sowie Abonnement- und Berechtigungsstatus. Keine Zahlungskartendaten werden über RevenueCat übermittelt — Zahlungen werden direkt von Apple oder Google verarbeitet.</li>
           </ul>
@@ -245,10 +253,9 @@
           <p>Bei Fragen zum Datenschutz: <a href="mailto:porty@rubeeks.co">porty@rubeeks.co</a></p>
         </div>
 
-        <!-- TÜRKÇE -->
         <div id="lang-tr" class="lang-section">
           <h1>Gizlilik Politikası</h1>
-          <p class="meta">Son güncelleme: 18 Nisan 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
+          <p class="meta">Son güncelleme: 13 Mayıs 2026 &nbsp;|&nbsp; Uygulama: Porty</p>
 
           <div class="highlight">
             Porty, kullanıcılarının gizliliğine saygı duyar. Bu politika, hangi verileri topladığımızı, nasıl kullandığımızı ve nasıl koruduğumuzu açıklamaktadır. Porty, 13 yaş ve üzeri kullanıcılara yöneliktir.
@@ -262,6 +269,7 @@
             <li><strong>Uygulama tercihleri:</strong> Dil, tema ve para birimi gibi tercihler (yerel olarak saklanır ve hesabınızla senkronize edilir).</li>
             <li><strong>Profil fotoğrafı:</strong> Tercih etmeniz durumunda profil fotoğrafınız güvenli şekilde saklanır ve yalnızca hesabınıza bağlanır.</li>
             <li><strong>Hedef verileri:</strong> Belirlediğiniz finansal hedefler (hedef tutar, varlık türü, zaman ufku) ve kilometre taşı ilerlemesi. Bu veriler yalnızca size aittir.</li>
+            <li><strong>AI analiz verileri:</strong> Portföy, hedef ve işlem verilerinizden türetilen AI analizleri, prompt/girdi ve çıktılar ile bu analizlerde kullanılan herkese açık analist/kaynak metaverileri.</li>
             <li><strong>Kullanım verileri:</strong> Ziyaret edilen ekranlar ve gerçekleştirilen aksiyonlar gibi uygulama içi aktiviteler, deneyimi geliştirmek amacıyla toplanır. Bu veriler hesabınıza bağlıdır.</li>
             <li><strong>Abonelik verileri:</strong> Abonelik durumunuz ve yetkilendirme kayıtları, RevenueCat aracılığıyla yönetilir. Anonim işlem kimlikleri içerir; Porty tarafından ödeme kartı verisi saklanmaz.</li>
             <li><strong>Teknik veriler:</strong> Cihaz türü, işletim sistemi sürümü, uygulama sürümü ve kimlik doğrulama amaçlı oturum belirteçleri.</li>
@@ -276,6 +284,7 @@
               <tr><td>Hesap oluşturma ve kimlik doğrulama</td><td>Sözleşmenin ifası</td></tr>
               <tr><td>Portföy verilerinin cihazlar arası senkronizasyonu</td><td>Sözleşmenin ifası</td></tr>
               <tr><td>Uygulama tercihlerinin kaydedilmesi</td><td>Meşru menfaat</td></tr>
+              <tr><td>Talep edilen AI analizlerinin ve ilgili kota/logların üretilmesi</td><td>Sözleşmenin ifası</td></tr>
               <tr><td>Teknik hata tespiti ve iyileştirme</td><td>Meşru menfaat</td></tr>
               <tr><td>Abonelik yönetimi ve satın alma işlemleri</td><td>Sözleşmenin ifası</td></tr>
               <tr><td>Yasal yükümlülüklerin yerine getirilmesi</td><td>Kanuni yükümlülük</td></tr>
@@ -287,18 +296,20 @@
           <ul>
             <li>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması</li>
             <li>Portföy ve hedef verilerinin cihazlar arasında senkronize edilmesi</li>
+            <li>Talep ettiğiniz kişiselleştirilmiş AI içgörülerinin ve davranışsal gözlemlerin üretilmesi</li>
             <li>Uygulama tercihlerinin hatırlanması</li>
             <li>Abonelik durumunun işlenmesi ve doğrulanması</li>
             <li>Uygulamanın çalışması için gerekli teknik işlemler</li>
           </ul>
-          <p>Kullanıcı verileri üçüncü taraflarla paylaşılmaz, satılmaz veya reklam ya da profilleme amacıyla <strong>kesinlikle kullanılmaz</strong>.</p>
+          <p>Kullanıcı verileri üçüncü taraflarla paylaşılmaz, satılmaz veya reklam ya da üçüncü taraf profilleme amacıyla <strong>kesinlikle kullanılmaz</strong>. Portföy, hedef ve işlem verileri; eğitsel amaçlı AI analizleri ve davranışsal gözlemler üretmek için uygulama içinde sınırlı biçimde analiz edilebilir.</p>
 
-          <h2>4. Üçüncü Taraf Hizmetler</h2>
+          <h2>4. Ãœçüncü Taraf Hizmetler</h2>
           <ul>
             <li><strong>Supabase Inc. (ABD):</strong> Bulut veritabanı ve kimlik doğrulama altyapısı. Veriler TLS üzerinden iletilir, AES-256 şifrelemeyle saklanır.</li>
             <li><strong>Finansal veri API'leri:</strong> Piyasa fiyatları üçüncü taraf sağlayıcılardan çekilir. Bu API'lere yalnızca varlık sembolleri gönderilir; kişisel veri paylaşılmaz.</li>
+            <li><strong>Google LLC / Gemini API (ABD):</strong> AI analiz üretimi. Talep ettiğiniz AI içgörülerini üretmek için gerekli portföy, hedef, işlem ve varlık bağlamı verileri bu servise gönderilebilir. Kaynaklandırılmış bağlantılar ve herkese açık analist referansları da alınabilir.</li>
             <li><strong>Apple / Google ile Giriş:</strong> Yalnızca kullanıcı kimliği, ad-soyad ve e-posta adresi alınır. Diğer hesap verilerine erişilmez.</li>
-            <li><strong>RevenueCat Inc. (ABD):</strong> Abonelik yönetimi ve uygulama içi satın alma işlemleri. RevenueCat, uygulama kullanıcı kimliğinizi ve abonelik/yetkilendirme durumunuzu alır. Ödeme kartı verisi RevenueCat üzerinden iletilmez; ödemeler doğrudan Apple veya Google tarafından işlenir.</li>
+            <li><strong>RevenueCat Inc. (ABD):</strong> Abonelik yönetimi ve uygulama içi satın alma işlemleri. RevenueCat, uygulama kullanıcı kimliğinizi ve abonelik/yetkilendirme durumunuzu alır. Ã–deme kartı verisi RevenueCat üzerinden iletilmez; ödemeler doğrudan Apple veya Google tarafından işlenir.</li>
           </ul>
 
           <h2>5. Verilerin Saklanma Süresi</h2>
@@ -311,7 +322,7 @@
           <h2>6. Veri Güvenliği</h2>
           <ul>
             <li>Tüm veriler HTTPS/TLS üzerinden iletilir</li>
-            <li>Şifreler bcrypt ile hashlenerek saklanır; asla düz metin olarak tutulmaz</li>
+            <li>Åžifreler bcrypt ile hashlenerek saklanır; asla düz metin olarak tutulmaz</li>
             <li>Row-Level Security (RLS) ile kullanıcılar yalnızca kendi verilerine erişebilir</li>
             <li>Güvenlik ihlali tespit edilmesi halinde etkilenen kullanıcılar <strong>72 saat</strong> içinde bilgilendirilir.</li>
           </ul>
@@ -347,3 +358,6 @@
   </script>
 </body>
 </html>
+
+
+
