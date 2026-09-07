@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="The rules for using the app">
+<title>Terms of Use — Nomad Budget</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <nav class="crumbs">
+        <a href="./index.en.html">← All documents</a>
+        <a href="./terms.tr.html" lang="tr">Türkçe</a>
+      </nav>
+      <h1>Terms of Use</h1>
+      <p class="meta">Version 1.3 · Effective: 2026-09-07</p>
+      <div class="lede">
+        <p>These Terms of Use (&quot;Terms&quot;) govern your use of the Nomad Budget mobile application and its related services (the &quot;App&quot;), provided by Rubeeks (rubeeks.co) (&quot;we&quot;, &quot;us&quot;).</p>
+        <p>By creating an account or using the App you confirm that you have read and accepted these Terms. If you do not accept them, please do not use the App.</p>
+      </div>
+      <nav class="toc">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Definitions</a></li>
+          <li><a href="#s2">What the Service Is</a></li>
+          <li><a href="#s3">Accounts and Security</a></li>
+          <li><a href="#s4">Acceptable Use</a></li>
+          <li><a href="#s5">Your Content</a></li>
+          <li><a href="#s6">Sharing a Wallet</a></li>
+          <li><a href="#s7">Fees</a></li>
+          <li><a href="#s8">Third-Party Services and Data</a></li>
+          <li><a href="#s9">Availability and Changes</a></li>
+          <li><a href="#s10">Disclaimer of Warranties</a></li>
+          <li><a href="#s11">Limitation of Liability</a></li>
+          <li><a href="#s12">Closing Your Account</a></li>
+          <li><a href="#s13">Changes to These Terms</a></li>
+          <li><a href="#s14">Governing Law and Disputes</a></li>
+          <li><a href="#s15">Contact</a></li>
+        </ol>
+      </nav>
+      <section id="s1">
+        <h2><span class="n">1.</span> Definitions</h2>
+        <ul>
+          <li><strong>App:</strong> the Nomad Budget mobile application, its backend services and all of their components.</li>
+          <li><strong>User:</strong> the natural person who uses the App, with or without an account.</li>
+          <li><strong>Content:</strong> the transactions, wallets, categories, budgets, goals, recurring rules and notes a User enters into the App.</li>
+        </ul>
+      </section>
+      <section id="s2">
+        <h2><span class="n">2.</span> What the Service Is</h2>
+        <p>Nomad Budget is a record-keeping and analysis tool for multi-currency personal budgeting. It stores the data you enter, converts it between currencies, and produces summaries and charts from it.</p>
+        <p>The App is not a bank, payment institution, electronic money institution or investment firm. It does not connect to any bank account, does not move or hold money, and does not act as an intermediary. Every record is entered manually by you.</p>
+      </section>
+      <section id="s3">
+        <h2><span class="n">3.</span> Accounts and Security</h2>
+        <p>To create an account you must be at least 18 years old, or act with the consent of your parent or guardian. The App is not directed at people under 18.</p>
+        <p>If you create a full account, you must register with a valid email address that belongs to you.</p>
+        <p>You may also create an account with Sign in with Apple. Apple then confirms your identity to us and passes on an address: your own, or the private relay address you asked Apple to substitute for it. No password exists for such an account, so there is none for you to keep secret and none for us to hold.</p>
+        <p>You may also use the App as a guest, without an account. A guest session lives only on the device it was started on: there is no email address and no password to sign back in with, so signing out of it — or losing the device, or uninstalling the App — ends that account and everything in it for good. You can turn a guest session into a full account at any time without losing anything you have entered. Anything that involves another person (sharing a wallet, or joining an invitation) requires a full account.</p>
+        <p>You are responsible for keeping your password confidential and for everything done through your account. If you suspect unauthorised access, change your password immediately and notify us at <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a></p>
+        <p>One person, one account: you may not transfer or share your account with third parties.</p>
+      </section>
+      <section id="s4">
+        <h2><span class="n">4.</span> Acceptable Use</h2>
+        <p>When using the App, you agree not to:</p>
+        <ul>
+          <li>Use it for any unlawful purpose or in breach of applicable law.</li>
+          <li>Attempt to access another user's account or circumvent any security measure.</li>
+          <li>Place an unreasonable load on the services through automated tools, or attempt to disrupt them.</li>
+          <li>Reverse engineer, decompile or create unauthorised derivative works of the App (mandatory statutory exceptions reserved).</li>
+          <li>Process third parties' personal data unlawfully through the App.</li>
+        </ul>
+      </section>
+      <section id="s5">
+        <h2><span class="n">5.</span> Your Content</h2>
+        <p>All Content you enter belongs to you. We claim no ownership over it.</p>
+        <p>You grant us permission to process your Content solely so that we can provide the service to you — storing it, syncing it, converting it and producing summaries and charts. This permission is limited to providing the service: we do not use your Content for marketing, and we do not sell or share it.</p>
+        <p>You are responsible for the accuracy and lawfulness of your Content.</p>
+      </section>
+      <section id="s6">
+        <h2><span class="n">6.</span> Sharing a Wallet</h2>
+        <p>You can invite other people into wallets of your own. Nothing is shared until you create an invitation yourself; there is no sharing by default.</p>
+        <p>An invitation is a code that lasts 15 minutes, can be used once, and can be revoked at any time before it is used. Whoever holds a live code can join the wallets it names, so treat it as a key and send it only to the person you mean to invite.</p>
+        <p>Someone you let in sees that wallet's records in full, and an editor can also add and change them. You remain responsible for what you choose to share; the person you invite is responsible for what they do with it.</p>
+        <p>You may remove a member at any time and their access ends immediately, and a member may leave the same way. Removing someone does not undo what they have already seen.</p>
+        <p>Both sides of a share need a full account: a guest session can neither invite nor join, because the other person would otherwise be trusting an account that cannot be reached again.</p>
+      </section>
+      <section id="s7">
+        <h2><span class="n">7.</span> Fees</h2>
+        <p>The App is currently provided free of charge. It carries no advertising and no in-app purchases.</p>
+        <p>If paid features are introduced later, their terms will be presented clearly before any purchase, and no charge will be applied retroactively for features that are free today. Any payments would be collected through the App Store or Google Play under those stores' rules, and refunds would follow their policies.</p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> Third-Party Services and Data</h2>
+        <p>The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple where you choose to sign in with your Apple ID, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, and open data published by official statistical institutions for cross-country price comparisons.</p>
+        <p>The availability, timeliness and accuracy of these sources are outside our control. See the &quot;Licenses and Data Sources&quot; document for the full list and their licences.</p>
+      </section>
+      <section id="s9">
+        <h2><span class="n">9.</span> Availability and Changes</h2>
+        <p>We do not warrant that the App will be uninterrupted, error-free or always available. Maintenance, updates, infrastructure failures and events beyond our control may cause interruptions.</p>
+        <p>We may add, change or remove features. If we discontinue the service entirely, we will give reasonable advance notice by email so that you can export your data.</p>
+      </section>
+      <section id="s10">
+        <h2><span class="n">10.</span> Disclaimer of Warranties</h2>
+        <p>The App is provided &quot;as is&quot; and &quot;as available&quot;. To the fullest extent permitted by law, no warranties of any kind are given, express or implied, including fitness for a particular purpose, uninterrupted availability and freedom from error.</p>
+        <p>The calculations, conversions, estimates and comparisons the App produces are informational. See the &quot;Financial Disclaimer&quot; document for detail.</p>
+      </section>
+      <section id="s11">
+        <h2><span class="n">11.</span> Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, we are not liable for loss of profit, loss of data, business interruption, or indirect or consequential damages.</p>
+        <p>The consequences of any financial decision you make on the basis of data in the App are yours alone.</p>
+        <p>Nothing in this section limits liability for our wilful misconduct or gross negligence, or any non-waivable rights you have under consumer protection law.</p>
+      </section>
+      <section id="s12">
+        <h2><span class="n">12.</span> Closing Your Account</h2>
+        <p>You can close your account at any time from within the App: Settings → Delete Account. This permanently deletes your account and all of your data and cannot be undone. Wallets you had shared disappear for the people you shared them with at the same moment.</p>
+        <p>A guest session is closed by signing out of it, which does the same thing: with no email and no password there is nothing left to sign back in with, so signing out erases that account and its records.</p>
+        <p>We may suspend or terminate an account in case of serious or repeated breach of these Terms. Where legally possible we will notify you first and give you a reasonable opportunity to export your data.</p>
+      </section>
+      <section id="s13">
+        <h2><span class="n">13.</span> Changes to These Terms</h2>
+        <p>We may update these Terms. For material changes we will notify you in the App or by email before they take effect, and ask for your acceptance again where required.</p>
+        <p>Continuing to use the App after such notice means you accept the updated Terms. If you do not accept them, you may close your account.</p>
+      </section>
+      <section id="s14">
+        <h2><span class="n">14.</span> Governing Law and Disputes</h2>
+        <p>These Terms are governed by the laws of the Republic of Türkiye. The courts and enforcement offices of the Republic of Türkiye have jurisdiction over disputes.</p>
+        <p>Users who qualify as consumers may, within the applicable monetary thresholds, apply to the Consumer Arbitration Committee or the Consumer Court at their place of residence. Users resident in the European Union retain the rights granted by the mandatory consumer provisions of their own country.</p>
+      </section>
+      <section id="s15">
+        <h2><span class="n">15.</span> Contact</h2>
+        <p>For any question or request regarding these Terms, write to <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a></p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>

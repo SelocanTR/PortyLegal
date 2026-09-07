@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Legal Documents · Yasal Belgeler">
+<title>Nomad Budget — Legal Documents</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <h1>Nomad Budget</h1>
+      <p class="meta">Version 1.3 · Effective: 2026-09-07</p>
+      <div class="group" lang="tr">
+        <h2>Türkçe</h2>
+        <ul class="docs">
+          <li><a href="./terms.tr.html">
+            <span class="t">Kullanım Koşulları</span>
+            <span class="s">Uygulamayı kullanma kuralları ve sorumluluklar</span>
+          </a></li>
+          <li><a href="./privacy.tr.html">
+            <span class="t">Gizlilik Politikası</span>
+            <span class="s">Hangi veriler, neden ve nerede</span>
+          </a></li>
+          <li><a href="./kvkk.tr.html">
+            <span class="t">KVKK Aydınlatma Metni</span>
+            <span class="s">6698 sayılı Kanun kapsamında aydınlatma</span>
+          </a></li>
+          <li><a href="./disclaimer.tr.html">
+            <span class="t">Finansal Sorumluluk Reddi</span>
+            <span class="s">Sayılar tahmindir, tavsiye değildir</span>
+          </a></li>
+          <li><a href="./licenses.tr.html">
+            <span class="t">Lisanslar ve Veri Kaynakları</span>
+            <span class="s">Açık kaynak bileşenler ve veri kaynakları</span>
+          </a></li>
+        </ul>
+      </div>
+      <div class="group" lang="en">
+        <h2>English</h2>
+        <ul class="docs">
+          <li><a href="./terms.en.html">
+            <span class="t">Terms of Use</span>
+            <span class="s">The rules for using the app</span>
+          </a></li>
+          <li><a href="./privacy.en.html">
+            <span class="t">Privacy Policy</span>
+            <span class="s">What we collect, why, and where it lives</span>
+          </a></li>
+          <li><a href="./kvkk.en.html">
+            <span class="t">Data Protection Notice (KVKK)</span>
+            <span class="s">Disclosure under Turkish Law No. 6698</span>
+          </a></li>
+          <li><a href="./disclaimer.en.html">
+            <span class="t">Financial Disclaimer</span>
+            <span class="s">The numbers are estimates, not advice</span>
+          </a></li>
+          <li><a href="./licenses.en.html">
+            <span class="t">Licenses and Data Sources</span>
+            <span class="s">Open-source components and data sources</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="What we collect, why, and where it lives">
+<title>Privacy Policy — Nomad Budget</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <nav class="crumbs">
+        <a href="./index.en.html">← All documents</a>
+        <a href="./privacy.tr.html" lang="tr">Türkçe</a>
+      </nav>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Version 1.3 · Effective: 2026-09-07</p>
+      <div class="lede">
+        <p>Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.</p>
+        <p>In short: we do not sell your data, we show no advertising, the App runs no third-party analytics or tracking, and you can delete your account and everything in it from inside the App at any time.</p>
+      </div>
+      <nav class="toc">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Who Is Responsible</a></li>
+          <li><a href="#s2">Data We Process</a></li>
+          <li><a href="#s3">Purposes and Legal Bases</a></li>
+          <li><a href="#s4">Where Your Data Is Stored and International Transfers</a></li>
+          <li><a href="#s5">Sharing</a></li>
+          <li><a href="#s6">When You Share a Wallet</a></li>
+          <li><a href="#s7">Retention and Deletion</a></li>
+          <li><a href="#s8">Security</a></li>
+          <li><a href="#s9">Cookies and Similar Technologies</a></li>
+          <li><a href="#s10">Children's Privacy</a></li>
+          <li><a href="#s11">Your Rights</a></li>
+          <li><a href="#s12">Changes to This Policy</a></li>
+          <li><a href="#s13">Contact</a></li>
+        </ol>
+      </nav>
+      <section id="s1">
+        <h2><span class="n">1.</span> Who Is Responsible</h2>
+        <p>The party responsible for processing your data (the data controller) is Rubeeks (rubeeks.co).</p>
+        <p>Contact: <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+      </section>
+      <section id="s2">
+        <h2><span class="n">2.</span> Data We Process</h2>
+        <p><strong>Account data:</strong> your email address, a cryptographic hash of your password (never the password itself), your account creation date, session information, and the version and date of the consent you gave at sign-up. An account created with Sign in with Apple has no password hash at all: what is held instead is the identifier Apple issues for you in this App, together with the address Apple passed on, which is a private relay alias if you chose to hide your own. Apple offers your name once, on the very first sign-in and never again, and it is written to your profile as a starting display name you are free to change.</p>
+        <p><strong>The financial records you enter:</strong> wallets (name, country, currency, opening balance), transactions (amount, currency, date, type, category, note, event tag), categories, budgets, goals and recurring rules.</p>
+        <p><strong>Profile:</strong> the display name and the avatar you pick. These are the only things another person sees about you when you share a wallet — your email address is never shown to another user.</p>
+        <p><strong>Guest sessions:</strong> you can use the App without creating an account. A guest account holds the same records, and the same record of the consent you gave, as a full one, but it has no email address and no password: the session stored on that single device is the only thing that reaches it. Signing out therefore deletes the account and everything in it, irreversibly. Adding an email and a password later turns the very same account into a full one, with nothing moved and nothing lost.</p>
+        <p><strong>Preferences:</strong> interface language, theme and base currency.</p>
+        <p><strong>Technical data kept on your device:</strong> your session token, the local cache that makes offline use possible, and records queued while you have no connection. These stay on your device and are removed when you uninstall the App.</p>
+        <p><strong>Notifications (optional):</strong> if you allow them, your device registers a push token with us, together with whether it is an iOS or an Android device, so that we can tell you when someone acts in a wallet you share. Reminders you set for yourself are scheduled by your own device and need neither a token nor a server. You can withdraw the permission at any time in your device settings.</p>
+        <p><strong>Camera (optional, QR codes only):</strong> the camera opens only when you choose to scan a sharing invitation, and only to read the code in front of it. No photo or video is taken, stored or transmitted.</p>
+        <p><strong>Location (optional, country only):</strong> if you grant permission, your device's approximate location (coarse, city-level accuracy at most) is used to determine which country you are in, and the transactions you record and the countries you visit are marked with that two-letter country code. The conversion from location to country happens on your device; your coordinates are never stored and never sent to our servers or to any third party. You can decline the permission, or withdraw it at any time in your device settings — the country is then inferred from your wallets and the rest of the App works exactly as before.</p>
+        <p>What we do not collect:</p>
+        <ul>
+          <li>Bank or card details — the App connects to no financial institution.</li>
+          <li>Location history or coordinate logs — beyond the country described above, nothing about your location is retained.</li>
+          <li>Contacts, photos or any other file on your device.</li>
+          <li>Advertising identifiers or cross-app tracking data.</li>
+          <li>Third-party analytics, crash-reporting or marketing SDK data — the App contains none of these.</li>
+        </ul>
+      </section>
+      <section id="s3">
+        <h2><span class="n">3.</span> Purposes and Legal Bases</h2>
+        <ul>
+          <li><strong>Creating and securing your account</strong> — performance of a contract (KVKK Art. 5/2-c; GDPR Art. 6(1)(b)).</li>
+          <li><strong>Storing, syncing and displaying your records</strong> — performance of a contract.</li>
+          <li><strong>Currency conversion, budget and goal tracking, summaries and charts</strong> — performance of a contract.</li>
+          <li><strong>Deriving the country from your location, to mark your spending and fill the map and the country comparisons</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)). This consent is given only through the device permission and can be withdrawn at any time in your device settings.</li>
+          <li><strong>Preventing abuse, debugging and keeping the service secure</strong> — legitimate interest (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).</li>
+          <li><strong>Letting you share a wallet with someone you invite, and join a wallet you are invited to</strong> — performance of a contract.</li>
+          <li><strong>Sending push notifications about activity in a wallet you share</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through your device's notification permission and withdrawable at any time in your device settings.</li>
+          <li><strong>Sending service messages you cannot opt out of (email confirmation, password reset)</strong> — performance of a contract.</li>
+          <li><strong>Complying with legal obligations and responding to lawful requests</strong> — legal obligation (KVKK Art. 5/2-ç; GDPR Art. 6(1)(c)).</li>
+        </ul>
+        <p>We do not use your data for profiling, automated decision-making or marketing.</p>
+      </section>
+      <section id="s4">
+        <h2><span class="n">4.</span> Where Your Data Is Stored and International Transfers</h2>
+        <p>Your account and records are hosted on servers operated by Supabase Inc. (AWS ap-northeast-2 — Seoul, South Korea). Your data is therefore transferred outside Türkiye (KVKK Art. 9).</p>
+        <p>South Korea is covered by an adequacy decision of the European Commission. The transfer is necessary to provide the service and is protected by our contract with the hosting provider and by technical safeguards.</p>
+        <p>When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose.</p>
+        <p>Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.</p>
+      </section>
+      <section id="s5">
+        <h2><span class="n">5.</span> Sharing</h2>
+        <p>We do not sell, rent or share your data for advertising. Data is disclosed to third parties only in the following cases:</p>
+        <ul>
+          <li><strong>Hosting and authentication provider (Supabase Inc.):</strong> as a data processor, solely to run the service.</li>
+          <li><strong>Sign in with Apple (Apple Inc.):</strong> if you choose it, Apple confirms to us that the Apple ID is yours, and in doing so learns that you use the App. For that step Apple is an independent controller under its own privacy policy. Nothing about your records is sent to it.</li>
+          <li><strong>Email delivery:</strong> your email address only, to deliver confirmation and password-reset messages.</li>
+          <li><strong>Notification delivery (Expo, Apple, Google):</strong> your push token and the text of the notification, solely so that the message can be delivered.</li>
+          <li><strong>Other people you share a wallet with:</strong> only what the next section describes, and only because you chose to invite them or to accept an invitation.</li>
+          <li><strong>Lawful requests:</strong> where properly requested by a competent authority, to the extent the law requires.</li>
+        </ul>
+      </section>
+      <section id="s6">
+        <h2><span class="n">6.</span> When You Share a Wallet</h2>
+        <p>Sharing is off until you turn it on: no wallet of yours is visible to anybody else unless you create an invitation for it yourself.</p>
+        <p>Someone who joins sees that wallet's records in full — amounts, dates, categories, notes and the country each record was entered in — and, for each record, which member entered it. An editor can also add and change records; a viewer cannot.</p>
+        <p>What they see about you as a person is your display name and your avatar, and nothing else. Your email address is never disclosed to another user.</p>
+        <p>The invitation itself is a code that lasts 15 minutes and can be used once, and you can revoke it before it is used. You can remove a member at any time, which ends their access immediately, and a member can leave on their own.</p>
+        <p>Both sides of a share need a full account. A guest session can neither invite nor join: a guest account can vanish with its device, and the other person would be left trusting something unreachable.</p>
+      </section>
+      <section id="s7">
+        <h2><span class="n">7.</span> Retention and Deletion</h2>
+        <p>Your data is retained for as long as your account exists.</p>
+        <p>When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals and recurring rules are permanently deleted. This cannot be undone.</p>
+        <p>Deleting your account also ends the shares you had given: the wallets you shared disappear for their members at the same moment, along with your profile and your push token. Records you entered in a wallet belonging to somebody else stay where they are, because they are that person's records; they simply stop being attributed to you.</p>
+        <p>A guest session is deleted by signing out of it. That is not a sign-out in the ordinary sense — it is the deletion of the account, because nothing else reaches it — and it cannot be undone.</p>
+        <p>Copies remaining in system backups are purged as the backup cycle rolls over, within 30 days at the latest. The local cache on your device is removed when you uninstall the App.</p>
+        <p>You can also request deletion by writing to <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a></p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> Security</h2>
+        <p>All traffic between your device and the server is encrypted with TLS. Data is stored on encrypted disks.</p>
+        <p>Every table is protected by row-level security rules: at the database level, a user can only reach their own records.</p>
+        <p>Your password is never stored in plain text — only an irreversible hash of it is kept.</p>
+        <p>No system can be absolutely secure; please protect your account with a strong, unique password.</p>
+      </section>
+      <section id="s9">
+        <h2><span class="n">9.</span> Cookies and Similar Technologies</h2>
+        <p>The mobile app uses no cookies. Keeping you signed in and working offline rely on your device's own secure storage and local database. That data stays on your device and is never used for tracking.</p>
+      </section>
+      <section id="s10">
+        <h2><span class="n">10.</span> Children's Privacy</h2>
+        <p>The App is not directed at people under 18 and we do not knowingly collect their data. If we find that we have, we delete the account and its data.</p>
+      </section>
+      <section id="s11">
+        <h2><span class="n">11.</span> Your Rights</h2>
+        <p>Under KVKK Art. 11 and — where it applies to you — the GDPR, you have the right to:</p>
+        <ul>
+          <li>Learn whether your personal data is processed, and request access to it.</li>
+          <li>Have incomplete or inaccurate data corrected.</li>
+          <li>Request erasure or destruction of your data.</li>
+          <li>Request restriction of processing and object to processing.</li>
+          <li>Receive your data in a structured, commonly used format (data portability).</li>
+          <li>Claim compensation if you suffer damage from unlawful processing.</li>
+        </ul>
+        <p>You can exercise most of your access and correction rights directly in the App: every record you have is visible, editable and deletable there.</p>
+        <p>For anything else, write to <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a>; requests are answered within 30 days at the latest. See the &quot;Data Protection Notice (KVKK)&quot; for the detailed application procedure.</p>
+      </section>
+      <section id="s12">
+        <h2><span class="n">12.</span> Changes to This Policy</h2>
+        <p>We may update this policy. Material changes are announced in the App or by email before they take effect. The effective date and version are always shown at the top of this document.</p>
+      </section>
+      <section id="s13">
+        <h2><span class="n">13.</span> Contact</h2>
+        <p>For any privacy question, request or complaint: <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>

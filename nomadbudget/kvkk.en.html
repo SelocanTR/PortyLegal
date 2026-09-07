@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Disclosure under Turkish Law No. 6698">
+<title>Data Protection Notice (KVKK) — Nomad Budget</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <nav class="crumbs">
+        <a href="./index.en.html">← All documents</a>
+        <a href="./kvkk.tr.html" lang="tr">Türkçe</a>
+      </nav>
+      <h1>Data Protection Notice (KVKK)</h1>
+      <p class="meta">Version 1.3 · Effective: 2026-09-07</p>
+      <div class="lede">
+        <p>This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data (&quot;KVKK&quot;) and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.</p>
+        <p>For a fuller account of everything the App does with data, see the &quot;Privacy Policy&quot;.</p>
+      </div>
+      <nav class="toc">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Identity of the Data Controller</a></li>
+          <li><a href="#s2">Categories of Personal Data Processed</a></li>
+          <li><a href="#s3">Purposes of Processing</a></li>
+          <li><a href="#s4">Legal Grounds</a></li>
+          <li><a href="#s5">Method of Collection</a></li>
+          <li><a href="#s6">Transfers, Including Abroad</a></li>
+          <li><a href="#s7">Retention Period</a></li>
+          <li><a href="#s8">Your Rights as a Data Subject (KVKK Art. 11)</a></li>
+          <li><a href="#s9">How to Apply</a></li>
+        </ol>
+      </nav>
+      <section id="s1">
+        <h2><span class="n">1.</span> Identity of the Data Controller</h2>
+        <p>Data controller: Rubeeks (rubeeks.co)</p>
+        <p>Contact address: <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+      </section>
+      <section id="s2">
+        <h2><span class="n">2.</span> Categories of Personal Data Processed</h2>
+        <ul>
+          <li><strong>Identity and contact data:</strong> email address; the display name and avatar you choose. Where the account was created with Sign in with Apple, this also covers the identifier Apple issues and the address it passes on, which may be a private relay alias. A guest account has no email address and carries only the display name and avatar, if you set them.</li>
+          <li><strong>Customer transaction data:</strong> the wallets, transactions, categories, budgets, goals and recurring rules you enter, including their amounts, currencies, dates and free-text note fields.</li>
+          <li><strong>Transaction security data:</strong> the hash of your password (an account created with Sign in with Apple has none, because Apple confirms the identity instead), session information, account creation date, and the version and date of your consent.</li>
+          <li><strong>Device data:</strong> where you have allowed notifications, your device's push token and whether it is an iOS or an Android device.</li>
+          <li><strong>Sharing data:</strong> which of your wallets you have shared with whom and in what role, which wallets you have been invited into and by whom, and which member entered a given record.</li>
+        </ul>
+        <p>No special categories of personal data are processed. We recommend that you do not write special-category information (health, beliefs and similar) into free-text note fields.</p>
+      </section>
+      <section id="s3">
+        <h2><span class="n">3.</span> Purposes of Processing</h2>
+        <ul>
+          <li>Creating your membership record and securing your account.</li>
+          <li>Providing the budgeting service: storing and syncing your records, converting currencies, producing summaries and charts.</li>
+          <li>Running the sharing feature: creating and redeeming invitations, keeping wallet memberships, and showing members who entered a record.</li>
+          <li>Delivering mandatory service messages (email confirmation, password reset) and, where you have permitted them, push notifications about activity in a shared wallet.</li>
+          <li>Running information security processes, debugging and preventing abuse.</li>
+          <li>Handling requests and complaints, and complying with legal obligations.</li>
+        </ul>
+      </section>
+      <section id="s4">
+        <h2><span class="n">4.</span> Legal Grounds</h2>
+        <p>Your personal data is processed on the following grounds under KVKK Art. 5:</p>
+        <ul>
+          <li><strong>Art. 5/2-c</strong> — directly related to the conclusion or performance of a contract: creating the account and providing the service.</li>
+          <li><strong>Art. 5/2-ç</strong> — compliance with the controller's legal obligations: responding to requests from competent authorities.</li>
+          <li><strong>Art. 5/2-f</strong> — legitimate interests, provided this does not harm your fundamental rights and freedoms: security, abuse prevention and debugging.</li>
+          <li><strong>Art. 5/1</strong> — explicit consent: deriving your country from your device's location, and sending push notifications. Both are given through a device permission and can be withdrawn at any time in your device settings.</li>
+        </ul>
+      </section>
+      <section id="s5">
+        <h2><span class="n">5.</span> Method of Collection</h2>
+        <p>Your personal data is collected electronically, by automated means, as you enter it into the App yourself and — for location, the camera and notifications — through the device permissions you grant.</p>
+        <p>Data about you is obtained from a third party in one case, and only if you choose it: signing in with Apple, where the identifier, the email address and, on the first sign-in only, your name reach us from Apple. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.</p>
+      </section>
+      <section id="s6">
+        <h2><span class="n">6.</span> Transfers, Including Abroad</h2>
+        <p>Your personal data is transferred to Supabase Inc., our hosting and authentication provider, acting as a data processor, so that the service can be provided. Its servers are servers operated by Supabase Inc. (AWS ap-northeast-2 — Seoul, South Korea); your data is therefore transferred abroad within the meaning of KVKK Art. 9.</p>
+        <p>The transfer is necessary for the performance of the contract and is protected by our agreement with the processor and by technical and administrative measures.</p>
+        <p>Where you choose Sign in with Apple, the sign-in request is transferred to Apple Inc. in the United States so that Apple can confirm your identity; for that step Apple acts as an independent controller and receives nothing about your records.</p>
+        <p>Where you have allowed notifications, your push token and the text of the notification are transferred to Expo, Apple (APNs) and Google (FCM) in the United States, solely so that the message can be delivered.</p>
+        <p>Where you share a wallet, its records together with your display name and avatar become visible to the people you invited. That disclosure happens only on your own instruction and you can end it at any time by removing the member.</p>
+        <p>Beyond this, your data may be transferred only to legally authorised public authorities, to the extent required by law.</p>
+      </section>
+      <section id="s7">
+        <h2><span class="n">7.</span> Retention Period</h2>
+        <p>Your personal data is retained for as long as your account exists. If you delete your account, the data is permanently deleted; copies in system backups are purged as the backup cycle rolls over, within 30 days at the latest. A guest account is deleted when you sign out of it, since nothing else can reach it.</p>
+        <p>Where a statutory retention obligation applies, the relevant data is kept only for the period and to the extent that obligation requires.</p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> Your Rights as a Data Subject (KVKK Art. 11)</h2>
+        <p>By applying to the data controller, you have the right to:</p>
+        <ul>
+          <li>Learn whether your personal data is processed;</li>
+          <li>Request information if it has been processed;</li>
+          <li>Learn the purpose of processing and whether the data is used accordingly;</li>
+          <li>Know the third parties, in Türkiye or abroad, to whom the data is transferred;</li>
+          <li>Request correction if the data is incomplete or inaccurate;</li>
+          <li>Request erasure or destruction under the conditions in KVKK Art. 7;</li>
+          <li>Request that corrections and erasures be notified to third parties to whom the data was transferred;</li>
+          <li>Object to a result reached against you through analysis carried out solely by automated systems;</li>
+          <li>Claim compensation for damage arising from unlawful processing.</li>
+        </ul>
+      </section>
+      <section id="s9">
+        <h2><span class="n">9.</span> How to Apply</h2>
+        <p>In line with the Communiqué on the Procedures and Principles of Application to the Data Controller, send your request together with information identifying you to <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a> Writing from the email address registered in our system speeds up identity verification.</p>
+        <p>State the subject of your request clearly. Requests are answered free of charge as soon as possible and within 30 days at the latest. If responding involves an additional cost, the fee set by the Personal Data Protection Board may be charged.</p>
+        <p>If your application is rejected, you find the answer insufficient, or no answer is given in time, you may complain to the Personal Data Protection Board within 30 days of learning the answer and in any case within 60 days of the application date.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>

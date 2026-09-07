@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Uygulamayı kullanma kuralları ve sorumluluklar">
+<title>Kullanım Koşulları — Nomad Budget</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <nav class="crumbs">
+        <a href="./index.tr.html">← Tüm belgeler</a>
+        <a href="./terms.en.html" lang="en">English</a>
+      </nav>
+      <h1>Kullanım Koşulları</h1>
+      <p class="meta">Sürüm 1.3 · Yürürlük tarihi: 2026-09-07</p>
+      <div class="lede">
+        <p>Bu Kullanım Koşulları (&quot;Koşullar&quot;), Rubeeks (rubeeks.co) (&quot;biz&quot;) tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin (&quot;Uygulama&quot;) kullanımına ilişkin şartları düzenler.</p>
+        <p>Hesap oluşturarak veya Uygulamayı kullanarak bu Koşulları okuduğunuzu ve kabul ettiğinizi beyan edersiniz. Koşulları kabul etmiyorsanız Uygulamayı kullanmayınız.</p>
+      </div>
+      <nav class="toc">
+        <h2>İçindekiler</h2>
+        <ol>
+          <li><a href="#s1">Tanımlar</a></li>
+          <li><a href="#s2">Hizmetin Tanımı</a></li>
+          <li><a href="#s3">Hesap Oluşturma ve Güvenlik</a></li>
+          <li><a href="#s4">Kullanım Kuralları</a></li>
+          <li><a href="#s5">Kullanıcı İçeriği</a></li>
+          <li><a href="#s6">Cüzdan Paylaşımı</a></li>
+          <li><a href="#s7">Ücretlendirme</a></li>
+          <li><a href="#s8">Üçüncü Taraf Hizmetler ve Veriler</a></li>
+          <li><a href="#s9">Hizmetin Sürekliliği ve Değişiklikler</a></li>
+          <li><a href="#s10">Garanti Reddi</a></li>
+          <li><a href="#s11">Sorumluluğun Sınırlandırılması</a></li>
+          <li><a href="#s12">Hesabın Kapatılması</a></li>
+          <li><a href="#s13">Koşullarda Değişiklik</a></li>
+          <li><a href="#s14">Uygulanacak Hukuk ve Uyuşmazlıkların Çözümü</a></li>
+          <li><a href="#s15">İletişim</a></li>
+        </ol>
+      </nav>
+      <section id="s1">
+        <h2><span class="n">1.</span> Tanımlar</h2>
+        <ul>
+          <li><strong>Uygulama:</strong> Nomad Budget mobil uygulaması, arka uç servisleri ve tüm alt bileşenleri.</li>
+          <li><strong>Kullanıcı:</strong> Uygulamayı hesap açarak veya hesap açmadan kullanan gerçek kişi.</li>
+          <li><strong>İçerik:</strong> Kullanıcının Uygulamaya girdiği işlem, cüzdan, kategori, bütçe, hedef, tekrarlayan kural kayıtları ve notlar.</li>
+        </ul>
+      </section>
+      <section id="s2">
+        <h2><span class="n">2.</span> Hizmetin Tanımı</h2>
+        <p>Nomad Budget, çok para birimli kişisel bütçe takibi için bir kayıt ve analiz aracıdır. Kullanıcının kendi girdiği verileri saklar, para birimleri arasında dönüştürür, özetler ve grafikler üretir.</p>
+        <p>Uygulama bir banka, ödeme kuruluşu, elektronik para kuruluşu veya yatırım kuruluşu değildir. Herhangi bir banka hesabına bağlanmaz, para transferi yapmaz, para saklamaz ve aracılık faaliyeti yürütmez. Tüm kayıtlar Kullanıcı tarafından manuel olarak girilir.</p>
+      </section>
+      <section id="s3">
+        <h2><span class="n">3.</span> Hesap Oluşturma ve Güvenlik</h2>
+        <p>Hesap oluşturmak için en az 18 yaşında olmanız veya veli/vasinizin onayıyla hareket etmeniz gerekir. Uygulama 18 yaş altındaki kişilere yönelik değildir.</p>
+        <p>Tam hesap oluşturuyorsanız, kayıt sırasında geçerli ve size ait bir e-posta adresi vermeniz gerekir.</p>
+        <p>Hesabınızı Apple ile Giriş kullanarak da oluşturabilirsiniz. Bu durumda kimliğinizi bize Apple doğrular ve bir e-posta adresi iletir: ya size ait olan adres ya da Apple'dan onun yerine vermesini istediğiniz gizli yönlendirme adresi. Böyle bir hesap için şifre oluşturulmaz; dolayısıyla gizli tutmanız gereken bir şifre de, bizim sakladığımız bir şifre de yoktur.</p>
+        <p>Uygulamayı hesap açmadan, misafir olarak da kullanabilirsiniz. Misafir oturumu yalnızca başlatıldığı cihazda yaşar: geri dönmek için ne e-posta ne şifre olduğundan, oturumdan çıkmanız — ya da cihazı kaybetmeniz veya uygulamayı kaldırmanız — o hesabı ve içindeki her şeyi kalıcı olarak sonlandırır. Misafir oturumunu dilediğiniz an, girdiğiniz hiçbir şeyi kaybetmeden tam hesaba dönüştürebilirsiniz. Başka bir kişiyi ilgilendiren işlemler (cüzdan paylaşmak, bir davete katılmak) tam hesap gerektirir.</p>
+        <p>Şifrenizin gizliliğinden ve hesabınız üzerinden yapılan tüm işlemlerden siz sorumlusunuz. Hesabınıza yetkisiz erişimden şüphelenirseniz şifrenizi derhal değiştirin ve <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a> adresine bildirin.</p>
+        <p>Bir kişi tek hesap kullanır; hesabınızı üçüncü kişilere devredemez veya paylaşamazsınız.</p>
+      </section>
+      <section id="s4">
+        <h2><span class="n">4.</span> Kullanım Kuralları</h2>
+        <p>Uygulamayı kullanırken aşağıdakileri yapmamayı kabul edersiniz:</p>
+        <ul>
+          <li>Yürürlükteki mevzuata aykırı, hukuka veya ahlaka aykırı amaçlarla kullanmak.</li>
+          <li>Başkasının hesabına yetkisiz erişmeye çalışmak, güvenlik önlemlerini aşmaya teşebbüs etmek.</li>
+          <li>Servislere otomatik araçlarla makul olmayan yük bindirmek, servis dışı bırakmaya yönelik girişimlerde bulunmak.</li>
+          <li>Uygulamayı tersine mühendisliğe tabi tutmak, kaynak koda dönüştürmek veya izinsiz türev çalışma üretmek (zorunlu yasal istisnalar saklıdır).</li>
+          <li>Uygulama üzerinden üçüncü kişilere ait kişisel verileri hukuka aykırı biçimde işlemek.</li>
+        </ul>
+      </section>
+      <section id="s5">
+        <h2><span class="n">5.</span> Kullanıcı İçeriği</h2>
+        <p>Uygulamaya girdiğiniz tüm İçerik size aittir. İçeriğiniz üzerinde mülkiyet iddia etmiyoruz.</p>
+        <p>Hizmeti size sunabilmek için (verilerinizi saklamak, senkronize etmek, dönüştürmek, özet ve grafik üretmek amacıyla) İçeriğinizi işlememize izin vermiş olursunuz. Bu izin yalnızca hizmetin sağlanması amacıyla sınırlıdır; İçeriğinizi pazarlama amacıyla kullanmaz, satmaz veya üçüncü kişilerle paylaşmayız.</p>
+        <p>İçeriğinizin doğruluğundan ve hukuka uygunluğundan siz sorumlusunuz.</p>
+      </section>
+      <section id="s6">
+        <h2><span class="n">6.</span> Cüzdan Paylaşımı</h2>
+        <p>Kendi cüzdanlarınıza başka kişileri davet edebilirsiniz. Siz bir davet oluşturmadıkça hiçbir şey paylaşılmaz; varsayılan olarak paylaşım yoktur.</p>
+        <p>Davet, 15 dakika geçerli olan, tek kullanımlık ve kullanılmadan önce dilediğiniz an iptal edilebilen bir koddur. Geçerli bir kodu elinde tutan kişi, kodun kapsadığı cüzdanlara katılabilir; bu nedenle kodu bir anahtar gibi görün ve yalnızca davet etmek istediğiniz kişiye iletin.</p>
+        <p>İçeri aldığınız kişi o cüzdanın kayıtlarını eksiksiz görür; düzenleyici olarak davet ettiyseniz kayıt ekleyip değiştirebilir de. Neyi paylaşmayı seçtiğinizden siz, paylaşılanla ne yaptığından davet ettiğiniz kişi sorumludur.</p>
+        <p>Bir üyeyi dilediğiniz an çıkarabilirsiniz; erişimi o anda sona erer. Üye de aynı şekilde kendi isteğiyle ayrılabilir. Birini çıkarmak, onun o ana kadar gördüklerini geri almaz.</p>
+        <p>Paylaşımın iki tarafı da tam hesap gerektirir: misafir oturumu ne davet edebilir ne bir davete katılabilir; aksi hâlde karşı taraf bir daha ulaşılamayacak bir hesaba güvenmiş olurdu.</p>
+      </section>
+      <section id="s7">
+        <h2><span class="n">7.</span> Ücretlendirme</h2>
+        <p>Uygulama hâlihazırda ücretsiz sunulmaktadır. Reklam gösterilmez ve uygulama içi satın alma bulunmamaktadır.</p>
+        <p>İleride ücretli özellikler sunulması hâlinde, ücretlendirme koşulları satın alma öncesinde açıkça bildirilir ve mevcut ücretsiz özellikler için geriye dönük ücret talep edilmez. Ödemeler, kullanılması hâlinde App Store veya Google Play üzerinden ilgili mağazanın kuralları çerçevesinde tahsil edilir; iade talepleri de bu mağazaların politikalarına tabidir.</p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> Üçüncü Taraf Hizmetler ve Veriler</h2>
+        <p>Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş'i tercih etmeniz hâlinde Apple, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri.</p>
+        <p>Bu kaynakların kesintisizliği, güncelliği veya doğruluğu bizim kontrolümüzde değildir. Kaynakların tam listesi ve lisansları için &quot;Lisanslar ve Veri Kaynakları&quot; belgesine bakınız.</p>
+      </section>
+      <section id="s9">
+        <h2><span class="n">9.</span> Hizmetin Sürekliliği ve Değişiklikler</h2>
+        <p>Uygulamanın kesintisiz, hatasız veya her zaman erişilebilir olacağını taahhüt etmiyoruz. Bakım, güncelleme, altyapı arızası veya mücbir sebeplerden kaynaklı kesintiler yaşanabilir.</p>
+        <p>Özellikleri değiştirme, ekleme veya kaldırma hakkımız saklıdır. Hizmetin tamamen sonlandırılması hâlinde, verilerinizi dışa aktarabilmeniz için makul bir süre önceden e-posta ile bilgilendirme yapılır.</p>
+      </section>
+      <section id="s10">
+        <h2><span class="n">10.</span> Garanti Reddi</h2>
+        <p>Uygulama &quot;olduğu gibi&quot; ve &quot;mevcut hâliyle&quot; sunulur. Yürürlükteki hukukun izin verdiği azami ölçüde, açık veya zımni hiçbir garanti verilmemektedir; buna belirli bir amaca uygunluk, kesintisizlik ve hatasızlık garantileri dahildir.</p>
+        <p>Uygulamanın ürettiği hesaplama, dönüştürme, tahmin ve karşılaştırmalar bilgilendirme amaçlıdır. Ayrıntı için &quot;Finansal Sorumluluk Reddi&quot; belgesine bakınız.</p>
+      </section>
+      <section id="s11">
+        <h2><span class="n">11.</span> Sorumluluğun Sınırlandırılması</h2>
+        <p>Yürürlükteki hukukun izin verdiği azami ölçüde; kâr kaybı, veri kaybı, iş kesintisi veya dolaylı ya da netice kabilinden doğan zararlardan sorumlu değiliz.</p>
+        <p>Uygulamada yer alan verilere dayanarak aldığınız finansal kararların sonuçları münhasıran size aittir.</p>
+        <p>Bu maddedeki sınırlamalar, kastımızdan veya ağır ihmalimizden doğan sorumluluğu ve tüketici mevzuatından kaynaklanan devredilemez haklarınızı ortadan kaldırmaz.</p>
+      </section>
+      <section id="s12">
+        <h2><span class="n">12.</span> Hesabın Kapatılması</h2>
+        <p>Hesabınızı dilediğiniz zaman Uygulama içinden &quot;Ayarlar → Hesabı Sil&quot; yolunu izleyerek kapatabilirsiniz. Bu işlem hesabınızı ve tüm verilerinizi kalıcı olarak siler ve geri alınamaz. Paylaşmış olduğunuz cüzdanlar da aynı anda paylaştığınız kişiler için ortadan kalkar.</p>
+        <p>Misafir oturumu, oturumdan çıkılarak kapatılır ve sonucu aynıdır: e-posta ve şifre olmadığı için geri dönülecek bir yol kalmaz, dolayısıyla çıkış o hesabı ve kayıtlarını siler.</p>
+        <p>Bu Koşulların ağır biçimde veya tekrar tekrar ihlal edilmesi hâlinde, hesabınızı askıya alabilir veya sonlandırabiliriz. Hukuken mümkün olduğu ölçüde bu durumu önceden bildirir ve verilerinizi dışa aktarmanız için makul bir imkân tanırız.</p>
+      </section>
+      <section id="s13">
+        <h2><span class="n">13.</span> Koşullarda Değişiklik</h2>
+        <p>Bu Koşulları güncelleyebiliriz. Esaslı değişikliklerde, değişiklik yürürlüğe girmeden önce Uygulama içinde veya e-posta ile bilgilendirme yapılır ve gerektiğinde yeniden onayınız istenir.</p>
+        <p>Bildirimden sonra Uygulamayı kullanmaya devam etmeniz güncellenmiş Koşulları kabul ettiğiniz anlamına gelir. Kabul etmiyorsanız hesabınızı kapatabilirsiniz.</p>
+      </section>
+      <section id="s14">
+        <h2><span class="n">14.</span> Uygulanacak Hukuk ve Uyuşmazlıkların Çözümü</h2>
+        <p>Bu Koşullara Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri ve icra daireleri yetkilidir.</p>
+        <p>Tüketici sıfatını haiz kullanıcılar, parasal sınırlar dâhilinde ikametgâhlarının bulunduğu yerdeki Tüketici Hakem Heyetlerine veya Tüketici Mahkemelerine başvurabilir. Avrupa Birliği'nde yerleşik kullanıcıların kendi ülkelerinin emredici tüketici hükümlerinden doğan hakları saklıdır.</p>
+      </section>
+      <section id="s15">
+        <h2><span class="n">15.</span> İletişim</h2>
+        <p>Bu Koşullara ilişkin her türlü soru ve talebinizi <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a> adresine iletebilirsiniz.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>

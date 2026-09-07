@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="6698 sayılı Kanun kapsamında aydınlatma">
+<title>KVKK Aydınlatma Metni — Nomad Budget</title>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #F5F7FA;
+  --surface: #FFFFFF;
+  --surface-muted: #EEF1F6;
+  --ink: #0E1726;
+  --ink-soft: #3A4658;
+  --muted: #6B7684;
+  --border: #E7ECF2;
+  --accent: #11371C;
+  --lime: #52D69B;
+  /* gradients.appIconWash */
+  --wash-solid: #DCE3ED;
+  --wash: linear-gradient(135deg, #E1DDEC 0%, #DCE3ED 52%, #D1E8DE 100%);
+  --shadow: 0 1px 2px rgba(12,24,36,.05), 0 18px 44px rgba(12,24,36,.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B1220;
+    --surface: #1D2736;
+    --surface-muted: #29354A;
+    --ink: #E9EEF5;
+    --ink-soft: #B7C2D0;
+    --muted: #8B97A6;
+    --border: #303D52;
+    --accent: #52D69B;
+    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
+       a single image with a dark wordmark, and the app pairs the dark wash with a
+       light one it has and a web page does not. A light plate at the top of a dark
+       card is the same compromise the emails make, and it keeps the mark legible. */
+    --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 32px 16px 56px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  /* No web font: the app's Inter is not worth a request to someone else's CDN on
+     the page that explains how we handle your data. */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+
+.card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* The top of every auth screen: the mark on the app-icon wash, over the stepped
+   rule the focused input draws. */
+.wash {
+  background-color: var(--wash-solid);
+  background-image: var(--wash);
+  padding: 40px 28px 34px;
+  text-align: center;
+}
+.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.rule {
+  display: flex;
+  width: 72px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.rule i:nth-child(1) { width: 30%; background: #52D69B; }
+.rule i:nth-child(2) { width: 26%; background: #2E90FA; }
+.rule i:nth-child(3) { width: 24%; background: #EE46BC; }
+.rule i:nth-child(4) { width: 20%; background: #F79009; }
+
+.doc { padding: 34px 40px 44px; }
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+}
+.meta { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.lede { margin-top: 22px; }
+
+.toc {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.toc h2 {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol { margin: 0; padding-left: 20px; font-size: 15px; }
+.toc li { margin: 4px 0; }
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { margin-top: 36px; scroll-margin-top: 20px; }
+h2 { margin: 0 0 10px; font-size: 18px; line-height: 1.4; font-weight: 700; color: var(--ink); }
+h2 .n { color: var(--muted); font-weight: 600; }
+p { margin: 0 0 14px; }
+p:last-child { margin-bottom: 0; }
+strong { color: var(--ink); font-weight: 600; }
+
+ul { margin: 0 0 14px; padding: 0; list-style: none; }
+ul li { position: relative; padding-left: 20px; margin: 0 0 8px; }
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The index's document list: one tappable row per document. */
+.docs { margin-top: 26px; }
+.docs li { padding: 0; margin: 0 0 10px; }
+.docs li::before { content: none; }
+.docs a {
+  display: block;
+  padding: 16px 20px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  text-decoration: none;
+}
+.docs a:hover { border-color: var(--lime); }
+.docs .t { display: block; font-weight: 600; color: var(--ink); }
+.docs .s { display: block; margin-top: 2px; font-size: 14px; color: var(--muted); }
+
+.group { margin-top: 34px; }
+.group > h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.group .docs { margin-top: 12px; }
+
+footer {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0 0 4px; }
+
+@media (max-width: 560px) {
+  body { padding: 16px 12px 40px; }
+  .card { border-radius: 20px; }
+  .wash { padding: 32px 20px 26px; }
+  .doc { padding: 26px 22px 34px; }
+  h1 { font-size: 24px; }
+}
+
+@media print {
+  body { padding: 0; background: #fff; color: #000; }
+  .card { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+  .wash { background: none; padding-bottom: 12px; }
+  .crumbs, .toc { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="wash">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <div class="rule"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="doc">
+      <nav class="crumbs">
+        <a href="./index.tr.html">← Tüm belgeler</a>
+        <a href="./kvkk.en.html" lang="en">English</a>
+      </nav>
+      <h1>KVKK Aydınlatma Metni</h1>
+      <p class="meta">Sürüm 1.3 · Yürürlük tarihi: 2026-09-07</p>
+      <div class="lede">
+        <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (&quot;KVKK&quot;) 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.</p>
+        <p>Uygulamanın veri işleme faaliyetinin tamamına ilişkin daha ayrıntılı açıklama için &quot;Gizlilik Politikası&quot; belgesine bakınız.</p>
+      </div>
+      <nav class="toc">
+        <h2>İçindekiler</h2>
+        <ol>
+          <li><a href="#s1">Veri Sorumlusunun Kimliği</a></li>
+          <li><a href="#s2">İşlenen Kişisel Veri Kategorileri</a></li>
+          <li><a href="#s3">Kişisel Verilerin İşlenme Amaçları</a></li>
+          <li><a href="#s4">Hukuki Sebepler</a></li>
+          <li><a href="#s5">Toplama Yöntemi</a></li>
+          <li><a href="#s6">Aktarım ve Yurt Dışına Aktarım</a></li>
+          <li><a href="#s7">Saklama Süresi</a></li>
+          <li><a href="#s8">İlgili Kişinin Hakları (KVKK m.11)</a></li>
+          <li><a href="#s9">Başvuru Usulü</a></li>
+        </ol>
+      </nav>
+      <section id="s1">
+        <h2><span class="n">1.</span> Veri Sorumlusunun Kimliği</h2>
+        <p>Veri sorumlusu: Rubeeks (rubeeks.co)</p>
+        <p>İletişim adresi: <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+      </section>
+      <section id="s2">
+        <h2><span class="n">2.</span> İşlenen Kişisel Veri Kategorileri</h2>
+        <ul>
+          <li><strong>Kimlik ve iletişim verisi:</strong> e-posta adresi; seçtiğiniz görünen ad ve avatar. Hesap Apple ile Giriş kullanılarak açıldıysa buna Apple'ın verdiği kimlik belirteci ile Apple'ın ilettiği (gizli yönlendirme adresi olabilen) e-posta adresi de dâhildir. Misafir hesabında e-posta adresi bulunmaz; yalnızca ayarladıysanız görünen ad ve avatar bulunur.</li>
+          <li><strong>Müşteri işlem verisi:</strong> Uygulamaya girdiğiniz cüzdan, işlem, kategori, bütçe, hedef ve tekrarlayan kural kayıtları; bu kayıtların tutar, para birimi, tarih ve serbest metin not alanları.</li>
+          <li><strong>İşlem güvenliği verisi:</strong> şifrenizin kriptografik özeti (Apple ile Giriş kullanılarak açılan hesapta bulunmaz; kimliği Apple doğrular), oturum bilgileri, hesap oluşturma tarihi, onay sürümü ve tarihi.</li>
+          <li><strong>Cihaz verisi:</strong> bildirimlere izin verdiyseniz cihazınızın bildirim belirteci ve cihazın iOS mu Android mi olduğu.</li>
+          <li><strong>Paylaşım verisi:</strong> hangi cüzdanınızı kimle ve hangi rolle paylaştığınız, hangi cüzdanlara kimin daveti ile katıldığınız ve bir kaydı hangi üyenin girdiği.</li>
+        </ul>
+        <p>Özel nitelikli kişisel veri işlenmemektedir. Serbest metin not alanlarına özel nitelikli veri (sağlık, inanç vb. içerikli açıklamalar) yazmamanızı öneririz.</p>
+      </section>
+      <section id="s3">
+        <h2><span class="n">3.</span> Kişisel Verilerin İşlenme Amaçları</h2>
+        <ul>
+          <li>Üyelik kaydının oluşturulması ve hesap güvenliğinin sağlanması.</li>
+          <li>Bütçe takibi hizmetinin sunulması: kayıtların saklanması, senkronize edilmesi, para birimleri arasında dönüştürülmesi, özet ve grafiklerin üretilmesi.</li>
+          <li>Paylaşım özelliğinin yürütülmesi: davetlerin oluşturulması ve kullanılması, cüzdan üyeliklerinin tutulması ve bir kaydı hangi üyenin girdiğinin gösterilmesi.</li>
+          <li>Hizmete ilişkin zorunlu bildirimlerin (e-posta doğrulama, şifre sıfırlama) ve — izin verdiyseniz — paylaşılan cüzdandaki hareketlere dair bildirimlerin iletilmesi.</li>
+          <li>Bilgi güvenliği süreçlerinin yürütülmesi, hata giderme ve kötüye kullanımın önlenmesi.</li>
+          <li>Talep ve şikâyetlerin takibi ile yasal yükümlülüklerin yerine getirilmesi.</li>
+        </ul>
+      </section>
+      <section id="s4">
+        <h2><span class="n">4.</span> Hukuki Sebepler</h2>
+        <p>Kişisel verileriniz KVKK m.5 kapsamında aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:</p>
+        <ul>
+          <li><strong>m.5/2-c</strong> — Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması: hesabın oluşturulması ve hizmetin sunulması.</li>
+          <li><strong>m.5/2-ç</strong> — Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi: yetkili makam taleplerinin karşılanması.</li>
+          <li><strong>m.5/2-f</strong> — İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla meşru menfaat: güvenlik, kötüye kullanımın önlenmesi ve hata giderme.</li>
+          <li><strong>m.5/1</strong> — Açık rıza: cihazınızın konumundan ülke bilgisinin türetilmesi ve bildirim gönderilmesi. Her ikisi de cihaz izniyle verilir ve cihaz ayarlarından her an geri alınabilir.</li>
+        </ul>
+      </section>
+      <section id="s5">
+        <h2><span class="n">5.</span> Toplama Yöntemi</h2>
+        <p>Kişisel verileriniz, Uygulamayı kullanmanız sırasında doğrudan sizin tarafınızdan girilmek suretiyle ve — konum, kamera ve bildirimler için — tarafınızca verilen cihaz izinleri aracılığıyla elektronik ortamda otomatik yollarla toplanmaktadır.</p>
+        <p>Hakkınızda üçüncü kişilerden veri temin edilen tek hâl tamamen sizin tercihinize bağlıdır: Apple ile Giriş'i seçmeniz durumunda kimlik belirteciniz, e-posta adresiniz ve — yalnızca ilk girişte — adınız Apple'dan tarafımıza ulaşır. Bunun dışında kaynağı başka bir kişi olan tek kayıt, davet edildiğiniz bir cüzdandaki üyeliğinizdir; bu kayıt sizi davet eden kişiyi de içerir.</p>
+      </section>
+      <section id="s6">
+        <h2><span class="n">6.</span> Aktarım ve Yurt Dışına Aktarım</h2>
+        <p>Kişisel verileriniz, hizmetin sunulabilmesi amacıyla barındırma ve kimlik doğrulama hizmeti sağlayan Supabase Inc.'a veri işleyen sıfatıyla aktarılmaktadır. Sunucular Supabase Inc. tarafından işletilen sunucular (AWS ap-northeast-2 — Seul, Güney Kore) üzerindedir; dolayısıyla veriler KVKK m.9 anlamında yurt dışına aktarılmaktadır.</p>
+        <p>Aktarım, sözleşmenin ifası için zorunlu olup, veri işleyenle akdedilen sözleşme ve teknik/idari tedbirlerle korunmaktadır.</p>
+        <p>Apple ile Giriş'i seçmeniz hâlinde, kimliğinizi doğrulayabilmesi için giriş talebiniz Amerika Birleşik Devletleri'nde bulunan Apple Inc.'e aktarılır; Apple bu adımda bağımsız veri sorumlusu sıfatıyla hareket eder ve kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.</p>
+        <p>Bildirimlere izin verdiyseniz, yalnızca mesajın iletilebilmesi amacıyla bildirim belirteciniz ve bildirimin metni Amerika Birleşik Devletleri'nde bulunan Expo, Apple (APNs) ve Google (FCM) altyapılarına aktarılır.</p>
+        <p>Bir cüzdanı paylaşmanız hâlinde, o cüzdanın kayıtları ile görünen adınız ve avatarınız davet ettiğiniz kişilere görünür olur. Bu aktarım yalnızca sizin talimatınızla gerçekleşir ve üyeyi çıkararak dilediğiniz an sona erdirebilirsiniz.</p>
+        <p>Bunun dışında verileriniz, yalnızca kanunen yetkili kamu kurum ve kuruluşlarına, mevzuatın öngördüğü ölçüde aktarılabilir.</p>
+      </section>
+      <section id="s7">
+        <h2><span class="n">7.</span> Saklama Süresi</h2>
+        <p>Kişisel verileriniz, hesabınız açık kaldığı sürece saklanır. Hesabınızı silmeniz hâlinde veriler kalıcı olarak silinir; sistem yedeklerindeki kopyalar yedek döngüsünün tamamlanmasıyla (en geç 30 gün) tasfiye edilir. Misafir hesabı, ona ulaşan başka bir yol olmadığı için oturumdan çıktığınızda silinir.</p>
+        <p>Mevzuattan doğan bir saklama yükümlülüğü bulunması hâlinde, ilgili veriler yalnızca bu yükümlülüğün gerektirdiği süre ve kapsamla sınırlı olarak muhafaza edilir.</p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> İlgili Kişinin Hakları (KVKK m.11)</h2>
+        <p>Veri sorumlusuna başvurarak;</p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+          <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+          <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+          <li>Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme,</li>
+          <li>Eksik veya yanlış işlenmiş olması hâlinde düzeltilmesini isteme,</li>
+          <li>KVKK m.7'de öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+          <li>Düzeltme, silme ve yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+          <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+          <li>Kanuna aykırı işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
+        </ul>
+        <p>haklarına sahipsiniz.</p>
+      </section>
+      <section id="s9">
+        <h2><span class="n">9.</span> Başvuru Usulü</h2>
+        <p>Haklarınıza ilişkin taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ uyarınca, kimliğinizi tespit edici bilgilerle birlikte <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a> adresine iletebilirsiniz. Başvurunuzu, sistemimizde kayıtlı e-posta adresinizden göndermeniz kimlik doğrulamasını hızlandırır.</p>
+        <p>Başvurunuzda talebinizin konusunu açıkça belirtiniz. Talepleriniz, niteliğine göre en kısa sürede ve her hâlde en geç 30 gün içinde ücretsiz olarak sonuçlandırılır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kurul tarafından belirlenen tarifedeki ücret alınabilir.</p>
+        <p>Başvurunuzun reddedilmesi, verilen cevabı yetersiz bulmanız veya süresinde cevap verilmemesi hâlinde, cevabı öğrendiğiniz tarihten itibaren 30 ve her hâlde başvuru tarihinden itibaren 60 gün içinde Kişisel Verileri Koruma Kurulu'na şikâyette bulunabilirsiniz.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Nomad Budget · Rubeeks (rubeeks.co)</p>
+    <p><a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a></p>
+  </footer>
+</body>
+</html>
