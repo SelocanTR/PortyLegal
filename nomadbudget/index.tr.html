@@ -33,10 +33,12 @@
     --muted: #8B97A6;
     --border: #303D52;
     --accent: #52D69B;
-    /* The wash deliberately does not flip to gradients.appIconWashDark: the mark is
-       a single image with a dark wordmark, and the app pairs the dark wash with a
-       light one it has and a web page does not. A light plate at the top of a dark
-       card is the same compromise the emails make, and it keeps the mark legible. */
+    /* gradients.appIconWashDark — the wash the app itself puts behind the mark in
+       dark mode. It can flip here because the wordmark is text in the ink colour
+       rather than part of the image: the coin is transparent and carries its own
+       colour, so the one thing that needed a light plate now inverts with the page. */
+    --wash-solid: #141C2B;
+    --wash: linear-gradient(135deg, #161E2E 0%, #141C2B 52%, #122320 100%);
     --shadow: 0 1px 2px rgba(0,0,0,.45), 0 18px 44px rgba(0,0,0,.35);
   }
 }
@@ -74,12 +76,24 @@ a { color: var(--accent); text-underline-offset: 2px; }
   padding: 40px 28px 34px;
   text-align: center;
 }
-.wash img { display: block; width: 227px; max-width: 62%; height: auto; margin: 0 auto; }
+.wash img { display: block; width: 64px; height: 64px; margin: 0 auto; }
+/* The app's own stack under the coin: the name at the display size, then the rule.
+   No web font, so this is the same system stack the headings use rather than the
+   app's Inter — see the note on the body rule. */
+.wordmark {
+  display: block;
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: var(--ink);
+}
 .rule {
   display: flex;
   width: 72px;
   height: 3px;
-  margin: 18px auto 0;
+  margin: 12px auto 0;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -207,7 +221,8 @@ footer p { margin: 0 0 4px; }
 <body>
   <main class="card">
     <div class="wash">
-      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/mark.png" alt="Nomad Budget" width="227" height="109">
+      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/coin.png" alt="" width="64" height="64">
+      <span class="wordmark">Nomad Budget</span>
       <div class="rule"><i></i><i></i><i></i><i></i></div>
     </div>
     <div class="doc">
