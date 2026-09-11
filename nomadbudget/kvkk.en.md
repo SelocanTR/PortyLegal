@@ -1,6 +1,6 @@
 # Data Protection Notice (KVKK)
 
-_Version 1.3 · Effective: 2026-09-07_
+_Version 1.4 · Effective: 2026-09-11_
 
 This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.
 
@@ -14,9 +14,9 @@ Contact address: nomadbudget@rubeeks.co
 
 ## 2. Categories of Personal Data Processed
 
-- **Identity and contact data:** email address; the display name and avatar you choose. Where the account was created with Sign in with Apple, this also covers the identifier Apple issues and the address it passes on, which may be a private relay alias. A guest account has no email address and carries only the display name and avatar, if you set them.
+- **Identity and contact data:** email address; the display name and avatar you choose. Where the account was created with Sign in with Apple or Sign in with Google, this also covers the identifier the provider issues and the address it passes on, which with Apple may be a private relay alias. A guest account has no email address and carries only the display name and avatar, if you set them.
 - **Customer transaction data:** the wallets, transactions, categories, budgets, goals and recurring rules you enter, including their amounts, currencies, dates and free-text note fields.
-- **Transaction security data:** the hash of your password (an account created with Sign in with Apple has none, because Apple confirms the identity instead), session information, account creation date, and the version and date of your consent.
+- **Transaction security data:** the hash of your password (an account created with Sign in with Apple or Sign in with Google has none, because the provider confirms the identity instead), session information, account creation date, and the version and date of your consent.
 - **Device data:** where you have allowed notifications, your device's push token and whether it is an iOS or an Android device.
 - **Sharing data:** which of your wallets you have shared with whom and in what role, which wallets you have been invited into and by whom, and which member entered a given record.
 
@@ -44,7 +44,7 @@ Your personal data is processed on the following grounds under KVKK Art. 5:
 
 Your personal data is collected electronically, by automated means, as you enter it into the App yourself and — for location, the camera and notifications — through the device permissions you grant.
 
-Data about you is obtained from a third party in one case, and only if you choose it: signing in with Apple, where the identifier, the email address and, on the first sign-in only, your name reach us from Apple. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.
+Data about you is obtained from a third party in one case, and only if you choose it: signing in with Apple or Google, where the identifier, the email address and your name reach us from that provider — from Apple on the first sign-in only, from Google on every sign-in, though it is read only the first time. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.
 
 ## 6. Transfers, Including Abroad
 
@@ -52,7 +52,7 @@ Your personal data is transferred to Supabase Inc., our hosting and authenticati
 
 The transfer is necessary for the performance of the contract and is protected by our agreement with the processor and by technical and administrative measures.
 
-Where you choose Sign in with Apple, the sign-in request is transferred to Apple Inc. in the United States so that Apple can confirm your identity; for that step Apple acts as an independent controller and receives nothing about your records.
+Where you choose Sign in with Apple or Sign in with Google, the sign-in request is transferred to Apple Inc. or Google LLC in the United States so that the provider can confirm your identity; for that step it acts as an independent controller and receives nothing about your records.
 
 Where you have allowed notifications, your push token and the text of the notification are transferred to Expo, Apple (APNs) and Google (FCM) in the United States, solely so that the message can be delivered.
 

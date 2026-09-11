@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Version 1.3 · Effective: 2026-09-07_
+_Version 1.4 · Effective: 2026-09-11_
 
 These Terms of Use ("Terms") govern your use of the Nomad Budget mobile application and its related services (the "App"), provided by Rubeeks (rubeeks.co) ("we", "us").
 
@@ -24,7 +24,7 @@ To create an account you must be at least 18 years old, or act with the consent 
 
 If you create a full account, you must register with a valid email address that belongs to you.
 
-You may also create an account with Sign in with Apple. Apple then confirms your identity to us and passes on an address: your own, or the private relay address you asked Apple to substitute for it. No password exists for such an account, so there is none for you to keep secret and none for us to hold.
+You may also create an account with Sign in with Apple or Sign in with Google. The provider then confirms your identity to us and passes on an address: with Google, the address of your Google account; with Apple, your own or the private relay address you asked Apple to substitute for it. No password exists for such an account, so there is none for you to keep secret and none for us to hold.
 
 You may also use the App as a guest, without an account. A guest session lives only on the device it was started on: there is no email address and no password to sign back in with, so signing out of it — or losing the device, or uninstalling the App — ends that account and everything in it for good. You can turn a guest session into a full account at any time without losing anything you have entered. Anything that involves another person (sharing a wallet, or joining an invitation) requires a full account.
 
@@ -70,7 +70,7 @@ If paid features are introduced later, their terms will be presented clearly bef
 
 ## 8. Third-Party Services and Data
 
-The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple where you choose to sign in with your Apple ID, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, and open data published by official statistical institutions for cross-country price comparisons.
+The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, and open data published by official statistical institutions for cross-country price comparisons.
 
 The availability, timeliness and accuracy of these sources are outside our control. See the "Licenses and Data Sources" document for the full list and their licences.
 

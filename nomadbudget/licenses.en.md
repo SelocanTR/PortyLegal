@@ -1,6 +1,6 @@
 # Licenses and Data Sources
 
-_Version 1.3 · Effective: 2026-09-07_
+_Version 1.4 · Effective: 2026-09-11_
 
 Nomad Budget is built on open-source software and publicly available statistical data. The components and their licences are listed below.
 

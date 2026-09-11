@@ -1,6 +1,6 @@
 # Nomad Budget — Yasal Belgeler
 
-_Sürüm 1.3 · Yürürlük tarihi: 2026-09-07_
+_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
 
 - [Kullanım Koşulları](./terms.tr.md) — Uygulamayı kullanma kuralları ve sorumluluklar
 - [Gizlilik Politikası](./privacy.tr.md) — Hangi veriler, neden ve nerede

@@ -1,6 +1,6 @@
 # Kullanım Koşulları
 
-_Sürüm 1.3 · Yürürlük tarihi: 2026-09-07_
+_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
 
 Bu Kullanım Koşulları ("Koşullar"), Rubeeks (rubeeks.co) ("biz") tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin ("Uygulama") kullanımına ilişkin şartları düzenler.
 
@@ -24,7 +24,7 @@ Hesap oluşturmak için en az 18 yaşında olmanız veya veli/vasinizin onayıyl
 
 Tam hesap oluşturuyorsanız, kayıt sırasında geçerli ve size ait bir e-posta adresi vermeniz gerekir.
 
-Hesabınızı Apple ile Giriş kullanarak da oluşturabilirsiniz. Bu durumda kimliğinizi bize Apple doğrular ve bir e-posta adresi iletir: ya size ait olan adres ya da Apple'dan onun yerine vermesini istediğiniz gizli yönlendirme adresi. Böyle bir hesap için şifre oluşturulmaz; dolayısıyla gizli tutmanız gereken bir şifre de, bizim sakladığımız bir şifre de yoktur.
+Hesabınızı Apple ile Giriş veya Google ile Giriş kullanarak da oluşturabilirsiniz. Bu durumda kimliğinizi bize ilgili sağlayıcı doğrular ve bir e-posta adresi iletir: Google'da Google hesabınızın adresi; Apple'da ya size ait olan adres ya da Apple'dan onun yerine vermesini istediğiniz gizli yönlendirme adresi. Böyle bir hesap için şifre oluşturulmaz; dolayısıyla gizli tutmanız gereken bir şifre de, bizim sakladığımız bir şifre de yoktur.
 
 Uygulamayı hesap açmadan, misafir olarak da kullanabilirsiniz. Misafir oturumu yalnızca başlatıldığı cihazda yaşar: geri dönmek için ne e-posta ne şifre olduğundan, oturumdan çıkmanız — ya da cihazı kaybetmeniz veya uygulamayı kaldırmanız — o hesabı ve içindeki her şeyi kalıcı olarak sonlandırır. Misafir oturumunu dilediğiniz an, girdiğiniz hiçbir şeyi kaybetmeden tam hesaba dönüştürebilirsiniz. Başka bir kişiyi ilgilendiren işlemler (cüzdan paylaşmak, bir davete katılmak) tam hesap gerektirir.
 
@@ -70,7 +70,7 @@ Uygulama hâlihazırda ücretsiz sunulmaktadır. Reklam gösterilmez ve uygulama
 
 ## 8. Üçüncü Taraf Hizmetler ve Veriler
 
-Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş'i tercih etmeniz hâlinde Apple, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri.
+Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri.
 
 Bu kaynakların kesintisizliği, güncelliği veya doğruluğu bizim kontrolümüzde değildir. Kaynakların tam listesi ve lisansları için "Lisanslar ve Veri Kaynakları" belgesine bakınız.
 

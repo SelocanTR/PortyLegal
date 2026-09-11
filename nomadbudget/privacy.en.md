@@ -1,6 +1,6 @@
 # Privacy Policy
 
-_Version 1.3 · Effective: 2026-09-07_
+_Version 1.4 · Effective: 2026-09-11_
 
 Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.
 
@@ -14,7 +14,7 @@ Contact: nomadbudget@rubeeks.co
 
 ## 2. Data We Process
 
-**Account data:** your email address, a cryptographic hash of your password (never the password itself), your account creation date, session information, and the version and date of the consent you gave at sign-up. An account created with Sign in with Apple has no password hash at all: what is held instead is the identifier Apple issues for you in this App, together with the address Apple passed on, which is a private relay alias if you chose to hide your own. Apple offers your name once, on the very first sign-in and never again, and it is written to your profile as a starting display name you are free to change.
+**Account data:** your email address, a cryptographic hash of your password (never the password itself), your account creation date, session information, and the version and date of the consent you gave at sign-up. An account created with Sign in with Apple or Sign in with Google has no password hash at all: what is held instead is the identifier the provider issues for you in this App, together with the address it passed on — with Apple, a private relay alias if you chose to hide your own; with Google, always the address of your Google account. Your name is written to your profile as a starting display name you are free to change. Apple offers it once, on the very first sign-in and never again; Google offers it on every sign-in, but it is read only the first time, so a display name you changed later is never overwritten.
 
 **The financial records you enter:** wallets (name, country, currency, opening balance), transactions (amount, currency, date, type, category, note, event tag), categories, budgets, goals and recurring rules.
 
@@ -70,6 +70,7 @@ We do not sell, rent or share your data for advertising. Data is disclosed to th
 
 - **Hosting and authentication provider (Supabase Inc.):** as a data processor, solely to run the service.
 - **Sign in with Apple (Apple Inc.):** if you choose it, Apple confirms to us that the Apple ID is yours, and in doing so learns that you use the App. For that step Apple is an independent controller under its own privacy policy. Nothing about your records is sent to it.
+- **Sign in with Google (Google LLC):** if you choose it, Google confirms to us that the Google account is yours, and in doing so learns that you use the App. For that step Google is an independent controller under its own privacy policy. Nothing about your records is sent to it.
 - **Email delivery:** your email address only, to deliver confirmation and password-reset messages.
 - **Notification delivery (Expo, Apple, Google):** your push token and the text of the notification, solely so that the message can be delivered.
 - **Other people you share a wallet with:** only what the next section describes, and only because you chose to invite them or to accept an invitation.

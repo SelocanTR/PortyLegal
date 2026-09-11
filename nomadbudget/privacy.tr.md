@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-_Sürüm 1.3 · Yürürlük tarihi: 2026-09-07_
+_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
 
 Nomad Budget finansal verilerinizi tutar; bu yüzden gizlilik bizim için sonradan eklenen bir başlık değil. Bu politika hangi verileri işlediğimizi, neden işlediğimizi ve bunlar üzerinde hangi haklara sahip olduğunuzu açıklar.
 
@@ -14,7 +14,7 @@ Verilerinizin işlenmesinden sorumlu taraf (veri sorumlusu): Rubeeks (rubeeks.co
 
 ## 2. İşlediğimiz Veriler
 
-**Hesap verileri:** e-posta adresiniz, şifrenizin kriptografik özeti (şifrenin kendisi hiçbir zaman saklanmaz), hesap oluşturma tarihi, oturum bilgileri ve kayıt sırasında verdiğiniz onayın sürümü ile tarihi. Apple ile Giriş kullanılarak açılan hesapta şifre özeti hiç bulunmaz; onun yerine Apple'ın bu Uygulama için size verdiği kimlik belirteci ve Apple'ın ilettiği e-posta adresi tutulur — adresinizi gizlemeyi seçtiyseniz bu bir gizli yönlendirme adresidir. Apple adınızı yalnızca ilk girişte, bir kez iletir; bu ad profilinize başlangıç görünen adı olarak yazılır ve dilediğiniz gibi değiştirebilirsiniz.
+**Hesap verileri:** e-posta adresiniz, şifrenizin kriptografik özeti (şifrenin kendisi hiçbir zaman saklanmaz), hesap oluşturma tarihi, oturum bilgileri ve kayıt sırasında verdiğiniz onayın sürümü ile tarihi. Apple ile Giriş veya Google ile Giriş kullanılarak açılan hesapta şifre özeti hiç bulunmaz; onun yerine sağlayıcının bu Uygulama için size verdiği kimlik belirteci ve ilettiği e-posta adresi tutulur — Apple'da adresinizi gizlemeyi seçtiyseniz bu bir gizli yönlendirme adresidir, Google'da ise her zaman Google hesabınızın adresidir. Adınız profilinize başlangıç görünen adı olarak yazılır ve dilediğiniz gibi değiştirebilirsiniz. Apple adınızı yalnızca ilk girişte, bir kez iletir; Google her girişte iletir, ancak yalnızca ilk seferinde okunur, dolayısıyla sonradan değiştirdiğiniz görünen ad hiçbir zaman üzerine yazılmaz.
 
 **Uygulamaya girdiğiniz finansal kayıtlar:** cüzdanlar (ad, ülke, para birimi, açılış bakiyesi), işlemler (tutar, para birimi, tarih, tür, kategori, not, etkinlik etiketi), kategoriler, bütçeler, hedefler ve tekrarlayan kurallar.
 
@@ -70,6 +70,7 @@ Verilerinizi satmıyoruz, kiralamıyoruz ve reklam amacıyla paylaşmıyoruz. Ve
 
 - **Barındırma ve kimlik doğrulama sağlayıcısı (Supabase Inc.):** yalnızca hizmeti çalıştırmak için, veri işleyen sıfatıyla.
 - **Apple ile Giriş (Apple Inc.):** bu yolu seçerseniz, Apple ID'nin size ait olduğunu bize Apple doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Apple, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
+- **Google ile Giriş (Google LLC):** bu yolu seçerseniz, Google hesabının size ait olduğunu bize Google doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Google, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
 - **E-posta gönderimi:** doğrulama ve şifre sıfırlama e-postalarının iletilmesi için, yalnızca e-posta adresiniz.
 - **Bildirim iletimi (Expo, Apple, Google):** yalnızca mesajın iletilebilmesi için bildirim belirteciniz ve bildirimin metni.
 - **Cüzdan paylaştığınız kişiler:** yalnızca bir sonraki bölümde anlatılanlar ve yalnızca siz davet ettiğiniz ya da bir daveti kabul ettiğiniz için.

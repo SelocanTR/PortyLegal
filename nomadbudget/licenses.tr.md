@@ -1,6 +1,6 @@
 # Lisanslar ve Veri Kaynakları
 
-_Sürüm 1.3 · Yürürlük tarihi: 2026-09-07_
+_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
 
 Nomad Budget, açık kaynak yazılımlar ve kamuya açık istatistik verileri üzerine kuruludur. Aşağıda bunların listesi ve lisansları yer alır.
 
