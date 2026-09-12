@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["RAG4646MDK.com.nomadbudget.mobile"],
+        "components": [
+          { "/": "/nomadbudget/join", "?": { "code": "*" }, "comment": "Wallet invite link — src/lib/inviteLink.ts" }
+        ]
+      }
+    ]
+  }
+}
