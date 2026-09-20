@@ -231,7 +231,7 @@ footer p { margin: 0 0 4px; }
         <a href="./privacy.tr.html" lang="tr">Türkçe</a>
       </nav>
       <h1>Privacy Policy</h1>
-      <p class="meta">Version 1.4 · Effective: 2026-09-11</p>
+      <p class="meta">Version 1.5 · Effective: 2026-09-20</p>
       <div class="lede">
         <p>Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.</p>
         <p>In short: we do not sell your data, we show no advertising, the App runs no third-party analytics or tracking, and you can delete your account and everything in it from inside the App at any time.</p>
@@ -263,6 +263,8 @@ footer p { margin: 0 0 4px; }
         <h2><span class="n">2.</span> Data We Process</h2>
         <p><strong>Account data:</strong> your email address, a cryptographic hash of your password (never the password itself), your account creation date, session information, and the version and date of the consent you gave at sign-up. An account created with Sign in with Apple or Sign in with Google has no password hash at all: what is held instead is the identifier the provider issues for you in this App, together with the address it passed on — with Apple, a private relay alias if you chose to hide your own; with Google, always the address of your Google account. Your name is written to your profile as a starting display name you are free to change. Apple offers it once, on the very first sign-in and never again; Google offers it on every sign-in, but it is read only the first time, so a display name you changed later is never overwritten.</p>
         <p><strong>The financial records you enter:</strong> wallets (name, country, currency, opening balance), transactions (amount, currency, date, type, category, note, event tag), categories, budgets, goals and recurring rules.</p>
+        <p><strong>Your travel records:</strong> the visits and crossings you confirm or enter for the map — which country, the first and last day there, where you arrived from and left for, how you travelled, and which of your transactions was the ticket — and the countries you mark as visited from memory. The App suggests these from the dates and countries of your transactions; nothing is recorded until you confirm or enter it.</p>
+        <p><strong>Files you import (optional):</strong> when you choose to import a CSV or Excel file, it is opened through your device's file picker and read on the device. Only the rows you confirm are written to your records, as ordinary transactions. The file is neither uploaded nor retained, and the App can reach no file you did not pick.</p>
         <p><strong>Profile:</strong> the display name and the avatar you pick. These are the only things another person sees about you when you share a wallet — your email address is never shown to another user.</p>
         <p><strong>Guest sessions:</strong> you can use the App without creating an account. A guest account holds the same records, and the same record of the consent you gave, as a full one, but it has no email address and no password: the session stored on that single device is the only thing that reaches it. Signing out therefore deletes the account and everything in it, irreversibly. Adding an email and a password later turns the very same account into a full one, with nothing moved and nothing lost.</p>
         <p><strong>Preferences:</strong> interface language, theme and base currency.</p>
@@ -274,7 +276,7 @@ footer p { margin: 0 0 4px; }
         <ul>
           <li>Bank or card details — the App connects to no financial institution.</li>
           <li>Location history or coordinate logs — beyond the country described above, nothing about your location is retained.</li>
-          <li>Contacts, photos or any other file on your device.</li>
+          <li>Contacts, photos or any file on your device other than one you explicitly pick to import.</li>
           <li>Advertising identifiers or cross-app tracking data.</li>
           <li>Third-party analytics, crash-reporting or marketing SDK data — the App contains none of these.</li>
         </ul>
@@ -285,6 +287,7 @@ footer p { margin: 0 0 4px; }
           <li><strong>Creating and securing your account</strong> — performance of a contract (KVKK Art. 5/2-c; GDPR Art. 6(1)(b)).</li>
           <li><strong>Storing, syncing and displaying your records</strong> — performance of a contract.</li>
           <li><strong>Currency conversion, budget and goal tracking, summaries and charts</strong> — performance of a contract.</li>
+          <li><strong>Drawing your map and route from your records, and pricing your own spending pattern against other countries</strong> — performance of a contract.</li>
           <li><strong>Deriving the country from your location, to mark your spending and fill the map and the country comparisons</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)). This consent is given only through the device permission and can be withdrawn at any time in your device settings.</li>
           <li><strong>Preventing abuse, debugging and keeping the service secure</strong> — legitimate interest (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).</li>
           <li><strong>Letting you share a wallet with someone you invite, and join a wallet you are invited to</strong> — performance of a contract.</li>
@@ -298,7 +301,7 @@ footer p { margin: 0 0 4px; }
         <h2><span class="n">4.</span> Where Your Data Is Stored and International Transfers</h2>
         <p>Your account and records are hosted on servers operated by Supabase Inc. (AWS ap-northeast-2 — Seoul, South Korea). Your data is therefore transferred outside Türkiye (KVKK Art. 9).</p>
         <p>South Korea is covered by an adequacy decision of the European Commission. The transfer is necessary to provide the service and is protected by our contract with the hosting provider and by technical safeguards.</p>
-        <p>When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose.</p>
+        <p>When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose. The country illustrations on the map are fetched from our hosting provider's storage by country code alone.</p>
         <p>Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.</p>
       </section>
       <section id="s5">
@@ -325,7 +328,7 @@ footer p { margin: 0 0 4px; }
       <section id="s7">
         <h2><span class="n">7.</span> Retention and Deletion</h2>
         <p>Your data is retained for as long as your account exists.</p>
-        <p>When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals and recurring rules are permanently deleted. This cannot be undone.</p>
+        <p>When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals, recurring rules, visits, crossings and marked countries are permanently deleted. This cannot be undone.</p>
         <p>Deleting your account also ends the shares you had given: the wallets you shared disappear for their members at the same moment, along with your profile and your push token. Records you entered in a wallet belonging to somebody else stay where they are, because they are that person's records; they simply stop being attributed to you.</p>
         <p>A guest session is deleted by signing out of it. That is not a sign-out in the ordinary sense — it is the deletion of the account, because nothing else reaches it — and it cannot be undone.</p>
         <p>Copies remaining in system backups are purged as the backup cycle rolls over, within 30 days at the latest. The local cache on your device is removed when you uninstall the App.</p>

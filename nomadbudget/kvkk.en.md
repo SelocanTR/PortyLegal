@@ -1,6 +1,6 @@
 # Data Protection Notice (KVKK)
 
-_Version 1.4 · Effective: 2026-09-11_
+_Version 1.5 · Effective: 2026-09-20_
 
 This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.
 
@@ -15,7 +15,8 @@ Contact address: nomadbudget@rubeeks.co
 ## 2. Categories of Personal Data Processed
 
 - **Identity and contact data:** email address; the display name and avatar you choose. Where the account was created with Sign in with Apple or Sign in with Google, this also covers the identifier the provider issues and the address it passes on, which with Apple may be a private relay alias. A guest account has no email address and carries only the display name and avatar, if you set them.
-- **Customer transaction data:** the wallets, transactions, categories, budgets, goals and recurring rules you enter, including their amounts, currencies, dates and free-text note fields.
+- **Customer transaction data:** the wallets, transactions, categories, budgets, goals and recurring rules you enter — whether typed in or imported from a file you chose — including their amounts, currencies, dates and free-text note fields.
+- **Travel data:** the visits and crossings you confirm or enter (country, first and last day, where from and where to, means of travel, the transaction that was the ticket) and the countries you mark as visited.
 - **Transaction security data:** the hash of your password (an account created with Sign in with Apple or Sign in with Google has none, because the provider confirms the identity instead), session information, account creation date, and the version and date of your consent.
 - **Device data:** where you have allowed notifications, your device's push token and whether it is an iOS or an Android device.
 - **Sharing data:** which of your wallets you have shared with whom and in what role, which wallets you have been invited into and by whom, and which member entered a given record.
@@ -25,7 +26,7 @@ No special categories of personal data are processed. We recommend that you do n
 ## 3. Purposes of Processing
 
 - Creating your membership record and securing your account.
-- Providing the budgeting service: storing and syncing your records, converting currencies, producing summaries and charts.
+- Providing the budgeting service: storing and syncing your records, converting currencies, producing summaries and charts, drawing your map and route, and comparing countries on the basis of your own spending.
 - Running the sharing feature: creating and redeeming invitations, keeping wallet memberships, and showing members who entered a record.
 - Delivering mandatory service messages (email confirmation, password reset) and, where you have permitted them, push notifications about activity in a shared wallet.
 - Running information security processes, debugging and preventing abuse.
@@ -42,7 +43,7 @@ Your personal data is processed on the following grounds under KVKK Art. 5:
 
 ## 5. Method of Collection
 
-Your personal data is collected electronically, by automated means, as you enter it into the App yourself and — for location, the camera and notifications — through the device permissions you grant.
+Your personal data is collected electronically, by automated means, as you enter it into the App yourself, from a CSV or Excel file you choose to import (read on your device), and — for location, the camera and notifications — through the device permissions you grant.
 
 Data about you is obtained from a third party in one case, and only if you choose it: signing in with Apple or Google, where the identifier, the email address and your name reach us from that provider — from Apple on the first sign-in only, from Google on every sign-in, though it is read only the first time. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.
 

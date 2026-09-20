@@ -1,6 +1,6 @@
 # KVKK Aydınlatma Metni
 
-_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
+_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
 
 Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.
 
@@ -15,7 +15,8 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 ## 2. İşlenen Kişisel Veri Kategorileri
 
 - **Kimlik ve iletişim verisi:** e-posta adresi; seçtiğiniz görünen ad ve avatar. Hesap Apple ile Giriş veya Google ile Giriş kullanılarak açıldıysa buna sağlayıcının verdiği kimlik belirteci ile ilettiği (Apple'da gizli yönlendirme adresi olabilen) e-posta adresi de dâhildir. Misafir hesabında e-posta adresi bulunmaz; yalnızca ayarladıysanız görünen ad ve avatar bulunur.
-- **Müşteri işlem verisi:** Uygulamaya girdiğiniz cüzdan, işlem, kategori, bütçe, hedef ve tekrarlayan kural kayıtları; bu kayıtların tutar, para birimi, tarih ve serbest metin not alanları.
+- **Müşteri işlem verisi:** Uygulamaya — elle girerek veya seçtiğiniz bir dosyadan içe aktararak — kaydettiğiniz cüzdan, işlem, kategori, bütçe, hedef ve tekrarlayan kural kayıtları; bu kayıtların tutar, para birimi, tarih ve serbest metin not alanları.
+- **Seyahat verisi:** onayladığınız veya girdiğiniz ziyaretler ve geçişler (ülke, ilk ve son gün, nereden ve nereye, ulaşım aracı, bilet olan işlem) ile ziyaret edilmiş olarak işaretlediğiniz ülkeler.
 - **İşlem güvenliği verisi:** şifrenizin kriptografik özeti (Apple ile Giriş veya Google ile Giriş kullanılarak açılan hesapta bulunmaz; kimliği sağlayıcı doğrular), oturum bilgileri, hesap oluşturma tarihi, onay sürümü ve tarihi.
 - **Cihaz verisi:** bildirimlere izin verdiyseniz cihazınızın bildirim belirteci ve cihazın iOS mu Android mi olduğu.
 - **Paylaşım verisi:** hangi cüzdanınızı kimle ve hangi rolle paylaştığınız, hangi cüzdanlara kimin daveti ile katıldığınız ve bir kaydı hangi üyenin girdiği.
@@ -25,7 +26,7 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 ## 3. Kişisel Verilerin İşlenme Amaçları
 
 - Üyelik kaydının oluşturulması ve hesap güvenliğinin sağlanması.
-- Bütçe takibi hizmetinin sunulması: kayıtların saklanması, senkronize edilmesi, para birimleri arasında dönüştürülmesi, özet ve grafiklerin üretilmesi.
+- Bütçe takibi hizmetinin sunulması: kayıtların saklanması, senkronize edilmesi, para birimleri arasında dönüştürülmesi, özet ve grafiklerin üretilmesi, harita ve rotanın çizilmesi, ülkelerin kendi harcamalarınız üzerinden karşılaştırılması.
 - Paylaşım özelliğinin yürütülmesi: davetlerin oluşturulması ve kullanılması, cüzdan üyeliklerinin tutulması ve bir kaydı hangi üyenin girdiğinin gösterilmesi.
 - Hizmete ilişkin zorunlu bildirimlerin (e-posta doğrulama, şifre sıfırlama) ve — izin verdiyseniz — paylaşılan cüzdandaki hareketlere dair bildirimlerin iletilmesi.
 - Bilgi güvenliği süreçlerinin yürütülmesi, hata giderme ve kötüye kullanımın önlenmesi.
@@ -42,7 +43,7 @@ Kişisel verileriniz KVKK m.5 kapsamında aşağıdaki hukuki sebeplere dayanıl
 
 ## 5. Toplama Yöntemi
 
-Kişisel verileriniz, Uygulamayı kullanmanız sırasında doğrudan sizin tarafınızdan girilmek suretiyle ve — konum, kamera ve bildirimler için — tarafınızca verilen cihaz izinleri aracılığıyla elektronik ortamda otomatik yollarla toplanmaktadır.
+Kişisel verileriniz, Uygulamayı kullanmanız sırasında doğrudan sizin tarafınızdan girilmek suretiyle, içe aktarmayı seçtiğiniz bir CSV veya Excel dosyasından (cihazınızda okunarak) ve — konum, kamera ve bildirimler için — tarafınızca verilen cihaz izinleri aracılığıyla elektronik ortamda otomatik yollarla toplanmaktadır.
 
 Hakkınızda üçüncü kişilerden veri temin edilen tek hâl tamamen sizin tercihinize bağlıdır: Apple ile Giriş veya Google ile Giriş'i seçmeniz durumunda kimlik belirteciniz, e-posta adresiniz ve adınız ilgili sağlayıcıdan tarafımıza ulaşır — Apple'dan yalnızca ilk girişte, Google'dan her girişte, ancak yalnızca ilk seferinde okunmak üzere. Bunun dışında kaynağı başka bir kişi olan tek kayıt, davet edildiğiniz bir cüzdandaki üyeliğinizdir; bu kayıt sizi davet eden kişiyi de içerir.
 

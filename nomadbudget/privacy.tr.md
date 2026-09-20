@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
+_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
 
 Nomad Budget finansal verilerinizi tutar; bu yüzden gizlilik bizim için sonradan eklenen bir başlık değil. Bu politika hangi verileri işlediğimizi, neden işlediğimizi ve bunlar üzerinde hangi haklara sahip olduğunuzu açıklar.
 
@@ -17,6 +17,10 @@ Verilerinizin işlenmesinden sorumlu taraf (veri sorumlusu): Rubeeks (rubeeks.co
 **Hesap verileri:** e-posta adresiniz, şifrenizin kriptografik özeti (şifrenin kendisi hiçbir zaman saklanmaz), hesap oluşturma tarihi, oturum bilgileri ve kayıt sırasında verdiğiniz onayın sürümü ile tarihi. Apple ile Giriş veya Google ile Giriş kullanılarak açılan hesapta şifre özeti hiç bulunmaz; onun yerine sağlayıcının bu Uygulama için size verdiği kimlik belirteci ve ilettiği e-posta adresi tutulur — Apple'da adresinizi gizlemeyi seçtiyseniz bu bir gizli yönlendirme adresidir, Google'da ise her zaman Google hesabınızın adresidir. Adınız profilinize başlangıç görünen adı olarak yazılır ve dilediğiniz gibi değiştirebilirsiniz. Apple adınızı yalnızca ilk girişte, bir kez iletir; Google her girişte iletir, ancak yalnızca ilk seferinde okunur, dolayısıyla sonradan değiştirdiğiniz görünen ad hiçbir zaman üzerine yazılmaz.
 
 **Uygulamaya girdiğiniz finansal kayıtlar:** cüzdanlar (ad, ülke, para birimi, açılış bakiyesi), işlemler (tutar, para birimi, tarih, tür, kategori, not, etkinlik etiketi), kategoriler, bütçeler, hedefler ve tekrarlayan kurallar.
+
+**Seyahat kayıtlarınız:** harita için onayladığınız veya girdiğiniz ziyaretler ve geçişler — hangi ülke, oradaki ilk ve son gün, nereden gelip nereye gittiğiniz, nasıl yolculuk ettiğiniz ve hangi işleminizin bilet olduğu — ile hafızadan ziyaret edilmiş olarak işaretlediğiniz ülkeler. Uygulama bunları işlemlerinizin tarih ve ülkelerinden önerir; siz onaylamadan veya girmeden hiçbiri kaydedilmez.
+
+**İçe aktardığınız dosyalar (isteğe bağlı):** bir CSV veya Excel dosyasını içe aktarmayı seçtiğinizde dosya, cihazınızın dosya seçicisi üzerinden açılır ve cihazda okunur. Yalnızca onayladığınız satırlar, sıradan işlemler olarak kayıtlarınıza yazılır. Dosya ne yüklenir ne saklanır; Uygulama sizin seçmediğiniz hiçbir dosyaya erişemez.
 
 **Profil:** seçtiğiniz görünen ad ve avatar. Bir cüzdanı paylaştığınızda karşı tarafın sizinle ilgili gördüğü tek şey bunlardır; e-posta adresiniz hiçbir zaman başka bir kullanıcıya gösterilmez.
 
@@ -36,7 +40,7 @@ Toplamadığımız veriler:
 
 - Banka veya kart bilgisi — Uygulama hiçbir finansal kuruma bağlanmaz.
 - Konum geçmişi veya koordinat kaydı — yukarıda açıklanan ülke bilgisi dışında konumunuza dair hiçbir veri tutulmaz.
-- Rehber, fotoğraflar veya cihazdaki diğer dosyalar.
+- Rehber, fotoğraflar veya — içe aktarmak için açıkça seçtiğiniz dosya dışında — cihazdaki herhangi bir dosya.
 - Reklam kimliği veya çapraz uygulama izleme verisi.
 - Üçüncü taraf analitik, çökme raporlama veya pazarlama SDK'sı verisi — Uygulamada bunların hiçbiri bulunmamaktadır.
 
@@ -45,6 +49,7 @@ Toplamadığımız veriler:
 - **Hesabınızı oluşturmak ve güvenliğini sağlamak** — sözleşmenin ifası (KVKK m.5/2-c; GDPR m.6/1-b).
 - **Kayıtlarınızı saklamak, cihazlarınız arasında senkronize etmek ve size göstermek** — sözleşmenin ifası.
 - **Para birimi dönüşümü, bütçe/hedef takibi, özet ve grafik üretmek** — sözleşmenin ifası.
+- **Kayıtlarınızdan haritanızı ve rotanızı çizmek, kendi harcama düzeninizi başka ülkelerin fiyatlarıyla değerlemek** — sözleşmenin ifası.
 - **Harcamalarınızı ve ziyaret ettiğiniz ülkeleri harita ile ülke bazlı karşılaştırmalarda göstermek üzere konumunuzdan ülke bilgisi türetmek** — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza yalnızca cihaz izniyle verilir ve cihaz ayarlarından her an geri alınabilir.
 - **Hizmetin kötüye kullanımını önlemek, hata ayıklamak ve güvenliği sağlamak** — meşru menfaat (KVKK m.5/2-f; GDPR m.6/1-f).
 - **Davet ettiğiniz kişiyle bir cüzdanı paylaşmanızı ve davet edildiğiniz bir cüzdana katılmanızı sağlamak** — sözleşmenin ifası.
@@ -60,7 +65,7 @@ Hesap ve kayıt verileriniz Supabase Inc. tarafından işletilen sunucular (AWS 
 
 Güney Kore, Avrupa Komisyonu'nun yeterlilik kararına sahip ülkeler arasındadır. Aktarım, hizmetin sunulabilmesi için zorunlu olup barındırma sağlayıcısıyla yapılan sözleşme ve teknik önlemlerle korunur.
 
-Kur verisi almak için açık kur servislerine bağlanılırken yalnızca para birimi kodları gönderilir; hiçbir kişisel veri veya işlem bilgisi bu servislere iletilmez.
+Kur verisi almak için açık kur servislerine bağlanılırken yalnızca para birimi kodları gönderilir; hiçbir kişisel veri veya işlem bilgisi bu servislere iletilmez. Haritadaki ülke görselleri, barındırma sağlayıcımızın depolama alanından yalnızca ülke koduyla çekilir.
 
 Bildirimler, iletilmek üzere Expo'nun bildirim servisine, oradan da Apple (APNs) veya Google (FCM) altyapısına verilir. Bu sağlayıcılara bildirim belirteciniz ve mesajın metni ulaşır; paylaşılan bir cüzdandaki hareket bildiriminde bu metin işlemi yapan kişinin adını, cüzdanı ve kaydın tutarını içerir. Bu, yalnızca mesajın iletilmesi süresince yapılan bir Amerika Birleşik Devletleri'ne aktarımdır ve bildirimleri cihaz ayarlarından kapattığınız anda sona erer.
 
@@ -92,7 +97,7 @@ Paylaşımın iki tarafı da tam hesap gerektirir. Misafir oturumu ne davet edeb
 
 Verileriniz hesabınız açık kaldığı sürece saklanır.
 
-"Ayarlar → Hesabı Sil" ile hesabınızı sildiğinizde; kimlik kaydınız, cüzdanlarınız, işlemleriniz, kategorileriniz, bütçeleriniz, hedefleriniz ve tekrarlayan kurallarınız kalıcı olarak silinir. Silme işlemi geri alınamaz.
+"Ayarlar → Hesabı Sil" ile hesabınızı sildiğinizde; kimlik kaydınız, cüzdanlarınız, işlemleriniz, kategorileriniz, bütçeleriniz, hedefleriniz, tekrarlayan kurallarınız, ziyaretleriniz, geçişleriniz ve işaretlediğiniz ülkeler kalıcı olarak silinir. Silme işlemi geri alınamaz.
 
 Hesabınızı silmek, vermiş olduğunuz paylaşımları da sona erdirir: paylaştığınız cüzdanlar aynı anda üyeleri için ortadan kalkar; profiliniz ve bildirim belirteciniz de silinir. Başkasına ait bir cüzdana girdiğiniz kayıtlar ise yerinde kalır — çünkü o kayıtlar o kişinin kayıtlarıdır — yalnızca artık size atfedilmezler.
 

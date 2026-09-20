@@ -1,6 +1,6 @@
 # Lisanslar ve Veri Kaynakları
 
-_Sürüm 1.4 · Yürürlük tarihi: 2026-09-11_
+_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
 
 Nomad Budget, açık kaynak yazılımlar ve kamuya açık istatistik verileri üzerine kuruludur. Aşağıda bunların listesi ve lisansları yer alır.
 
@@ -13,7 +13,10 @@ Nomad Budget, açık kaynak yazılımlar ve kamuya açık istatistik verileri ü
 - i18next ve react-i18next — MIT Lisansı
 - Zustand — MIT Lisansı
 - React Native Reanimated, Gesture Handler, Screens, Safe Area Context, SVG — MIT Lisansı
+- React Native Skia (Shopify) — MIT Lisansı
 - react-native-gifted-charts — MIT Lisansı
+- react-native-country-flag-icons — MIT Lisansı
+- SheetJS Community Edition (xlsx) — Apache Lisansı 2.0
 - Lucide ikonları — ISC Lisansı
 - Inter yazı tipi (Rasmus Andersson) — SIL Open Font License 1.1
 
@@ -23,13 +26,17 @@ Her bileşenin lisans metnine, ilgili projenin resmî deposundan ulaşılabilir.
 
 - **Dünya Bankası** — ICP 2021 fiyat seviyesi endeksleri, tüketici fiyat endeksi ve resmî kur serileri (CC BY 4.0).
 - **Eurostat** — uyumlaştırılmış tüketici fiyat endeksleri (Avrupa Komisyonu yeniden kullanım politikası).
-- **CSO Ireland / RTB** — kayıtlı kira sözleşmelerine dayalı ortalama kira raporu.
-- **data.gouv.fr** — "Carte des loyers" ilan bazlı kira göstergeleri.
 - **open.er-api.com** — güncel döviz kurları.
 - **frankfurter.dev** ve **fawazahmed0/currency-api** — tarihsel döviz kurları.
+- **NASA Earth Observatory** — kürenin yüzeyini oluşturan Blue Marble Next Generation görüntüleri (kamu malı).
+- **Natural Earth** — ülke sınırları ve dünya haritası geometrisi (kamu malı).
 
 Veriler kaynaklarından alındıkları hâliyle kullanılır ve Uygulama içinde işlenerek türetilmiş göstergeler üretilir. Kaynak kurumlar bu türetilmiş göstergelerden sorumlu değildir ve Uygulamayı onaylamamaktadır.
 
-## 3. Markalar
+## 3. Görseller
+
+Haritadaki ülke görselleri, tanıtım ekranlarındaki çizimler ve boş durum nesneleri, ticari kullanıma izin veren lisanslar altında üretken görüntü araçlarıyla üretilmiştir. Bunlar temsilî çizimlerdir, fotoğraf değildir; gerçek bir kişiyi veya mülkü betimlemez.
+
+## 4. Markalar
 
 Nomad Budget adı ve logosu yayıncıya aittir. Belgede geçen diğer tüm marka ve ticari adlar ilgili sahiplerine aittir; anılmaları herhangi bir ortaklık veya onay ilişkisi göstermez.

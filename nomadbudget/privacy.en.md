@@ -1,6 +1,6 @@
 # Privacy Policy
 
-_Version 1.4 · Effective: 2026-09-11_
+_Version 1.5 · Effective: 2026-09-20_
 
 Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.
 
@@ -17,6 +17,10 @@ Contact: nomadbudget@rubeeks.co
 **Account data:** your email address, a cryptographic hash of your password (never the password itself), your account creation date, session information, and the version and date of the consent you gave at sign-up. An account created with Sign in with Apple or Sign in with Google has no password hash at all: what is held instead is the identifier the provider issues for you in this App, together with the address it passed on — with Apple, a private relay alias if you chose to hide your own; with Google, always the address of your Google account. Your name is written to your profile as a starting display name you are free to change. Apple offers it once, on the very first sign-in and never again; Google offers it on every sign-in, but it is read only the first time, so a display name you changed later is never overwritten.
 
 **The financial records you enter:** wallets (name, country, currency, opening balance), transactions (amount, currency, date, type, category, note, event tag), categories, budgets, goals and recurring rules.
+
+**Your travel records:** the visits and crossings you confirm or enter for the map — which country, the first and last day there, where you arrived from and left for, how you travelled, and which of your transactions was the ticket — and the countries you mark as visited from memory. The App suggests these from the dates and countries of your transactions; nothing is recorded until you confirm or enter it.
+
+**Files you import (optional):** when you choose to import a CSV or Excel file, it is opened through your device's file picker and read on the device. Only the rows you confirm are written to your records, as ordinary transactions. The file is neither uploaded nor retained, and the App can reach no file you did not pick.
 
 **Profile:** the display name and the avatar you pick. These are the only things another person sees about you when you share a wallet — your email address is never shown to another user.
 
@@ -36,7 +40,7 @@ What we do not collect:
 
 - Bank or card details — the App connects to no financial institution.
 - Location history or coordinate logs — beyond the country described above, nothing about your location is retained.
-- Contacts, photos or any other file on your device.
+- Contacts, photos or any file on your device other than one you explicitly pick to import.
 - Advertising identifiers or cross-app tracking data.
 - Third-party analytics, crash-reporting or marketing SDK data — the App contains none of these.
 
@@ -45,6 +49,7 @@ What we do not collect:
 - **Creating and securing your account** — performance of a contract (KVKK Art. 5/2-c; GDPR Art. 6(1)(b)).
 - **Storing, syncing and displaying your records** — performance of a contract.
 - **Currency conversion, budget and goal tracking, summaries and charts** — performance of a contract.
+- **Drawing your map and route from your records, and pricing your own spending pattern against other countries** — performance of a contract.
 - **Deriving the country from your location, to mark your spending and fill the map and the country comparisons** — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)). This consent is given only through the device permission and can be withdrawn at any time in your device settings.
 - **Preventing abuse, debugging and keeping the service secure** — legitimate interest (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).
 - **Letting you share a wallet with someone you invite, and join a wallet you are invited to** — performance of a contract.
@@ -60,7 +65,7 @@ Your account and records are hosted on servers operated by Supabase Inc. (AWS ap
 
 South Korea is covered by an adequacy decision of the European Commission. The transfer is necessary to provide the service and is protected by our contract with the hosting provider and by technical safeguards.
 
-When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose.
+When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose. The country illustrations on the map are fetched from our hosting provider's storage by country code alone.
 
 Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.
 
@@ -92,7 +97,7 @@ Both sides of a share need a full account. A guest session can neither invite no
 
 Your data is retained for as long as your account exists.
 
-When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals and recurring rules are permanently deleted. This cannot be undone.
+When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals, recurring rules, visits, crossings and marked countries are permanently deleted. This cannot be undone.
 
 Deleting your account also ends the shares you had given: the wallets you shared disappear for their members at the same moment, along with your profile and your push token. Records you entered in a wallet belonging to somebody else stay where they are, because they are that person's records; they simply stop being attributed to you.
 

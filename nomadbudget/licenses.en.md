@@ -1,6 +1,6 @@
 # Licenses and Data Sources
 
-_Version 1.4 · Effective: 2026-09-11_
+_Version 1.5 · Effective: 2026-09-20_
 
 Nomad Budget is built on open-source software and publicly available statistical data. The components and their licences are listed below.
 
@@ -13,7 +13,10 @@ Nomad Budget is built on open-source software and publicly available statistical
 - i18next and react-i18next — MIT License
 - Zustand — MIT License
 - React Native Reanimated, Gesture Handler, Screens, Safe Area Context, SVG — MIT License
+- React Native Skia (Shopify) — MIT License
 - react-native-gifted-charts — MIT License
+- react-native-country-flag-icons — MIT License
+- SheetJS Community Edition (xlsx) — Apache License 2.0
 - Lucide icons — ISC License
 - Inter typeface (Rasmus Andersson) — SIL Open Font License 1.1
 
@@ -23,13 +26,17 @@ The full licence text of each component is available from its official repositor
 
 - **World Bank** — ICP 2021 price level indices, consumer price index and official exchange rate series (CC BY 4.0).
 - **Eurostat** — harmonised indices of consumer prices (European Commission reuse policy).
-- **CSO Ireland / RTB** — average monthly rent report based on registered tenancies.
-- **data.gouv.fr** — "Carte des loyers", listing-based rent indicators.
 - **open.er-api.com** — live exchange rates.
 - **frankfurter.dev** and **fawazahmed0/currency-api** — historical exchange rates.
+- **NASA Earth Observatory** — Blue Marble Next Generation imagery, the surface of the globe (public domain).
+- **Natural Earth** — country boundaries and the world map geometry (public domain).
 
 Data is used as published and processed within the App to produce derived indicators. The source institutions are not responsible for those derived indicators and do not endorse the App.
 
-## 3. Trademarks
+## 3. Illustrations
+
+The country illustrations on the map, the onboarding artwork and the empty-state objects were produced with generative image tools under licences that permit their commercial use. They are representative artwork, not photographs, and depict no real person or property.
+
+## 4. Trademarks
 
 The Nomad Budget name and logo belong to the publisher. All other trademarks and trade names mentioned belong to their respective owners; their mention implies no partnership or endorsement.
