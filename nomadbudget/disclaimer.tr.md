@@ -1,12 +1,12 @@
 # Finansal Sorumluluk Reddi
 
-_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
+_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
 
 Nomad Budget bir kayıt ve analiz aracıdır. Ürettiği her sayı, sizin girdiğiniz verilere ve açık kaynaklı istatistiklere dayanan bir tahmindir.
 
 ## 1. Yatırım veya Finansal Tavsiye Değildir
 
-Uygulamada yer alan hiçbir içerik, özet, grafik, karşılaştırma veya öneri; yatırım danışmanlığı, finansal danışmanlık, portföy yöneticiliği veya yatırım tavsiyesi niteliğinde değildir.
+Uygulamada yer alan hiçbir içerik, özet, grafik, karşılaştırma veya öneri — ücretsiz Uygulamaya ya da Pro'ya ait olması fark etmeksizin — yatırım danışmanlığı, finansal danışmanlık, portföy yöneticiliği veya yatırım tavsiyesi niteliğinde değildir.
 
 Yatırım danışmanlığı hizmeti, yetkili kuruluşlar tarafından kişilerin risk ve getiri tercihleri dikkate alınarak sunulur. Uygulama böyle bir yetkiye sahip değildir ve kişiye özel değerlendirme yapmaz.
 

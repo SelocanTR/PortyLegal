@@ -1,6 +1,6 @@
 # Privacy Policy
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.
 
@@ -28,9 +28,11 @@ Contact: nomadbudget@rubeeks.co
 
 **Preferences:** interface language, theme and base currency.
 
+**Subscriptions (Pro):** so that the App can tell whether you have Pro, it registers your account's identifier — a random ID, never your email address — with RevenueCat, our subscription provider, whenever you are signed in. If you subscribe, the store (Apple or Google) takes the payment and reports the purchase to RevenueCat and, through it, to us: the plan, the store, the dates of purchase, renewal and expiry, whether it will renew, billing problems and refunds, the store's transaction identifiers, and the price and currency charged. RevenueCat also receives the technical data such a request carries: the App and operating-system version, the store country and the device's IP address. We never receive your card or bank details or the name on your store account.
+
 **Technical data kept on your device:** your session token, the local cache that makes offline use possible, and records queued while you have no connection. These stay on your device and are removed when you uninstall the App.
 
-**Notifications (optional):** if you allow them, your device registers a push token with us, together with whether it is an iOS or an Android device, so that we can tell you when someone acts in a wallet you share. Reminders you set for yourself are scheduled by your own device and need neither a token nor a server. You can withdraw the permission at any time in your device settings.
+**Notifications (optional):** if you allow them, your device registers a push token with us, together with whether it is an iOS or an Android device, so that we can tell you when someone acts in a wallet you share, and when one of your monthly budgets reaches 80% of its limit or goes over it (you can turn budget alerts off in the App's notification settings). Reminders you set for yourself are scheduled by your own device and need neither a token nor a server. You can withdraw the permission at any time in your device settings.
 
 **Camera (optional, QR codes only):** the camera opens only when you choose to scan a sharing invitation, and only to read the code in front of it. No photo or video is taken, stored or transmitted.
 
@@ -38,7 +40,7 @@ Contact: nomadbudget@rubeeks.co
 
 What we do not collect:
 
-- Bank or card details — the App connects to no financial institution.
+- Bank or card details — the App connects to no financial institution, and payment for Pro is handled entirely by Apple or Google.
 - Location history or coordinate logs — beyond the country described above, nothing about your location is retained.
 - Contacts, photos or any file on your device other than one you explicitly pick to import.
 - Advertising identifiers or cross-app tracking data.
@@ -53,7 +55,8 @@ What we do not collect:
 - **Deriving the country from your location, to mark your spending and fill the map and the country comparisons** — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)). This consent is given only through the device permission and can be withdrawn at any time in your device settings.
 - **Preventing abuse, debugging and keeping the service secure** — legitimate interest (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).
 - **Letting you share a wallet with someone you invite, and join a wallet you are invited to** — performance of a contract.
-- **Sending push notifications about activity in a wallet you share** — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through your device's notification permission and withdrawable at any time in your device settings.
+- **Selling Pro, checking whether you have it, and handling renewals, cancellations, refunds and restored purchases** — performance of a contract.
+- **Sending push notifications about activity in a wallet you share and about your budgets** — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through your device's notification permission and withdrawable at any time in your device settings.
 - **Sending service messages you cannot opt out of (email confirmation, password reset)** — performance of a contract.
 - **Complying with legal obligations and responding to lawful requests** — legal obligation (KVKK Art. 5/2-ç; GDPR Art. 6(1)(c)).
 
@@ -67,7 +70,9 @@ South Korea is covered by an adequacy decision of the European Commission. The t
 
 When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose. The country illustrations on the map are fetched from our hosting provider's storage by country code alone.
 
-Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.
+Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record, and for a budget alert names the budget (its category, or your monthly budget), how much has been spent and its limit. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.
+
+Subscription data is processed by RevenueCat, Inc. in the United States, as our data processor and under its data processing terms, which is also a transfer abroad. It covers only your account identifier and your purchases: none of your financial records, travel records or profile is sent to RevenueCat.
 
 ## 5. Sharing
 
@@ -76,6 +81,8 @@ We do not sell, rent or share your data for advertising. Data is disclosed to th
 - **Hosting and authentication provider (Supabase Inc.):** as a data processor, solely to run the service.
 - **Sign in with Apple (Apple Inc.):** if you choose it, Apple confirms to us that the Apple ID is yours, and in doing so learns that you use the App. For that step Apple is an independent controller under its own privacy policy. Nothing about your records is sent to it.
 - **Sign in with Google (Google LLC):** if you choose it, Google confirms to us that the Google account is yours, and in doing so learns that you use the App. For that step Google is an independent controller under its own privacy policy. Nothing about your records is sent to it.
+- **Subscription provider (RevenueCat, Inc.):** as a data processor, your account identifier and your purchase data, solely to verify and manage Pro.
+- **App Store (Apple) and Google Play (Google):** if you subscribe, the store processes the payment as an independent controller under its own terms and privacy policy. Nothing about your records is sent to it.
 - **Email delivery:** your email address only, to deliver confirmation and password-reset messages.
 - **Notification delivery (Expo, Apple, Google):** your push token and the text of the notification, solely so that the message can be delivered.
 - **Other people you share a wallet with:** only what the next section describes, and only because you chose to invite them or to accept an invitation.
@@ -102,6 +109,8 @@ When you delete your account via Settings → Delete Account, your identity reco
 Deleting your account also ends the shares you had given: the wallets you shared disappear for their members at the same moment, along with your profile and your push token. Records you entered in a wallet belonging to somebody else stay where they are, because they are that person's records; they simply stop being attributed to you.
 
 A guest session is deleted by signing out of it. That is not a sign-out in the ordinary sense — it is the deletion of the account, because nothing else reaches it — and it cannot be undone.
+
+Your subscription record with us is deleted together with your account, and we have RevenueCat delete the customer record it holds for you at the same time. Apple and Google keep their own records of a purchase under their policies. Deleting your account does not cancel a subscription — see the Terms of Use.
 
 Copies remaining in system backups are purged as the backup cycle rolls over, within 30 days at the latest. The local cache on your device is removed when you uninstall the App.
 

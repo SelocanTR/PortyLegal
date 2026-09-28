@@ -77,6 +77,10 @@ a { color: var(--accent); text-underline-offset: 2px; }
   text-align: center;
 }
 .wash img { display: block; width: 64px; height: 64px; margin: 0 auto; }
+/* The coin and the name together are the link home, as a site's logo is. */
+.home { display: inline-block; color: inherit; text-decoration: none; border-radius: 16px; transition: opacity .2s ease; }
+.home:hover { opacity: .8; }
+.home:focus-visible { outline: 3px solid #52D69B; outline-offset: 6px; }
 /* The app's own stack under the coin: the name at the display size, then the rule.
    No web font, so this is the same system stack the headings use rather than the
    app's Inter — see the note on the body rule. */
@@ -221,8 +225,10 @@ footer p { margin: 0 0 4px; }
 <body>
   <main class="card">
     <div class="wash">
-      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/coin.png" alt="" width="64" height="64">
-      <span class="wordmark">Nomad Budget</span>
+      <a class="home" href="https://nomadbudget.rubeeks.co/tr/">
+        <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/coin.png" alt="" width="64" height="64">
+        <span class="wordmark">Nomad Budget</span>
+      </a>
       <div class="rule"><i></i><i></i><i></i><i></i></div>
     </div>
     <div class="doc">
@@ -231,7 +237,7 @@ footer p { margin: 0 0 4px; }
         <a href="./privacy.en.html" lang="en">English</a>
       </nav>
       <h1>Gizlilik Politikası</h1>
-      <p class="meta">Sürüm 1.5 · Yürürlük tarihi: 2026-09-20</p>
+      <p class="meta">Sürüm 1.8 · Yürürlük tarihi: 2026-09-26</p>
       <div class="lede">
         <p>Nomad Budget finansal verilerinizi tutar; bu yüzden gizlilik bizim için sonradan eklenen bir başlık değil. Bu politika hangi verileri işlediğimizi, neden işlediğimizi ve bunlar üzerinde hangi haklara sahip olduğunuzu açıklar.</p>
         <p>Özetle: verilerinizi satmıyoruz, reklam göstermiyoruz, Uygulamada üçüncü taraf analitik veya izleme aracı çalıştırmıyoruz ve hesabınızı dilediğiniz an Uygulama içinden tamamen silebiliyorsunuz.</p>
@@ -268,13 +274,14 @@ footer p { margin: 0 0 4px; }
         <p><strong>Profil:</strong> seçtiğiniz görünen ad ve avatar. Bir cüzdanı paylaştığınızda karşı tarafın sizinle ilgili gördüğü tek şey bunlardır; e-posta adresiniz hiçbir zaman başka bir kullanıcıya gösterilmez.</p>
         <p><strong>Misafir oturumları:</strong> Uygulamayı hesap açmadan kullanabilirsiniz. Misafir hesabı, tam hesapla aynı kayıtları ve verdiğiniz onayın aynı kaydını taşır; ancak e-posta adresi ve şifresi yoktur: ona ulaşan tek şey o tek cihazda saklanan oturumdur. Bu nedenle oturumdan çıkmak, hesabı ve içindeki her şeyi geri alınamaz biçimde siler. Sonradan e-posta ve şifre eklemek ise aynı hesabı tam hesaba dönüştürür; hiçbir veri taşınmaz, hiçbir şey kaybolmaz.</p>
         <p><strong>Tercihler:</strong> arayüz dili, tema seçimi ve temel para birimi.</p>
+        <p><strong>Abonelikler (Pro):</strong> Uygulama, Pro'nuz olup olmadığını anlayabilmek için, oturumunuz açık olduğu sürece hesabınızın kimliğini — rastgele bir kimlik; asla e-posta adresiniz değil — abonelik sağlayıcımız RevenueCat'e kaydeder. Abone olursanız ödemeyi mağaza (Apple veya Google) alır ve satın almayı RevenueCat'e, onun üzerinden de bize bildirir: plan, mağaza, satın alma, yenileme ve bitiş tarihleri, yenilenip yenilenmeyeceği, ödeme sorunları ve iadeler, mağazanın işlem kimlikleri ile tahsil edilen fiyat ve para birimi. RevenueCat ayrıca böyle bir isteğin taşıdığı teknik verileri de alır: Uygulama ve işletim sistemi sürümü, mağaza ülkesi ve cihazın IP adresi. Kart veya banka bilgilerinizi ya da mağaza hesabınızdaki adı hiçbir zaman almayız.</p>
         <p><strong>Cihazda kalan teknik veriler:</strong> oturum belirteci, çevrimdışı çalışma için tutulan yerel önbellek ve bağlantı yokken kuyruğa alınan kayıtlar. Bunlar cihazınızda kalır; uygulamayı kaldırdığınızda silinir.</p>
-        <p><strong>Bildirimler (isteğe bağlı):</strong> izin verirseniz cihazınız bize bir bildirim belirteci (push token) ve cihazın iOS mu Android mi olduğunu kaydeder; böylece paylaştığınız bir cüzdanda biri işlem yaptığında sizi haberdar edebiliriz. Kendiniz için kurduğunuz hatırlatıcılar cihazınızın kendisi tarafından zamanlanır; ne belirteç ne sunucu gerektirir. İzni dilediğiniz an cihaz ayarlarından geri alabilirsiniz.</p>
+        <p><strong>Bildirimler (isteğe bağlı):</strong> izin verirseniz cihazınız bize bir bildirim belirteci (push token) ve cihazın iOS mu Android mi olduğunu kaydeder; böylece paylaştığınız bir cüzdanda biri işlem yaptığında ve aylık bütçelerinizden biri limitinin %80'ine ulaştığında ya da limiti aştığında sizi haberdar edebiliriz (bütçe uyarılarını Uygulamanın bildirim ayarlarından kapatabilirsiniz). Kendiniz için kurduğunuz hatırlatıcılar cihazınızın kendisi tarafından zamanlanır; ne belirteç ne sunucu gerektirir. İzni dilediğiniz an cihaz ayarlarından geri alabilirsiniz.</p>
         <p><strong>Kamera (isteğe bağlı, yalnızca QR):</strong> kamera, yalnızca bir paylaşım davetini okutmayı seçtiğinizde ve yalnızca karşısındaki kodu okumak için açılır. Fotoğraf veya video çekilmez, saklanmaz, hiçbir yere iletilmez.</p>
         <p><strong>Konum (isteğe bağlı, yalnızca ülke):</strong> izin verirseniz, cihazınızın yaklaşık konumundan (yalnızca kaba/şehir düzeyi doğruluk) hangi ülkede bulunduğunuz belirlenir ve kaydettiğiniz işlemler ile ziyaret ettiğiniz ülkeler bu iki harfli ülke koduyla işaretlenir. Konumun ülkeye çevrilmesi cihazınızda yapılır; koordinatlarınız hiçbir zaman saklanmaz, sunucularımıza veya üçüncü taraflara iletilmez. İzni vermeyebilir ya da dilediğiniz an cihaz ayarlarından geri alabilirsiniz; bu durumda ülke, cüzdanlarınızdan tahmin edilir ve Uygulamanın geri kalanı aynen çalışır.</p>
         <p>Toplamadığımız veriler:</p>
         <ul>
-          <li>Banka veya kart bilgisi — Uygulama hiçbir finansal kuruma bağlanmaz.</li>
+          <li>Banka veya kart bilgisi — Uygulama hiçbir finansal kuruma bağlanmaz; Pro ödemesini tamamen Apple veya Google yürütür.</li>
           <li>Konum geçmişi veya koordinat kaydı — yukarıda açıklanan ülke bilgisi dışında konumunuza dair hiçbir veri tutulmaz.</li>
           <li>Rehber, fotoğraflar veya — içe aktarmak için açıkça seçtiğiniz dosya dışında — cihazdaki herhangi bir dosya.</li>
           <li>Reklam kimliği veya çapraz uygulama izleme verisi.</li>
@@ -291,7 +298,8 @@ footer p { margin: 0 0 4px; }
           <li><strong>Harcamalarınızı ve ziyaret ettiğiniz ülkeleri harita ile ülke bazlı karşılaştırmalarda göstermek üzere konumunuzdan ülke bilgisi türetmek</strong> — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza yalnızca cihaz izniyle verilir ve cihaz ayarlarından her an geri alınabilir.</li>
           <li><strong>Hizmetin kötüye kullanımını önlemek, hata ayıklamak ve güvenliği sağlamak</strong> — meşru menfaat (KVKK m.5/2-f; GDPR m.6/1-f).</li>
           <li><strong>Davet ettiğiniz kişiyle bir cüzdanı paylaşmanızı ve davet edildiğiniz bir cüzdana katılmanızı sağlamak</strong> — sözleşmenin ifası.</li>
-          <li><strong>Paylaştığınız bir cüzdandaki hareketler için bildirim göndermek</strong> — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza cihazın bildirim izniyle verilir ve cihaz ayarlarından her an geri alınabilir.</li>
+          <li><strong>Pro'yu satmak, sizde olup olmadığını doğrulamak; yenileme, iptal, iade ve geri yüklenen satın alımları yürütmek</strong> — sözleşmenin ifası.</li>
+          <li><strong>Paylaştığınız bir cüzdandaki hareketler ve bütçeleriniz için bildirim göndermek</strong> — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza cihazın bildirim izniyle verilir ve cihaz ayarlarından her an geri alınabilir.</li>
           <li><strong>Hizmete ilişkin zorunlu bildirimleri (e-posta doğrulama, şifre sıfırlama) göndermek</strong> — sözleşmenin ifası.</li>
           <li><strong>Yasal yükümlülüklere uymak ve hukuki taleplere yanıt vermek</strong> — hukuki yükümlülük (KVKK m.5/2-ç; GDPR m.6/1-c).</li>
         </ul>
@@ -302,7 +310,8 @@ footer p { margin: 0 0 4px; }
         <p>Hesap ve kayıt verileriniz Supabase Inc. tarafından işletilen sunucular (AWS ap-northeast-2 — Seul, Güney Kore) üzerinde barındırılmaktadır. Bu nedenle verileriniz Türkiye dışına aktarılmaktadır (KVKK m.9).</p>
         <p>Güney Kore, Avrupa Komisyonu'nun yeterlilik kararına sahip ülkeler arasındadır. Aktarım, hizmetin sunulabilmesi için zorunlu olup barındırma sağlayıcısıyla yapılan sözleşme ve teknik önlemlerle korunur.</p>
         <p>Kur verisi almak için açık kur servislerine bağlanılırken yalnızca para birimi kodları gönderilir; hiçbir kişisel veri veya işlem bilgisi bu servislere iletilmez. Haritadaki ülke görselleri, barındırma sağlayıcımızın depolama alanından yalnızca ülke koduyla çekilir.</p>
-        <p>Bildirimler, iletilmek üzere Expo'nun bildirim servisine, oradan da Apple (APNs) veya Google (FCM) altyapısına verilir. Bu sağlayıcılara bildirim belirteciniz ve mesajın metni ulaşır; paylaşılan bir cüzdandaki hareket bildiriminde bu metin işlemi yapan kişinin adını, cüzdanı ve kaydın tutarını içerir. Bu, yalnızca mesajın iletilmesi süresince yapılan bir Amerika Birleşik Devletleri'ne aktarımdır ve bildirimleri cihaz ayarlarından kapattığınız anda sona erer.</p>
+        <p>Bildirimler, iletilmek üzere Expo'nun bildirim servisine, oradan da Apple (APNs) veya Google (FCM) altyapısına verilir. Bu sağlayıcılara bildirim belirteciniz ve mesajın metni ulaşır; paylaşılan bir cüzdandaki hareket bildiriminde bu metin işlemi yapan kişinin adını, cüzdanı ve kaydın tutarını; bir bütçe uyarısında ise bütçenin adını (kategorisini ya da aylık bütçenizi), harcanan tutarı ve limitini içerir. Bu, yalnızca mesajın iletilmesi süresince yapılan bir Amerika Birleşik Devletleri'ne aktarımdır ve bildirimleri cihaz ayarlarından kapattığınız anda sona erer.</p>
+        <p>Abonelik verileri, Amerika Birleşik Devletleri'nde bulunan RevenueCat, Inc. tarafından veri işleyen sıfatıyla ve onun veri işleme koşulları çerçevesinde işlenir; bu da bir yurt dışına aktarımdır. Kapsamı yalnızca hesap kimliğiniz ve satın alımlarınızdır: finansal kayıtlarınızın, seyahat kayıtlarınızın veya profilinizin hiçbiri RevenueCat'e gönderilmez.</p>
       </section>
       <section id="s5">
         <h2><span class="n">5.</span> Verilerin Paylaşımı</h2>
@@ -311,6 +320,8 @@ footer p { margin: 0 0 4px; }
           <li><strong>Barındırma ve kimlik doğrulama sağlayıcısı (Supabase Inc.):</strong> yalnızca hizmeti çalıştırmak için, veri işleyen sıfatıyla.</li>
           <li><strong>Apple ile Giriş (Apple Inc.):</strong> bu yolu seçerseniz, Apple ID'nin size ait olduğunu bize Apple doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Apple, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.</li>
           <li><strong>Google ile Giriş (Google LLC):</strong> bu yolu seçerseniz, Google hesabının size ait olduğunu bize Google doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Google, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.</li>
+          <li><strong>Abonelik sağlayıcısı (RevenueCat, Inc.):</strong> yalnızca Pro'yu doğrulamak ve yönetmek için, veri işleyen sıfatıyla, hesap kimliğiniz ve satın alma verileriniz.</li>
+          <li><strong>App Store (Apple) ve Google Play (Google):</strong> abone olursanız ödemeyi mağaza, kendi koşulları ve gizlilik politikası kapsamında bağımsız veri sorumlusu olarak işler. Kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.</li>
           <li><strong>E-posta gönderimi:</strong> doğrulama ve şifre sıfırlama e-postalarının iletilmesi için, yalnızca e-posta adresiniz.</li>
           <li><strong>Bildirim iletimi (Expo, Apple, Google):</strong> yalnızca mesajın iletilebilmesi için bildirim belirteciniz ve bildirimin metni.</li>
           <li><strong>Cüzdan paylaştığınız kişiler:</strong> yalnızca bir sonraki bölümde anlatılanlar ve yalnızca siz davet ettiğiniz ya da bir daveti kabul ettiğiniz için.</li>
@@ -331,6 +342,7 @@ footer p { margin: 0 0 4px; }
         <p>&quot;Ayarlar → Hesabı Sil&quot; ile hesabınızı sildiğinizde; kimlik kaydınız, cüzdanlarınız, işlemleriniz, kategorileriniz, bütçeleriniz, hedefleriniz, tekrarlayan kurallarınız, ziyaretleriniz, geçişleriniz ve işaretlediğiniz ülkeler kalıcı olarak silinir. Silme işlemi geri alınamaz.</p>
         <p>Hesabınızı silmek, vermiş olduğunuz paylaşımları da sona erdirir: paylaştığınız cüzdanlar aynı anda üyeleri için ortadan kalkar; profiliniz ve bildirim belirteciniz de silinir. Başkasına ait bir cüzdana girdiğiniz kayıtlar ise yerinde kalır — çünkü o kayıtlar o kişinin kayıtlarıdır — yalnızca artık size atfedilmezler.</p>
         <p>Misafir oturumu, oturumdan çıkılarak silinir. Bu, alışılmış anlamda bir çıkış değildir: ona ulaşan başka bir yol olmadığı için hesabın silinmesidir ve geri alınamaz.</p>
+        <p>Bizdeki abonelik kaydınız hesabınızla birlikte silinir; RevenueCat'in sizin için tuttuğu müşteri kaydını da aynı anda sildiririz. Apple ve Google, bir satın almaya ilişkin kendi kayıtlarını kendi politikalarına göre saklar. Hesabınızı silmek aboneliği iptal etmez — Kullanım Koşulları'na bakınız.</p>
         <p>Sistem yedeklerinde kalan kopyalar, yedek döngüsünün tamamlanmasıyla (en geç 30 gün içinde) tasfiye edilir. Cihazınızdaki yerel önbellek uygulamayı kaldırdığınızda silinir.</p>
         <p>Silme talebinizi <a href="mailto:nomadbudget@rubeeks.co">nomadbudget@rubeeks.co</a> adresine e-posta göndererek de iletebilirsiniz.</p>
       </section>

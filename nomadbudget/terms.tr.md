@@ -1,6 +1,6 @@
 # Kullanım Koşulları
 
-_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
+_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
 
 Bu Kullanım Koşulları ("Koşullar"), Rubeeks (rubeeks.co) ("biz") tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin ("Uygulama") kullanımına ilişkin şartları düzenler.
 
@@ -11,6 +11,7 @@ Hesap oluşturarak veya Uygulamayı kullanarak bu Koşulları okuduğunuzu ve ka
 - **Uygulama:** Nomad Budget mobil uygulaması, arka uç servisleri ve tüm alt bileşenleri.
 - **Kullanıcı:** Uygulamayı hesap açarak veya hesap açmadan kullanan gerçek kişi.
 - **İçerik:** Kullanıcının Uygulamaya girdiği işlem, cüzdan, kategori, bütçe, hedef, tekrarlayan kural, ziyaret ve geçiş kayıtları ile notlar; Kullanıcının içe aktarmayı seçtiği bir dosyadan gelen kayıtlar da buna dâhildir.
+- **Pro:** "Pro Abonelik ve Ücretlendirme" bölümünde tanımlanan, isteğe bağlı ücretli Nomad Budget Pro aboneliği.
 
 ## 2. Hizmetin Tanımı
 
@@ -68,15 +69,30 @@ Bir üyeyi dilediğiniz an çıkarabilirsiniz; erişimi o anda sona erer. Üye d
 
 Paylaşımın iki tarafı da tam hesap gerektirir: misafir oturumu ne davet edebilir ne bir davete katılabilir; aksi hâlde karşı taraf bir daha ulaşılamayacak bir hesaba güvenmiş olurdu.
 
-## 8. Ücretlendirme
+## 8. Pro Abonelik ve Ücretlendirme
 
-Uygulama hâlihazırda ücretsiz sunulmaktadır. Reklam gösterilmez ve uygulama içi satın alma bulunmamaktadır.
+Uygulama ücretsiz kullanılabilir ve reklam gösterilmez. Nomad Budget Pro ("Pro"), ek özelliklerin kilidini açan, isteğe bağlı ve ücretli bir aboneliktir. Pro'nun neleri kapsadığı, abone olduğunuz sırada Uygulamadaki Pro ekranında açıklanır.
 
-İleride ücretli özellikler sunulması hâlinde, ücretlendirme koşulları satın alma öncesinde açıkça bildirilir ve mevcut ücretsiz özellikler için geriye dönük ücret talep edilmez. Ödemeler, kullanılması hâlinde App Store veya Google Play üzerinden ilgili mağazanın kuralları çerçevesinde tahsil edilir; iade talepleri de bu mağazaların politikalarına tabidir.
+Pro, aylık ve yıllık plan olarak sunulur. Her planın fiyatı, yerel para biriminizde ve mağazanın uyguladığı vergiler dâhil olarak, satın almayı onaylamadan önce Uygulamada gösterilir. Yıllık plan, yeni abonelere ücretsiz bir deneme süresiyle sunulabilir; süresi, satın almayı onaylamadan önce Pro ekranında gösterilir. Denemeye uygun olup olmadığınıza mağaza karar verir; deneme genellikle her mağaza hesabı için bir kez kullanılabilir. Deneme süresince ücret alınmaz. Deneme bitmeden iptal etmezseniz (App Store'da bitiminden en az 24 saat önce), deneme sona erdiğinde abonelik ücretli yıllık plana dönüşür ve yıllık ücret tahsil edilir. Deneme sırasında iptal ederseniz Pro, deneme süresinin sonuna kadar etkin kalır ve hiçbir ücret alınmaz.
+
+Ödeme, satın almayı onayladığınız anda Apple (App Store) veya Google (Google Play) tarafından, o mağazada kullandığınız hesaptan tahsil edilir. Ödemeye mağazanın kendi satış koşulları uygulanır. Kart veya banka bilgilerinizi hiçbir zaman görmeyiz ve saklamayız.
+
+- **Otomatik yenileme:** abonelik, her dönemin sonunda aynı uzunlukta bir dönem için ve o tarihteki güncel fiyattan otomatik olarak yenilenir ve mağaza bu tutarı hesabınızdan tahsil eder — yenilemeden önce iptal etmediğiniz sürece. App Store'da bu, mevcut dönemin bitiminden en az 24 saat önce demektir.
+- **İptal:** aboneliğinizi dilediğiniz an App Store veya Google Play abonelik ayarlarınızdan iptal edebilirsiniz; Pro ekranındaki "Aboneliği yönet" düğmesi bu ayarları açar. İptal, bir sonraki yenilemeyi durdurur; Pro, ödemesini yapmış olduğunuz dönemin sonuna kadar etkin kalır. Uygulamayı ya da hesabınızı silmek aboneliği iptal etmez — iptal mağaza üzerinden yapılmalıdır.
+- **İade:** ödemeler Apple veya Google tarafından tahsil edildiğinden iade talepleri onlara yapılır ve onların politikalarına göre sonuçlandırılır; doğrudan iade yapamayız. Pro, abone olduğunuz anda ifasına başlanan dijital bir hizmet olduğundan, mevzuatın izin verdiği ölçüde yasal cayma hakkı ifaya başlanmasıyla sona erer. Tüketici mevzuatından doğan emredici haklarınız saklıdır.
+- **Fiyat değişikliği:** bir planın fiyatı değişirse, mağazanın kurallarının gerektirdiği şekilde önceden bilgilendirilirsiniz; mağazanın onayınızı istediği durumlarda yeni fiyat ancak onay verdiğinizde uygulanır.
+
+Pro, abone olduğunuz sırada oturum açık olan Nomad Budget hesabına aittir ve o hesapla oturum açtığınız her cihazda kullanılabilir. Pro ekranındaki "Satın alımları geri yükle", mağaza hesabınızla yapılmış bir aboneliği oturum açık olan hesaba bağlar. Misafir oturumuyla abone olunamaz: satın almadan önce oturumun Apple, Google veya e-posta ile bir hesaba bağlanması istenir, çünkü misafir oturumundan çıkmak o hesabı sonlandırır. Bağlama hesabınızı değiştirmez; verileriniz olduğu gibi kalır.
+
+Ücretsiz planın bazı sınırları vardır (örneğin hedef, tekrarlayan işlem veya paylaşılan cüzdan sayısı) ve bazı özellikler yalnızca Pro'ya dahildir (örneğin kategori ve ülke bütçeleri; aylık toplam bütçe ücretsizdir); güncel sınırlar, bir sınıra ulaştığınızda Uygulamada gösterilir. Kayıt tutma — işlem eklemek, ülke cüzdanları, para birimleri ve çevrimdışı kullanım — hiçbir planda sınırlanmaz.
+
+Pro sona ererse (iptal, yenilenmeme veya iade nedeniyle) hiçbir veriniz silinmez: Pro sırasında oluşturduğunuz hedefler, tekrarlayan işlemler, paylaşımlar, bütçeler ve diğer kayıtlar yerinde kalır, görüntülenebilir ve düzenlenebilir. Yalnızca ücretsiz planın sınırlarını aşan yeni kayıtlar oluşturulamaz ve Pro'ya özel içgörüler yeniden kilitlenir.
+
+Pro'nun kapsadığı özellikleri değiştirebiliriz. Ücretini ödediğiniz bir şeyi kaldıran bir değişiklik, iptal edebilmeniz için en erken bir sonraki yenilemenizde uygulanır. Bir özelliği ücretsizken kullanmış olmanız nedeniyle geriye dönük hiçbir ücret talep edilmez.
 
 ## 9. Üçüncü Taraf Hizmetler ve Veriler
 
-Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri ve küre için NASA ile Natural Earth'ün kamu malı görüntü ve geometrileri.
+Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, Pro abonelikleri için App Store, Google Play ve RevenueCat, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri ve küre için NASA ile Natural Earth'ün kamu malı görüntü ve geometrileri.
 
 Bu kaynakların kesintisizliği, güncelliği veya doğruluğu bizim kontrolümüzde değildir. Kaynakların tam listesi ve lisansları için "Lisanslar ve Veri Kaynakları" belgesine bakınız.
 
@@ -105,6 +121,8 @@ Bu maddedeki sınırlamalar, kastımızdan veya ağır ihmalimizden doğan sorum
 Hesabınızı dilediğiniz zaman Uygulama içinden "Ayarlar → Hesabı Sil" yolunu izleyerek kapatabilirsiniz. Bu işlem hesabınızı ve tüm verilerinizi kalıcı olarak siler ve geri alınamaz. Paylaşmış olduğunuz cüzdanlar da aynı anda paylaştığınız kişiler için ortadan kalkar.
 
 Misafir oturumu, oturumdan çıkılarak kapatılır ve sonucu aynıdır: e-posta ve şifre olmadığı için geri dönülecek bir yol kalmaz, dolayısıyla çıkış o hesabı ve kayıtlarını siler.
+
+Hesabınızı kapatmak Pro aboneliğini iptal etmez. Aboneliği önce App Store veya Google Play ayarlarınızdan iptal edin; aksi hâlde mağaza yenilemeye devam eder. Hesabın kapatılması tek başına iade hakkı doğurmaz.
 
 Bu Koşulların ağır biçimde veya tekrar tekrar ihlal edilmesi hâlinde, hesabınızı askıya alabilir veya sonlandırabiliriz. Hukuken mümkün olduğu ölçüde bu durumu önceden bildirir ve verilerinizi dışa aktarmanız için makul bir imkân tanırız.
 

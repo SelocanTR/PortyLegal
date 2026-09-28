@@ -1,6 +1,6 @@
 # Lisanslar ve Veri Kaynakları
 
-_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
+_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
 
 Nomad Budget, açık kaynak yazılımlar ve kamuya açık istatistik verileri üzerine kuruludur. Aşağıda bunların listesi ve lisansları yer alır.
 
@@ -16,6 +16,9 @@ Nomad Budget, açık kaynak yazılımlar ve kamuya açık istatistik verileri ü
 - React Native Skia (Shopify) — MIT Lisansı
 - react-native-gifted-charts — MIT Lisansı
 - react-native-country-flag-icons — MIT Lisansı
+- react-native-qrcode-svg — MIT Lisansı
+- Google Sign-In for React Native — MIT Lisansı
+- RevenueCat Purchases SDK (react-native-purchases) — MIT Lisansı
 - SheetJS Community Edition (xlsx) — Apache Lisansı 2.0
 - Lucide ikonları — ISC Lisansı
 - Inter yazı tipi (Rasmus Andersson) — SIL Open Font License 1.1

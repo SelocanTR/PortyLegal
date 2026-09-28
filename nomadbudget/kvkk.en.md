@@ -1,6 +1,6 @@
 # Data Protection Notice (KVKK)
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.
 
@@ -19,6 +19,7 @@ Contact address: nomadbudget@rubeeks.co
 - **Travel data:** the visits and crossings you confirm or enter (country, first and last day, where from and where to, means of travel, the transaction that was the ticket) and the countries you mark as visited.
 - **Transaction security data:** the hash of your password (an account created with Sign in with Apple or Sign in with Google has none, because the provider confirms the identity instead), session information, account creation date, and the version and date of your consent.
 - **Device data:** where you have allowed notifications, your device's push token and whether it is an iOS or an Android device.
+- **Purchase data:** the identifier your account is registered under with our subscription provider and, if you subscribe to Pro, the plan, the store, the dates of purchase, renewal and expiry, renewal and refund status, the store's transaction identifiers, and the price and currency charged. Card and bank details are never received.
 - **Sharing data:** which of your wallets you have shared with whom and in what role, which wallets you have been invited into and by whom, and which member entered a given record.
 
 No special categories of personal data are processed. We recommend that you do not write special-category information (health, beliefs and similar) into free-text note fields.
@@ -28,7 +29,8 @@ No special categories of personal data are processed. We recommend that you do n
 - Creating your membership record and securing your account.
 - Providing the budgeting service: storing and syncing your records, converting currencies, producing summaries and charts, drawing your map and route, and comparing countries on the basis of your own spending.
 - Running the sharing feature: creating and redeeming invitations, keeping wallet memberships, and showing members who entered a record.
-- Delivering mandatory service messages (email confirmation, password reset) and, where you have permitted them, push notifications about activity in a shared wallet.
+- Selling and managing the Pro subscription: verifying purchases, renewals, cancellations, refunds and restored purchases.
+- Delivering mandatory service messages (email confirmation, password reset) and, where you have permitted them, push notifications about activity in a shared wallet and about your budgets.
 - Running information security processes, debugging and preventing abuse.
 - Handling requests and complaints, and complying with legal obligations.
 
@@ -36,7 +38,7 @@ No special categories of personal data are processed. We recommend that you do n
 
 Your personal data is processed on the following grounds under KVKK Art. 5:
 
-- **Art. 5/2-c** — directly related to the conclusion or performance of a contract: creating the account and providing the service.
+- **Art. 5/2-c** — directly related to the conclusion or performance of a contract: creating the account and providing the service, including the Pro subscription.
 - **Art. 5/2-ç** — compliance with the controller's legal obligations: responding to requests from competent authorities.
 - **Art. 5/2-f** — legitimate interests, provided this does not harm your fundamental rights and freedoms: security, abuse prevention and debugging.
 - **Art. 5/1** — explicit consent: deriving your country from your device's location, and sending push notifications. Both are given through a device permission and can be withdrawn at any time in your device settings.
@@ -45,7 +47,7 @@ Your personal data is processed on the following grounds under KVKK Art. 5:
 
 Your personal data is collected electronically, by automated means, as you enter it into the App yourself, from a CSV or Excel file you choose to import (read on your device), and — for location, the camera and notifications — through the device permissions you grant.
 
-Data about you is obtained from a third party in one case, and only if you choose it: signing in with Apple or Google, where the identifier, the email address and your name reach us from that provider — from Apple on the first sign-in only, from Google on every sign-in, though it is read only the first time. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.
+Data about you is obtained from third parties in two cases, each only if you choose it. Signing in with Apple or Google: the identifier, the email address and your name reach us from that provider — from Apple on the first sign-in only, from Google on every sign-in, though it is read only the first time. Subscribing to Pro: Apple or Google reports the purchase, and its later renewals, cancellations and refunds, to us through RevenueCat. Otherwise the one record that originates with somebody else is your membership of a wallet you were invited into, which names the person who invited you.
 
 ## 6. Transfers, Including Abroad
 
@@ -57,13 +59,15 @@ Where you choose Sign in with Apple or Sign in with Google, the sign-in request 
 
 Where you have allowed notifications, your push token and the text of the notification are transferred to Expo, Apple (APNs) and Google (FCM) in the United States, solely so that the message can be delivered.
 
+Your account identifier and, if you subscribe, your purchase data are transferred to RevenueCat, Inc. in the United States, acting as a data processor, so that Pro purchases can be verified and managed. Where you subscribe, the payment itself is processed by Apple Inc. or Google LLC as an independent controller.
+
 Where you share a wallet, its records together with your display name and avatar become visible to the people you invited. That disclosure happens only on your own instruction and you can end it at any time by removing the member.
 
 Beyond this, your data may be transferred only to legally authorised public authorities, to the extent required by law.
 
 ## 7. Retention Period
 
-Your personal data is retained for as long as your account exists. If you delete your account, the data is permanently deleted; copies in system backups are purged as the backup cycle rolls over, within 30 days at the latest. A guest account is deleted when you sign out of it, since nothing else can reach it.
+Your personal data is retained for as long as your account exists. If you delete your account, the data is permanently deleted; copies in system backups are purged as the backup cycle rolls over, within 30 days at the latest. A guest account is deleted when you sign out of it, since nothing else can reach it. Purchase data is deleted together with the account, and the customer record held by RevenueCat is deleted at our request at the same time; Apple and Google keep their own purchase records under their policies.
 
 Where a statutory retention obligation applies, the relevant data is kept only for the period and to the extent that obligation requires.
 

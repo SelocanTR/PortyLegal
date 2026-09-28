@@ -77,6 +77,10 @@ a { color: var(--accent); text-underline-offset: 2px; }
   text-align: center;
 }
 .wash img { display: block; width: 64px; height: 64px; margin: 0 auto; }
+/* The coin and the name together are the link home, as a site's logo is. */
+.home { display: inline-block; color: inherit; text-decoration: none; border-radius: 16px; transition: opacity .2s ease; }
+.home:hover { opacity: .8; }
+.home:focus-visible { outline: 3px solid #52D69B; outline-offset: 6px; }
 /* The app's own stack under the coin: the name at the display size, then the rule.
    No web font, so this is the same system stack the headings use rather than the
    app's Inter — see the note on the body rule. */
@@ -221,8 +225,10 @@ footer p { margin: 0 0 4px; }
 <body>
   <main class="card">
     <div class="wash">
-      <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/coin.png" alt="" width="64" height="64">
-      <span class="wordmark">Nomad Budget</span>
+      <a class="home" href="https://nomadbudget.rubeeks.co/">
+        <img src="https://czgrnmolqcbgvoctqpwp.supabase.co/storage/v1/object/public/brand/coin.png" alt="" width="64" height="64">
+        <span class="wordmark">Nomad Budget</span>
+      </a>
       <div class="rule"><i></i><i></i><i></i><i></i></div>
     </div>
     <div class="doc">
@@ -231,7 +237,7 @@ footer p { margin: 0 0 4px; }
         <a href="./privacy.tr.html" lang="tr">Türkçe</a>
       </nav>
       <h1>Privacy Policy</h1>
-      <p class="meta">Version 1.5 · Effective: 2026-09-20</p>
+      <p class="meta">Version 1.8 · Effective: 2026-09-26</p>
       <div class="lede">
         <p>Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.</p>
         <p>In short: we do not sell your data, we show no advertising, the App runs no third-party analytics or tracking, and you can delete your account and everything in it from inside the App at any time.</p>
@@ -268,13 +274,14 @@ footer p { margin: 0 0 4px; }
         <p><strong>Profile:</strong> the display name and the avatar you pick. These are the only things another person sees about you when you share a wallet — your email address is never shown to another user.</p>
         <p><strong>Guest sessions:</strong> you can use the App without creating an account. A guest account holds the same records, and the same record of the consent you gave, as a full one, but it has no email address and no password: the session stored on that single device is the only thing that reaches it. Signing out therefore deletes the account and everything in it, irreversibly. Adding an email and a password later turns the very same account into a full one, with nothing moved and nothing lost.</p>
         <p><strong>Preferences:</strong> interface language, theme and base currency.</p>
+        <p><strong>Subscriptions (Pro):</strong> so that the App can tell whether you have Pro, it registers your account's identifier — a random ID, never your email address — with RevenueCat, our subscription provider, whenever you are signed in. If you subscribe, the store (Apple or Google) takes the payment and reports the purchase to RevenueCat and, through it, to us: the plan, the store, the dates of purchase, renewal and expiry, whether it will renew, billing problems and refunds, the store's transaction identifiers, and the price and currency charged. RevenueCat also receives the technical data such a request carries: the App and operating-system version, the store country and the device's IP address. We never receive your card or bank details or the name on your store account.</p>
         <p><strong>Technical data kept on your device:</strong> your session token, the local cache that makes offline use possible, and records queued while you have no connection. These stay on your device and are removed when you uninstall the App.</p>
-        <p><strong>Notifications (optional):</strong> if you allow them, your device registers a push token with us, together with whether it is an iOS or an Android device, so that we can tell you when someone acts in a wallet you share. Reminders you set for yourself are scheduled by your own device and need neither a token nor a server. You can withdraw the permission at any time in your device settings.</p>
+        <p><strong>Notifications (optional):</strong> if you allow them, your device registers a push token with us, together with whether it is an iOS or an Android device, so that we can tell you when someone acts in a wallet you share, and when one of your monthly budgets reaches 80% of its limit or goes over it (you can turn budget alerts off in the App's notification settings). Reminders you set for yourself are scheduled by your own device and need neither a token nor a server. You can withdraw the permission at any time in your device settings.</p>
         <p><strong>Camera (optional, QR codes only):</strong> the camera opens only when you choose to scan a sharing invitation, and only to read the code in front of it. No photo or video is taken, stored or transmitted.</p>
         <p><strong>Location (optional, country only):</strong> if you grant permission, your device's approximate location (coarse, city-level accuracy at most) is used to determine which country you are in, and the transactions you record and the countries you visit are marked with that two-letter country code. The conversion from location to country happens on your device; your coordinates are never stored and never sent to our servers or to any third party. You can decline the permission, or withdraw it at any time in your device settings — the country is then inferred from your wallets and the rest of the App works exactly as before.</p>
         <p>What we do not collect:</p>
         <ul>
-          <li>Bank or card details — the App connects to no financial institution.</li>
+          <li>Bank or card details — the App connects to no financial institution, and payment for Pro is handled entirely by Apple or Google.</li>
           <li>Location history or coordinate logs — beyond the country described above, nothing about your location is retained.</li>
           <li>Contacts, photos or any file on your device other than one you explicitly pick to import.</li>
           <li>Advertising identifiers or cross-app tracking data.</li>
@@ -291,7 +298,8 @@ footer p { margin: 0 0 4px; }
           <li><strong>Deriving the country from your location, to mark your spending and fill the map and the country comparisons</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)). This consent is given only through the device permission and can be withdrawn at any time in your device settings.</li>
           <li><strong>Preventing abuse, debugging and keeping the service secure</strong> — legitimate interest (KVKK Art. 5/2-f; GDPR Art. 6(1)(f)).</li>
           <li><strong>Letting you share a wallet with someone you invite, and join a wallet you are invited to</strong> — performance of a contract.</li>
-          <li><strong>Sending push notifications about activity in a wallet you share</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through your device's notification permission and withdrawable at any time in your device settings.</li>
+          <li><strong>Selling Pro, checking whether you have it, and handling renewals, cancellations, refunds and restored purchases</strong> — performance of a contract.</li>
+          <li><strong>Sending push notifications about activity in a wallet you share and about your budgets</strong> — explicit consent (KVKK Art. 5/1; GDPR Art. 6(1)(a)), given through your device's notification permission and withdrawable at any time in your device settings.</li>
           <li><strong>Sending service messages you cannot opt out of (email confirmation, password reset)</strong> — performance of a contract.</li>
           <li><strong>Complying with legal obligations and responding to lawful requests</strong> — legal obligation (KVKK Art. 5/2-ç; GDPR Art. 6(1)(c)).</li>
         </ul>
@@ -302,7 +310,8 @@ footer p { margin: 0 0 4px; }
         <p>Your account and records are hosted on servers operated by Supabase Inc. (AWS ap-northeast-2 — Seoul, South Korea). Your data is therefore transferred outside Türkiye (KVKK Art. 9).</p>
         <p>South Korea is covered by an adequacy decision of the European Commission. The transfer is necessary to provide the service and is protected by our contract with the hosting provider and by technical safeguards.</p>
         <p>When fetching exchange rates, only currency codes are sent to the rate service; no personal data and no transaction details ever leave the App for that purpose. The country illustrations on the map are fetched from our hosting provider's storage by country code alone.</p>
-        <p>Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.</p>
+        <p>Push notifications are handed to Expo's push service and from there to Apple (APNs) or Google (FCM) for delivery. Those providers receive your push token and the text of the message, which for an event in a shared wallet names the person who acted, the wallet, and the amount of the record, and for a budget alert names the budget (its category, or your monthly budget), how much has been spent and its limit. That is a transfer to the United States, made only for as long as delivering the message takes, and it stops the moment you turn notifications off in your device settings.</p>
+        <p>Subscription data is processed by RevenueCat, Inc. in the United States, as our data processor and under its data processing terms, which is also a transfer abroad. It covers only your account identifier and your purchases: none of your financial records, travel records or profile is sent to RevenueCat.</p>
       </section>
       <section id="s5">
         <h2><span class="n">5.</span> Sharing</h2>
@@ -311,6 +320,8 @@ footer p { margin: 0 0 4px; }
           <li><strong>Hosting and authentication provider (Supabase Inc.):</strong> as a data processor, solely to run the service.</li>
           <li><strong>Sign in with Apple (Apple Inc.):</strong> if you choose it, Apple confirms to us that the Apple ID is yours, and in doing so learns that you use the App. For that step Apple is an independent controller under its own privacy policy. Nothing about your records is sent to it.</li>
           <li><strong>Sign in with Google (Google LLC):</strong> if you choose it, Google confirms to us that the Google account is yours, and in doing so learns that you use the App. For that step Google is an independent controller under its own privacy policy. Nothing about your records is sent to it.</li>
+          <li><strong>Subscription provider (RevenueCat, Inc.):</strong> as a data processor, your account identifier and your purchase data, solely to verify and manage Pro.</li>
+          <li><strong>App Store (Apple) and Google Play (Google):</strong> if you subscribe, the store processes the payment as an independent controller under its own terms and privacy policy. Nothing about your records is sent to it.</li>
           <li><strong>Email delivery:</strong> your email address only, to deliver confirmation and password-reset messages.</li>
           <li><strong>Notification delivery (Expo, Apple, Google):</strong> your push token and the text of the notification, solely so that the message can be delivered.</li>
           <li><strong>Other people you share a wallet with:</strong> only what the next section describes, and only because you chose to invite them or to accept an invitation.</li>
@@ -331,6 +342,7 @@ footer p { margin: 0 0 4px; }
         <p>When you delete your account via Settings → Delete Account, your identity record, wallets, transactions, categories, budgets, goals, recurring rules, visits, crossings and marked countries are permanently deleted. This cannot be undone.</p>
         <p>Deleting your account also ends the shares you had given: the wallets you shared disappear for their members at the same moment, along with your profile and your push token. Records you entered in a wallet belonging to somebody else stay where they are, because they are that person's records; they simply stop being attributed to you.</p>
         <p>A guest session is deleted by signing out of it. That is not a sign-out in the ordinary sense — it is the deletion of the account, because nothing else reaches it — and it cannot be undone.</p>
+        <p>Your subscription record with us is deleted together with your account, and we have RevenueCat delete the customer record it holds for you at the same time. Apple and Google keep their own records of a purchase under their policies. Deleting your account does not cancel a subscription — see the Terms of Use.</p>
         <p>Copies remaining in system backups are purged as the backup cycle rolls over, within 30 days at the latest. The local cache on your device is removed when you uninstall the App.</p>
         <p>You can also request deletion by writing to <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a></p>
       </section>

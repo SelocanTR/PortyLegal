@@ -1,6 +1,6 @@
 # Nomad Budget — Legal Documents
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 - [Terms of Use](./terms.en.md) — The rules for using the app
 - [Privacy Policy](./privacy.en.md) — What we collect, why, and where it lives

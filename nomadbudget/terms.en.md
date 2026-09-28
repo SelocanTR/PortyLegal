@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 These Terms of Use ("Terms") govern your use of the Nomad Budget mobile application and its related services (the "App"), provided by Rubeeks (rubeeks.co) ("we", "us").
 
@@ -11,6 +11,7 @@ By creating an account or using the App you confirm that you have read and accep
 - **App:** the Nomad Budget mobile application, its backend services and all of their components.
 - **User:** the natural person who uses the App, with or without an account.
 - **Content:** the transactions, wallets, categories, budgets, goals, recurring rules, notes, visits and crossings a User enters into the App, including records brought in from a file the User chooses to import.
+- **Pro:** Nomad Budget Pro, the optional paid subscription described in the "Pro Subscription and Fees" section.
 
 ## 2. What the Service Is
 
@@ -68,15 +69,30 @@ You may remove a member at any time and their access ends immediately, and a mem
 
 Both sides of a share need a full account: a guest session can neither invite nor join, because the other person would otherwise be trusting an account that cannot be reached again.
 
-## 8. Fees
+## 8. Pro Subscription and Fees
 
-The App is currently provided free of charge. It carries no advertising and no in-app purchases.
+The App can be used free of charge and carries no advertising. Nomad Budget Pro ("Pro") is an optional, paid subscription that unlocks additional features. What Pro includes is described on the Pro screen in the App at the time you subscribe.
 
-If paid features are introduced later, their terms will be presented clearly before any purchase, and no charge will be applied retroactively for features that are free today. Any payments would be collected through the App Store or Google Play under those stores' rules, and refunds would follow their policies.
+Pro is offered as a monthly and a yearly plan. The price of each, in your local currency and including any taxes the store applies, is shown in the App before you confirm the purchase. The yearly plan may be offered to new subscribers with a free trial; its length is shown on the Pro screen before you confirm the purchase. The store decides whether you are eligible, and a trial can generally be used once per store account. Nothing is charged during the trial. Unless you cancel before it ends (on the App Store, at least 24 hours before), the subscription converts to the paid yearly plan when the trial ends and the yearly price is charged. If you cancel during the trial, Pro stays active until the trial ends and nothing is charged.
+
+Payment is taken by Apple (App Store) or Google (Google Play), from the account you use with that store, when you confirm the purchase. The store's own terms of sale apply to the payment. We never see or store your card or bank details.
+
+- **Automatic renewal:** a subscription renews automatically at the end of each period, for a period of the same length and at the then-current price, and the store charges your account for it — unless you cancel before the renewal. On the App Store, that means at least 24 hours before the current period ends.
+- **Cancelling:** you can cancel at any time in your App Store or Google Play subscription settings, which the "Manage subscription" button on the Pro screen opens. Cancelling stops the next renewal; Pro stays active until the end of the period you have already paid for. Deleting the App, or your account, does not cancel a subscription — it has to be cancelled in the store.
+- **Refunds:** payments are collected by Apple or Google, so refund requests are made to them and decided under their policies; we cannot issue refunds directly. Because Pro is a digital service that starts as soon as you subscribe, to the extent the law allows the statutory right of withdrawal ends once that supply has begun. Any mandatory consumer rights you have are unaffected.
+- **Price changes:** if the price of a plan changes, you will be told in advance as the store's rules require, and where the store asks for your agreement the new price applies only once you have given it.
+
+Pro belongs to the Nomad Budget account you are signed into when you subscribe, and is available on every device where you sign in to that account. "Restore purchases" on the Pro screen attaches a subscription made with your store account to the account you are signed into. A guest session cannot subscribe: before a purchase you are asked to link the session to an account with Apple, Google or email, because signing out of a guest session ends that account. Linking does not change your account; your data stays as it is.
+
+The free plan has some limits (for example the number of goals, recurring transactions or shared wallets), and some features are part of Pro only (for example category and country budgets; a monthly total budget is free); the current limits are shown in the App when you reach one. Keeping records — adding entries, country wallets, currencies and offline use — is never limited on any plan.
+
+If Pro ends (by cancellation, non-renewal or refund), none of your data is deleted: the goals, recurring transactions, shares, budgets and other records you created while on Pro stay in place and can still be viewed and edited. Only creating new ones beyond the free plan's limits is not possible, and Pro-only insights are locked again.
+
+We may change which features Pro includes. A change that takes away something you are paying for applies no earlier than your next renewal, so that you can cancel before it. Nothing will be charged for use you have already made of a feature while it was free.
 
 ## 9. Third-Party Services and Data
 
-The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.
+The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, the App Store, Google Play and RevenueCat for Pro subscriptions, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.
 
 The availability, timeliness and accuracy of these sources are outside our control. See the "Licenses and Data Sources" document for the full list and their licences.
 
@@ -105,6 +121,8 @@ Nothing in this section limits liability for our wilful misconduct or gross negl
 You can close your account at any time from within the App: Settings → Delete Account. This permanently deletes your account and all of your data and cannot be undone. Wallets you had shared disappear for the people you shared them with at the same moment.
 
 A guest session is closed by signing out of it, which does the same thing: with no email and no password there is nothing left to sign back in with, so signing out erases that account and its records.
+
+Closing your account does not cancel a Pro subscription. Cancel it in your App Store or Google Play settings first, or the store will keep renewing it. Closing the account does not by itself give rise to a refund.
 
 We may suspend or terminate an account in case of serious or repeated breach of these Terms. Where legally possible we will notify you first and give you a reasonable opportunity to export your data.
 

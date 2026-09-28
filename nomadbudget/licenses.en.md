@@ -1,6 +1,6 @@
 # Licenses and Data Sources
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 Nomad Budget is built on open-source software and publicly available statistical data. The components and their licences are listed below.
 
@@ -16,6 +16,9 @@ Nomad Budget is built on open-source software and publicly available statistical
 - React Native Skia (Shopify) — MIT License
 - react-native-gifted-charts — MIT License
 - react-native-country-flag-icons — MIT License
+- react-native-qrcode-svg — MIT License
+- Google Sign-In for React Native — MIT License
+- RevenueCat Purchases SDK (react-native-purchases) — MIT License
 - SheetJS Community Edition (xlsx) — Apache License 2.0
 - Lucide icons — ISC License
 - Inter typeface (Rasmus Andersson) — SIL Open Font License 1.1

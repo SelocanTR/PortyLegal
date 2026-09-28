@@ -1,6 +1,6 @@
 # KVKK Aydınlatma Metni
 
-_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
+_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
 
 Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.
 
@@ -19,6 +19,7 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 - **Seyahat verisi:** onayladığınız veya girdiğiniz ziyaretler ve geçişler (ülke, ilk ve son gün, nereden ve nereye, ulaşım aracı, bilet olan işlem) ile ziyaret edilmiş olarak işaretlediğiniz ülkeler.
 - **İşlem güvenliği verisi:** şifrenizin kriptografik özeti (Apple ile Giriş veya Google ile Giriş kullanılarak açılan hesapta bulunmaz; kimliği sağlayıcı doğrular), oturum bilgileri, hesap oluşturma tarihi, onay sürümü ve tarihi.
 - **Cihaz verisi:** bildirimlere izin verdiyseniz cihazınızın bildirim belirteci ve cihazın iOS mu Android mi olduğu.
+- **Satın alma verisi:** hesabınızın abonelik sağlayıcımızda kayıtlı olduğu kimlik ve — Pro'ya abone olursanız — plan, mağaza, satın alma, yenileme ve bitiş tarihleri, yenileme ve iade durumu, mağazanın işlem kimlikleri ile tahsil edilen fiyat ve para birimi. Kart ve banka bilgileri hiçbir zaman alınmaz.
 - **Paylaşım verisi:** hangi cüzdanınızı kimle ve hangi rolle paylaştığınız, hangi cüzdanlara kimin daveti ile katıldığınız ve bir kaydı hangi üyenin girdiği.
 
 Özel nitelikli kişisel veri işlenmemektedir. Serbest metin not alanlarına özel nitelikli veri (sağlık, inanç vb. içerikli açıklamalar) yazmamanızı öneririz.
@@ -28,7 +29,8 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 - Üyelik kaydının oluşturulması ve hesap güvenliğinin sağlanması.
 - Bütçe takibi hizmetinin sunulması: kayıtların saklanması, senkronize edilmesi, para birimleri arasında dönüştürülmesi, özet ve grafiklerin üretilmesi, harita ve rotanın çizilmesi, ülkelerin kendi harcamalarınız üzerinden karşılaştırılması.
 - Paylaşım özelliğinin yürütülmesi: davetlerin oluşturulması ve kullanılması, cüzdan üyeliklerinin tutulması ve bir kaydı hangi üyenin girdiğinin gösterilmesi.
-- Hizmete ilişkin zorunlu bildirimlerin (e-posta doğrulama, şifre sıfırlama) ve — izin verdiyseniz — paylaşılan cüzdandaki hareketlere dair bildirimlerin iletilmesi.
+- Pro aboneliğinin satışı ve yönetimi: satın alma, yenileme, iptal, iade ve geri yüklenen satın alımların doğrulanması.
+- Hizmete ilişkin zorunlu bildirimlerin (e-posta doğrulama, şifre sıfırlama) ve — izin verdiyseniz — paylaşılan cüzdandaki hareketlere ve bütçelerinize dair bildirimlerin iletilmesi.
 - Bilgi güvenliği süreçlerinin yürütülmesi, hata giderme ve kötüye kullanımın önlenmesi.
 - Talep ve şikâyetlerin takibi ile yasal yükümlülüklerin yerine getirilmesi.
 
@@ -36,7 +38,7 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 
 Kişisel verileriniz KVKK m.5 kapsamında aşağıdaki hukuki sebeplere dayanılarak işlenmektedir:
 
-- **m.5/2-c** — Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması: hesabın oluşturulması ve hizmetin sunulması.
+- **m.5/2-c** — Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması: hesabın oluşturulması ve Pro aboneliği dâhil hizmetin sunulması.
 - **m.5/2-ç** — Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi: yetkili makam taleplerinin karşılanması.
 - **m.5/2-f** — İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla meşru menfaat: güvenlik, kötüye kullanımın önlenmesi ve hata giderme.
 - **m.5/1** — Açık rıza: cihazınızın konumundan ülke bilgisinin türetilmesi ve bildirim gönderilmesi. Her ikisi de cihaz izniyle verilir ve cihaz ayarlarından her an geri alınabilir.
@@ -45,7 +47,7 @@ Kişisel verileriniz KVKK m.5 kapsamında aşağıdaki hukuki sebeplere dayanıl
 
 Kişisel verileriniz, Uygulamayı kullanmanız sırasında doğrudan sizin tarafınızdan girilmek suretiyle, içe aktarmayı seçtiğiniz bir CSV veya Excel dosyasından (cihazınızda okunarak) ve — konum, kamera ve bildirimler için — tarafınızca verilen cihaz izinleri aracılığıyla elektronik ortamda otomatik yollarla toplanmaktadır.
 
-Hakkınızda üçüncü kişilerden veri temin edilen tek hâl tamamen sizin tercihinize bağlıdır: Apple ile Giriş veya Google ile Giriş'i seçmeniz durumunda kimlik belirteciniz, e-posta adresiniz ve adınız ilgili sağlayıcıdan tarafımıza ulaşır — Apple'dan yalnızca ilk girişte, Google'dan her girişte, ancak yalnızca ilk seferinde okunmak üzere. Bunun dışında kaynağı başka bir kişi olan tek kayıt, davet edildiğiniz bir cüzdandaki üyeliğinizdir; bu kayıt sizi davet eden kişiyi de içerir.
+Hakkınızda üçüncü kişilerden veri temin edilen iki hâl vardır ve her ikisi de tamamen sizin tercihinize bağlıdır. Apple ile Giriş veya Google ile Giriş'i seçmeniz durumunda kimlik belirteciniz, e-posta adresiniz ve adınız ilgili sağlayıcıdan tarafımıza ulaşır — Apple'dan yalnızca ilk girişte, Google'dan her girişte, ancak yalnızca ilk seferinde okunmak üzere. Pro'ya abone olmanız durumunda ise Apple veya Google, satın almayı ve sonraki yenileme, iptal ve iadeleri RevenueCat aracılığıyla tarafımıza bildirir. Bunun dışında kaynağı başka bir kişi olan tek kayıt, davet edildiğiniz bir cüzdandaki üyeliğinizdir; bu kayıt sizi davet eden kişiyi de içerir.
 
 ## 6. Aktarım ve Yurt Dışına Aktarım
 
@@ -57,13 +59,15 @@ Apple ile Giriş veya Google ile Giriş'i seçmeniz hâlinde, kimliğinizi doğr
 
 Bildirimlere izin verdiyseniz, yalnızca mesajın iletilebilmesi amacıyla bildirim belirteciniz ve bildirimin metni Amerika Birleşik Devletleri'nde bulunan Expo, Apple (APNs) ve Google (FCM) altyapılarına aktarılır.
 
+Pro satın alımlarının doğrulanıp yönetilebilmesi için hesap kimliğiniz ve — abone olursanız — satın alma verileriniz, veri işleyen sıfatıyla hareket eden ve Amerika Birleşik Devletleri'nde bulunan RevenueCat, Inc.'e aktarılır. Abone olmanız hâlinde ödemenin kendisi, bağımsız veri sorumlusu sıfatıyla Apple Inc. veya Google LLC tarafından işlenir.
+
 Bir cüzdanı paylaşmanız hâlinde, o cüzdanın kayıtları ile görünen adınız ve avatarınız davet ettiğiniz kişilere görünür olur. Bu aktarım yalnızca sizin talimatınızla gerçekleşir ve üyeyi çıkararak dilediğiniz an sona erdirebilirsiniz.
 
 Bunun dışında verileriniz, yalnızca kanunen yetkili kamu kurum ve kuruluşlarına, mevzuatın öngördüğü ölçüde aktarılabilir.
 
 ## 7. Saklama Süresi
 
-Kişisel verileriniz, hesabınız açık kaldığı sürece saklanır. Hesabınızı silmeniz hâlinde veriler kalıcı olarak silinir; sistem yedeklerindeki kopyalar yedek döngüsünün tamamlanmasıyla (en geç 30 gün) tasfiye edilir. Misafir hesabı, ona ulaşan başka bir yol olmadığı için oturumdan çıktığınızda silinir.
+Kişisel verileriniz, hesabınız açık kaldığı sürece saklanır. Hesabınızı silmeniz hâlinde veriler kalıcı olarak silinir; sistem yedeklerindeki kopyalar yedek döngüsünün tamamlanmasıyla (en geç 30 gün) tasfiye edilir. Misafir hesabı, ona ulaşan başka bir yol olmadığı için oturumdan çıktığınızda silinir. Satın alma verileri hesapla birlikte silinir; RevenueCat'in tuttuğu müşteri kaydı da aynı anda talebimiz üzerine silinir. Apple ve Google kendi satın alma kayıtlarını kendi politikalarına göre saklar.
 
 Mevzuattan doğan bir saklama yükümlülüğü bulunması hâlinde, ilgili veriler yalnızca bu yükümlülüğün gerektirdiği süre ve kapsamla sınırlı olarak muhafaza edilir.
 

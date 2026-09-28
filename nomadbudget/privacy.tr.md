@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-_Sürüm 1.5 · Yürürlük tarihi: 2026-09-20_
+_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
 
 Nomad Budget finansal verilerinizi tutar; bu yüzden gizlilik bizim için sonradan eklenen bir başlık değil. Bu politika hangi verileri işlediğimizi, neden işlediğimizi ve bunlar üzerinde hangi haklara sahip olduğunuzu açıklar.
 
@@ -28,9 +28,11 @@ Verilerinizin işlenmesinden sorumlu taraf (veri sorumlusu): Rubeeks (rubeeks.co
 
 **Tercihler:** arayüz dili, tema seçimi ve temel para birimi.
 
+**Abonelikler (Pro):** Uygulama, Pro'nuz olup olmadığını anlayabilmek için, oturumunuz açık olduğu sürece hesabınızın kimliğini — rastgele bir kimlik; asla e-posta adresiniz değil — abonelik sağlayıcımız RevenueCat'e kaydeder. Abone olursanız ödemeyi mağaza (Apple veya Google) alır ve satın almayı RevenueCat'e, onun üzerinden de bize bildirir: plan, mağaza, satın alma, yenileme ve bitiş tarihleri, yenilenip yenilenmeyeceği, ödeme sorunları ve iadeler, mağazanın işlem kimlikleri ile tahsil edilen fiyat ve para birimi. RevenueCat ayrıca böyle bir isteğin taşıdığı teknik verileri de alır: Uygulama ve işletim sistemi sürümü, mağaza ülkesi ve cihazın IP adresi. Kart veya banka bilgilerinizi ya da mağaza hesabınızdaki adı hiçbir zaman almayız.
+
 **Cihazda kalan teknik veriler:** oturum belirteci, çevrimdışı çalışma için tutulan yerel önbellek ve bağlantı yokken kuyruğa alınan kayıtlar. Bunlar cihazınızda kalır; uygulamayı kaldırdığınızda silinir.
 
-**Bildirimler (isteğe bağlı):** izin verirseniz cihazınız bize bir bildirim belirteci (push token) ve cihazın iOS mu Android mi olduğunu kaydeder; böylece paylaştığınız bir cüzdanda biri işlem yaptığında sizi haberdar edebiliriz. Kendiniz için kurduğunuz hatırlatıcılar cihazınızın kendisi tarafından zamanlanır; ne belirteç ne sunucu gerektirir. İzni dilediğiniz an cihaz ayarlarından geri alabilirsiniz.
+**Bildirimler (isteğe bağlı):** izin verirseniz cihazınız bize bir bildirim belirteci (push token) ve cihazın iOS mu Android mi olduğunu kaydeder; böylece paylaştığınız bir cüzdanda biri işlem yaptığında ve aylık bütçelerinizden biri limitinin %80'ine ulaştığında ya da limiti aştığında sizi haberdar edebiliriz (bütçe uyarılarını Uygulamanın bildirim ayarlarından kapatabilirsiniz). Kendiniz için kurduğunuz hatırlatıcılar cihazınızın kendisi tarafından zamanlanır; ne belirteç ne sunucu gerektirir. İzni dilediğiniz an cihaz ayarlarından geri alabilirsiniz.
 
 **Kamera (isteğe bağlı, yalnızca QR):** kamera, yalnızca bir paylaşım davetini okutmayı seçtiğinizde ve yalnızca karşısındaki kodu okumak için açılır. Fotoğraf veya video çekilmez, saklanmaz, hiçbir yere iletilmez.
 
@@ -38,7 +40,7 @@ Verilerinizin işlenmesinden sorumlu taraf (veri sorumlusu): Rubeeks (rubeeks.co
 
 Toplamadığımız veriler:
 
-- Banka veya kart bilgisi — Uygulama hiçbir finansal kuruma bağlanmaz.
+- Banka veya kart bilgisi — Uygulama hiçbir finansal kuruma bağlanmaz; Pro ödemesini tamamen Apple veya Google yürütür.
 - Konum geçmişi veya koordinat kaydı — yukarıda açıklanan ülke bilgisi dışında konumunuza dair hiçbir veri tutulmaz.
 - Rehber, fotoğraflar veya — içe aktarmak için açıkça seçtiğiniz dosya dışında — cihazdaki herhangi bir dosya.
 - Reklam kimliği veya çapraz uygulama izleme verisi.
@@ -53,7 +55,8 @@ Toplamadığımız veriler:
 - **Harcamalarınızı ve ziyaret ettiğiniz ülkeleri harita ile ülke bazlı karşılaştırmalarda göstermek üzere konumunuzdan ülke bilgisi türetmek** — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza yalnızca cihaz izniyle verilir ve cihaz ayarlarından her an geri alınabilir.
 - **Hizmetin kötüye kullanımını önlemek, hata ayıklamak ve güvenliği sağlamak** — meşru menfaat (KVKK m.5/2-f; GDPR m.6/1-f).
 - **Davet ettiğiniz kişiyle bir cüzdanı paylaşmanızı ve davet edildiğiniz bir cüzdana katılmanızı sağlamak** — sözleşmenin ifası.
-- **Paylaştığınız bir cüzdandaki hareketler için bildirim göndermek** — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza cihazın bildirim izniyle verilir ve cihaz ayarlarından her an geri alınabilir.
+- **Pro'yu satmak, sizde olup olmadığını doğrulamak; yenileme, iptal, iade ve geri yüklenen satın alımları yürütmek** — sözleşmenin ifası.
+- **Paylaştığınız bir cüzdandaki hareketler ve bütçeleriniz için bildirim göndermek** — açık rıza (KVKK m.5/1; GDPR m.6/1-a). Bu rıza cihazın bildirim izniyle verilir ve cihaz ayarlarından her an geri alınabilir.
 - **Hizmete ilişkin zorunlu bildirimleri (e-posta doğrulama, şifre sıfırlama) göndermek** — sözleşmenin ifası.
 - **Yasal yükümlülüklere uymak ve hukuki taleplere yanıt vermek** — hukuki yükümlülük (KVKK m.5/2-ç; GDPR m.6/1-c).
 
@@ -67,7 +70,9 @@ Güney Kore, Avrupa Komisyonu'nun yeterlilik kararına sahip ülkeler arasındad
 
 Kur verisi almak için açık kur servislerine bağlanılırken yalnızca para birimi kodları gönderilir; hiçbir kişisel veri veya işlem bilgisi bu servislere iletilmez. Haritadaki ülke görselleri, barındırma sağlayıcımızın depolama alanından yalnızca ülke koduyla çekilir.
 
-Bildirimler, iletilmek üzere Expo'nun bildirim servisine, oradan da Apple (APNs) veya Google (FCM) altyapısına verilir. Bu sağlayıcılara bildirim belirteciniz ve mesajın metni ulaşır; paylaşılan bir cüzdandaki hareket bildiriminde bu metin işlemi yapan kişinin adını, cüzdanı ve kaydın tutarını içerir. Bu, yalnızca mesajın iletilmesi süresince yapılan bir Amerika Birleşik Devletleri'ne aktarımdır ve bildirimleri cihaz ayarlarından kapattığınız anda sona erer.
+Bildirimler, iletilmek üzere Expo'nun bildirim servisine, oradan da Apple (APNs) veya Google (FCM) altyapısına verilir. Bu sağlayıcılara bildirim belirteciniz ve mesajın metni ulaşır; paylaşılan bir cüzdandaki hareket bildiriminde bu metin işlemi yapan kişinin adını, cüzdanı ve kaydın tutarını; bir bütçe uyarısında ise bütçenin adını (kategorisini ya da aylık bütçenizi), harcanan tutarı ve limitini içerir. Bu, yalnızca mesajın iletilmesi süresince yapılan bir Amerika Birleşik Devletleri'ne aktarımdır ve bildirimleri cihaz ayarlarından kapattığınız anda sona erer.
+
+Abonelik verileri, Amerika Birleşik Devletleri'nde bulunan RevenueCat, Inc. tarafından veri işleyen sıfatıyla ve onun veri işleme koşulları çerçevesinde işlenir; bu da bir yurt dışına aktarımdır. Kapsamı yalnızca hesap kimliğiniz ve satın alımlarınızdır: finansal kayıtlarınızın, seyahat kayıtlarınızın veya profilinizin hiçbiri RevenueCat'e gönderilmez.
 
 ## 5. Verilerin Paylaşımı
 
@@ -76,6 +81,8 @@ Verilerinizi satmıyoruz, kiralamıyoruz ve reklam amacıyla paylaşmıyoruz. Ve
 - **Barındırma ve kimlik doğrulama sağlayıcısı (Supabase Inc.):** yalnızca hizmeti çalıştırmak için, veri işleyen sıfatıyla.
 - **Apple ile Giriş (Apple Inc.):** bu yolu seçerseniz, Apple ID'nin size ait olduğunu bize Apple doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Apple, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
 - **Google ile Giriş (Google LLC):** bu yolu seçerseniz, Google hesabının size ait olduğunu bize Google doğrular ve bu sırada Uygulamayı kullandığınızı öğrenir. Bu adımda Google, kendi gizlilik politikası kapsamında bağımsız veri sorumlusudur; kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
+- **Abonelik sağlayıcısı (RevenueCat, Inc.):** yalnızca Pro'yu doğrulamak ve yönetmek için, veri işleyen sıfatıyla, hesap kimliğiniz ve satın alma verileriniz.
+- **App Store (Apple) ve Google Play (Google):** abone olursanız ödemeyi mağaza, kendi koşulları ve gizlilik politikası kapsamında bağımsız veri sorumlusu olarak işler. Kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
 - **E-posta gönderimi:** doğrulama ve şifre sıfırlama e-postalarının iletilmesi için, yalnızca e-posta adresiniz.
 - **Bildirim iletimi (Expo, Apple, Google):** yalnızca mesajın iletilebilmesi için bildirim belirteciniz ve bildirimin metni.
 - **Cüzdan paylaştığınız kişiler:** yalnızca bir sonraki bölümde anlatılanlar ve yalnızca siz davet ettiğiniz ya da bir daveti kabul ettiğiniz için.
@@ -102,6 +109,8 @@ Verileriniz hesabınız açık kaldığı sürece saklanır.
 Hesabınızı silmek, vermiş olduğunuz paylaşımları da sona erdirir: paylaştığınız cüzdanlar aynı anda üyeleri için ortadan kalkar; profiliniz ve bildirim belirteciniz de silinir. Başkasına ait bir cüzdana girdiğiniz kayıtlar ise yerinde kalır — çünkü o kayıtlar o kişinin kayıtlarıdır — yalnızca artık size atfedilmezler.
 
 Misafir oturumu, oturumdan çıkılarak silinir. Bu, alışılmış anlamda bir çıkış değildir: ona ulaşan başka bir yol olmadığı için hesabın silinmesidir ve geri alınamaz.
+
+Bizdeki abonelik kaydınız hesabınızla birlikte silinir; RevenueCat'in sizin için tuttuğu müşteri kaydını da aynı anda sildiririz. Apple ve Google, bir satın almaya ilişkin kendi kayıtlarını kendi politikalarına göre saklar. Hesabınızı silmek aboneliği iptal etmez — Kullanım Koşulları'na bakınız.
 
 Sistem yedeklerinde kalan kopyalar, yedek döngüsünün tamamlanmasıyla (en geç 30 gün içinde) tasfiye edilir. Cihazınızdaki yerel önbellek uygulamayı kaldırdığınızda silinir.
 

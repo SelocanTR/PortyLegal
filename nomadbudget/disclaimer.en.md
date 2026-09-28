@@ -1,12 +1,12 @@
 # Financial Disclaimer
 
-_Version 1.5 · Effective: 2026-09-20_
+_Version 1.8 · Effective: 2026-09-26_
 
 Nomad Budget is a record-keeping and analysis tool. Every number it produces is an estimate derived from the data you entered and from open statistical sources.
 
 ## 1. Not Investment or Financial Advice
 
-Nothing in the App — no summary, chart, comparison or suggestion — constitutes investment advice, financial advice, portfolio management or an investment recommendation.
+Nothing in the App — no summary, chart, comparison or suggestion, whether it belongs to the free App or to Pro — constitutes investment advice, financial advice, portfolio management or an investment recommendation.
 
 Investment advice is provided by licensed institutions taking each person's risk and return preferences into account. The App holds no such licence and makes no personalised assessment.
 
