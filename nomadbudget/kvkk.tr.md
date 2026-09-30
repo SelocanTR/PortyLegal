@@ -1,6 +1,6 @@
 # KVKK Aydınlatma Metni
 
-_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
+_Sürüm 1.9 · Yürürlük tarihi: 2026-09-29_
 
 Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.
 

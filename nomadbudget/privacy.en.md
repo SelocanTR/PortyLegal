@@ -1,6 +1,6 @@
 # Privacy Policy
 
-_Version 1.8 · Effective: 2026-09-26_
+_Version 1.9 · Effective: 2026-09-29_
 
 Nomad Budget holds your financial records, so privacy is not an afterthought here. This policy explains what data we process, why, and what rights you have over it.
 
@@ -146,6 +146,8 @@ Under KVKK Art. 11 and — where it applies to you — the GDPR, you have the ri
 - Claim compensation if you suffer damage from unlawful processing.
 
 You can exercise most of your access and correction rights directly in the App: every record you have is visible, editable and deletable there.
+
+With Pro, the App can also export your transactions as a CSV file. Data portability is a right on every plan: without Pro, write to nomadbudget@rubeeks.co and we will send your data in the same format.
 
 For anything else, write to nomadbudget@rubeeks.co; requests are answered within 30 days at the latest. See the "Data Protection Notice (KVKK)" for the detailed application procedure.
 

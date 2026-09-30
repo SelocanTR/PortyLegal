@@ -1,6 +1,6 @@
 # Data Protection Notice (KVKK)
 
-_Version 1.8 · Effective: 2026-09-26_
+_Version 1.9 · Effective: 2026-09-29_
 
 This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.
 

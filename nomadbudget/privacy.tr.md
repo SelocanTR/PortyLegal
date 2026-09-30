@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
+_Sürüm 1.9 · Yürürlük tarihi: 2026-09-29_
 
 Nomad Budget finansal verilerinizi tutar; bu yüzden gizlilik bizim için sonradan eklenen bir başlık değil. Bu politika hangi verileri işlediğimizi, neden işlediğimizi ve bunlar üzerinde hangi haklara sahip olduğunuzu açıklar.
 
@@ -146,6 +146,8 @@ KVKK m.11 ve — kapsamda olmanız hâlinde — GDPR uyarınca aşağıdaki hakl
 - Verilerin kanuna aykırı işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.
 
 Erişim ve düzeltme haklarınızın büyük kısmını doğrudan Uygulama içinden kullanabilirsiniz: tüm kayıtlarınızı görüntüleyebilir, düzenleyebilir ve silebilirsiniz.
+
+Pro ile Uygulama işlemlerinizi CSV dosyası olarak da dışa aktarabilir. Veri taşınabilirliği her planda geçerli bir haktır: Pro olmadan nomadbudget@rubeeks.co adresine yazmanız hâlinde verilerinizi aynı formatta göndeririz.
 
 Diğer talepleriniz için nomadbudget@rubeeks.co adresine yazın; başvurularınız en geç 30 gün içinde sonuçlandırılır. Ayrıntılı başvuru usulü için "KVKK Aydınlatma Metni" belgesine bakınız.
 

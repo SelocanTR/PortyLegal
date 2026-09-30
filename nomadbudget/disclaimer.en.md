@@ -1,6 +1,6 @@
 # Financial Disclaimer
 
-_Version 1.8 · Effective: 2026-09-26_
+_Version 1.9 · Effective: 2026-09-29_
 
 Nomad Budget is a record-keeping and analysis tool. Every number it produces is an estimate derived from the data you entered and from open statistical sources.
 

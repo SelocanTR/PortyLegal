@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Version 1.8 · Effective: 2026-09-26_
+_Version 1.9 · Effective: 2026-09-29_
 
 These Terms of Use ("Terms") govern your use of the Nomad Budget mobile application and its related services (the "App"), provided by Rubeeks (rubeeks.co) ("we", "us").
 
@@ -57,6 +57,8 @@ You can bring records in from a CSV or Excel file — an export from another app
 
 You are responsible for having the right to use the file you import and for the accuracy of what it contains. Names of other services whose exports the App recognises belong to their owners; the App is not affiliated with or endorsed by them.
 
+With Pro you can also take your records out as a CSV file. The file is created on your device and goes only where you send it from your device's share sheet; we do not receive or keep a copy. Exporting in the App is not the only way to get your data: your right to data portability does not depend on Pro (see the Privacy Policy).
+
 ## 7. Sharing a Wallet
 
 You can invite other people into wallets of your own. Nothing is shared until you create an invitation yourself; there is no sharing by default.
@@ -84,7 +86,7 @@ Payment is taken by Apple (App Store) or Google (Google Play), from the account 
 
 Pro belongs to the Nomad Budget account you are signed into when you subscribe, and is available on every device where you sign in to that account. "Restore purchases" on the Pro screen attaches a subscription made with your store account to the account you are signed into. A guest session cannot subscribe: before a purchase you are asked to link the session to an account with Apple, Google or email, because signing out of a guest session ends that account. Linking does not change your account; your data stays as it is.
 
-The free plan has some limits (for example the number of goals, recurring transactions or shared wallets), and some features are part of Pro only (for example category and country budgets; a monthly total budget is free); the current limits are shown in the App when you reach one. Keeping records — adding entries, country wallets, currencies and offline use — is never limited on any plan.
+The free plan has some limits (for example the number of goals, recurring transactions or shared wallets), and some features are part of Pro only (for example category and country budgets, and exporting your records as a CSV file; a monthly total budget is free); the current limits are shown in the App when you reach one. Keeping records — adding entries, country wallets, currencies and offline use — is never limited on any plan.
 
 If Pro ends (by cancellation, non-renewal or refund), none of your data is deleted: the goals, recurring transactions, shares, budgets and other records you created while on Pro stay in place and can still be viewed and edited. Only creating new ones beyond the free plan's limits is not possible, and Pro-only insights are locked again.
 

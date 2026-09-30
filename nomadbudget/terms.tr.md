@@ -1,6 +1,6 @@
 # Kullanım Koşulları
 
-_Sürüm 1.8 · Yürürlük tarihi: 2026-09-26_
+_Sürüm 1.9 · Yürürlük tarihi: 2026-09-29_
 
 Bu Kullanım Koşulları ("Koşullar"), Rubeeks (rubeeks.co) ("biz") tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin ("Uygulama") kullanımına ilişkin şartları düzenler.
 
@@ -57,6 +57,8 @@ Kayıtlarınızı bir CSV veya Excel dosyasından — başka bir uygulamanın d�
 
 İçe aktardığınız dosyayı kullanma hakkına sahip olmanızdan ve içeriğinin doğruluğundan siz sorumlusunuz. Uygulamanın dışa aktarımlarını tanıdığı diğer hizmetlerin adları ilgili sahiplerine aittir; Uygulamanın bu hizmetlerle bir bağlantısı veya onlardan aldığı bir onay yoktur.
 
+Pro ile kayıtlarınızı CSV dosyası olarak dışa da aktarabilirsiniz. Dosya cihazınızda oluşturulur ve yalnızca cihazınızın paylaşım menüsünden gönderdiğiniz yere gider; bir kopyası bize ulaşmaz ve saklanmaz. Uygulama içinden dışa aktarma, verilerinizi almanın tek yolu değildir: veri taşınabilirliği hakkınız Pro'ya bağlı değildir (bkz. Gizlilik Politikası).
+
 ## 7. Cüzdan Paylaşımı
 
 Kendi cüzdanlarınıza başka kişileri davet edebilirsiniz. Siz bir davet oluşturmadıkça hiçbir şey paylaşılmaz; varsayılan olarak paylaşım yoktur.
@@ -84,7 +86,7 @@ Pro, aylık ve yıllık plan olarak sunulur. Her planın fiyatı, yerel para bir
 
 Pro, abone olduğunuz sırada oturum açık olan Nomad Budget hesabına aittir ve o hesapla oturum açtığınız her cihazda kullanılabilir. Pro ekranındaki "Satın alımları geri yükle", mağaza hesabınızla yapılmış bir aboneliği oturum açık olan hesaba bağlar. Misafir oturumuyla abone olunamaz: satın almadan önce oturumun Apple, Google veya e-posta ile bir hesaba bağlanması istenir, çünkü misafir oturumundan çıkmak o hesabı sonlandırır. Bağlama hesabınızı değiştirmez; verileriniz olduğu gibi kalır.
 
-Ücretsiz planın bazı sınırları vardır (örneğin hedef, tekrarlayan işlem veya paylaşılan cüzdan sayısı) ve bazı özellikler yalnızca Pro'ya dahildir (örneğin kategori ve ülke bütçeleri; aylık toplam bütçe ücretsizdir); güncel sınırlar, bir sınıra ulaştığınızda Uygulamada gösterilir. Kayıt tutma — işlem eklemek, ülke cüzdanları, para birimleri ve çevrimdışı kullanım — hiçbir planda sınırlanmaz.
+Ücretsiz planın bazı sınırları vardır (örneğin hedef, tekrarlayan işlem veya paylaşılan cüzdan sayısı) ve bazı özellikler yalnızca Pro'ya dahildir (örneğin kategori ve ülke bütçeleri ile kayıtlarınızı CSV dosyası olarak dışa aktarma; aylık toplam bütçe ücretsizdir); güncel sınırlar, bir sınıra ulaştığınızda Uygulamada gösterilir. Kayıt tutma — işlem eklemek, ülke cüzdanları, para birimleri ve çevrimdışı kullanım — hiçbir planda sınırlanmaz.
 
 Pro sona ererse (iptal, yenilenmeme veya iade nedeniyle) hiçbir veriniz silinmez: Pro sırasında oluşturduğunuz hedefler, tekrarlayan işlemler, paylaşımlar, bütçeler ve diğer kayıtlar yerinde kalır, görüntülenebilir ve düzenlenebilir. Yalnızca ücretsiz planın sınırlarını aşan yeni kayıtlar oluşturulamaz ve Pro'ya özel içgörüler yeniden kilitlenir.
 

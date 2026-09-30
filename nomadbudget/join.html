@@ -147,6 +147,7 @@ footer { max-width: 480px; margin: 22px auto 0; padding: 0 12px; font-size: 13px
         <button id="copy" class="btn soft" type="button" data-i18n="copy"></button>
         <p class="hint" data-i18n="pasteHint"></p>
         <p class="hint" data-i18n="expires"></p>
+        <p class="hint" data-i18n="installHint"></p>
         <div class="stores" id="stores" hidden>
           <span data-i18n="noApp"></span>
           <a id="ios" data-i18n="appStore"></a>
@@ -162,9 +163,10 @@ footer { max-width: 480px; margin: 22px auto 0; padding: 0 12px; font-size: 13px
   <footer><a href="./index.html">Nomad Budget</a> · <a href="./privacy.en.html" data-i18n="privacy"></a></footer>
 <script>
 (function () {
-  // Store listings, once there are any — the "don't have the app?" line stays
-  // hidden until both are filled in, rather than pointing at nothing.
-  var STORE = { ios: '', android: '' };
+  // Store listings. A platform without one is left out rather than pointed at nothing;
+  // the line stays hidden only while neither exists. Android is not listed yet — its
+  // "Open" button already falls back to this page when the app is missing.
+  var STORE = { ios: 'https://apps.apple.com/app/id6803787746', android: '' };
   var PACKAGE = 'com.nomadbudget.mobile';
 
   var STRINGS = {
@@ -175,7 +177,8 @@ footer { max-width: 480px; margin: 22px auto 0; padding: 0 12px; font-size: 13px
       copy: 'Copy code',
       copied: 'Copied',
       pasteHint: 'If the app does not open: in Nomad Budget go to Settings → Share wallet → Scan invite → Paste code, and paste this code.',
-      expires: 'The invitation is valid for 15 minutes after it was created.',
+      expires: 'An invitation sent as a link from the latest version of the app is valid for 7 days; once you accept it, the person who invited you approves your request in the app. QR codes, and invitations sent from older versions, expire 15 minutes after they are created.',
+      installHint: 'Just installed the app? Tap this link again after you open it — the invitation will be waiting once your account is set up.',
       noApp: 'Don’t have the app?',
       appStore: 'App Store',
       playStore: 'Google Play',
@@ -190,7 +193,8 @@ footer { max-width: 480px; margin: 22px auto 0; padding: 0 12px; font-size: 13px
       copy: 'Kodu kopyala',
       copied: 'Kopyalandı',
       pasteHint: 'Uygulama açılmazsa: Nomad Budget’te Ayarlar → Cüzdan paylaş → Davet okut → Kodu yapıştır yolunu izleyip bu kodu yapıştır.',
-      expires: 'Davet, oluşturulduktan sonra 15 dakika geçerli.',
+      expires: 'Uygulamanın son sürümünden bağlantıyla gönderilen davet 7 gün geçerli; katılmak istediğinde, seni davet eden kişi isteğini uygulamadan onaylar. QR kodları ve eski sürümlerden gönderilen davetler oluşturulduktan 15 dakika sonra geçersiz olur.',
+      installHint: 'Uygulamayı yeni mi kurdun? Açtıktan sonra bu bağlantıya bir kez daha dokun — hesabını açınca davet seni bekliyor olacak.',
       noApp: 'Uygulama yok mu?',
       appStore: 'App Store',
       playStore: 'Google Play',
@@ -242,11 +246,11 @@ footer { max-width: 480px; margin: 22px auto 0; padding: 0 12px; font-size: 13px
     }
   });
 
-  if (STORE.ios && STORE.android) {
-    document.getElementById('ios').href = STORE.ios;
-    document.getElementById('android').href = STORE.android;
-    document.getElementById('stores').hidden = false;
-  }
+  var ios = document.getElementById('ios');
+  var play = document.getElementById('android');
+  if (STORE.ios) ios.href = STORE.ios; else ios.remove();
+  if (STORE.android) play.href = STORE.android; else play.remove();
+  if (STORE.ios || STORE.android) document.getElementById('stores').hidden = false;
 })();
 </script>
 </body>
