@@ -237,7 +237,7 @@ footer p { margin: 0 0 4px; }
         <a href="./terms.tr.html" lang="tr">Türkçe</a>
       </nav>
       <h1>Terms of Use</h1>
-      <p class="meta">Version 1.9 · Effective: 2026-09-29</p>
+      <p class="meta">Version 2.1 · Effective: 2026-10-01</p>
       <div class="lede">
         <p>These Terms of Use (&quot;Terms&quot;) govern your use of the Nomad Budget mobile application and its related services (the &quot;App&quot;), provided by Rubeeks (rubeeks.co) (&quot;we&quot;, &quot;us&quot;).</p>
         <p>By creating an account or using the App you confirm that you have read and accepted these Terms. If you do not accept them, please do not use the App.</p>
@@ -251,16 +251,17 @@ footer p { margin: 0 0 4px; }
           <li><a href="#s4">Acceptable Use</a></li>
           <li><a href="#s5">Your Content</a></li>
           <li><a href="#s6">Importing Your History</a></li>
-          <li><a href="#s7">Sharing a Wallet</a></li>
-          <li><a href="#s8">Pro Subscription and Fees</a></li>
-          <li><a href="#s9">Third-Party Services and Data</a></li>
-          <li><a href="#s10">Availability and Changes</a></li>
-          <li><a href="#s11">Disclaimer of Warranties</a></li>
-          <li><a href="#s12">Limitation of Liability</a></li>
-          <li><a href="#s13">Closing Your Account</a></li>
-          <li><a href="#s14">Changes to These Terms</a></li>
-          <li><a href="#s15">Governing Law and Disputes</a></li>
-          <li><a href="#s16">Contact</a></li>
+          <li><a href="#s7">Capturing Payments</a></li>
+          <li><a href="#s8">Sharing a Wallet</a></li>
+          <li><a href="#s9">Pro Subscription and Fees</a></li>
+          <li><a href="#s10">Third-Party Services and Data</a></li>
+          <li><a href="#s11">Availability and Changes</a></li>
+          <li><a href="#s12">Disclaimer of Warranties</a></li>
+          <li><a href="#s13">Limitation of Liability</a></li>
+          <li><a href="#s14">Closing Your Account</a></li>
+          <li><a href="#s15">Changes to These Terms</a></li>
+          <li><a href="#s16">Governing Law and Disputes</a></li>
+          <li><a href="#s17">Contact</a></li>
         </ol>
       </nav>
       <section id="s1">
@@ -275,7 +276,7 @@ footer p { margin: 0 0 4px; }
       <section id="s2">
         <h2><span class="n">2.</span> What the Service Is</h2>
         <p>Nomad Budget is a record-keeping and analysis tool for multi-currency personal budgeting. It stores the data you enter, converts it between currencies, and produces summaries, charts, a map of the countries you have spent in and a route between them from it.</p>
-        <p>The App is not a bank, payment institution, electronic money institution or investment firm. It does not connect to any bank account, does not move or hold money, and does not act as an intermediary. Every record is entered manually by you.</p>
+        <p>The App is not a bank, payment institution, electronic money institution or investment firm. It does not connect to any bank account, does not move or hold money, and does not act as an intermediary. Every record is entered or confirmed by you: even a payment the App reads from a notification or a Shortcuts automation does not become a record until you confirm it (see &quot;Capturing Payments&quot;).</p>
       </section>
       <section id="s3">
         <h2><span class="n">3.</span> Accounts and Security</h2>
@@ -310,15 +311,22 @@ footer p { margin: 0 0 4px; }
         <p>With Pro you can also take your records out as a CSV file. The file is created on your device and goes only where you send it from your device's share sheet; we do not receive or keep a copy. Exporting in the App is not the only way to get your data: your right to data portability does not depend on Pro (see the Privacy Policy).</p>
       </section>
       <section id="s7">
-        <h2><span class="n">7.</span> Sharing a Wallet</h2>
+        <h2><span class="n">7.</span> Capturing Payments</h2>
+        <p>If you wish, the App can prepare draft entries from the payments your bank or wallet app tells you about. The feature is off by default and works only if you turn it on: on Android, by granting the device's notification access and choosing in the App which sources are read (bank text messages and/or apps you pick); on iOS, by setting up a Shortcuts automation yourself that passes a payment or a message to the App.</p>
+        <p>The message is interpreted on your device and waits as a draft. A draft is not written to your records until you check it in the filled-in entry form and save it; drafts you do not confirm are deleted automatically after 14 days.</p>
+        <p>Reading messages is automatic and can be wrong: the amount, currency, merchant, date or kind of transaction may be misread, or a payment may not be noticed at all. Checking a draft before you save it is your responsibility. Banks and apps may change their message formats without notice; the feature is not promised to work with any particular bank or app, and the App is not affiliated with them.</p>
+        <p>You can turn the feature off at any time with the switches in the App, in your device's notification access settings, or by deleting the Shortcuts automation.</p>
+      </section>
+      <section id="s8">
+        <h2><span class="n">8.</span> Sharing a Wallet</h2>
         <p>You can invite other people into wallets of your own. Nothing is shared until you create an invitation yourself; there is no sharing by default.</p>
-        <p>An invitation is a code that lasts 15 minutes, can be used once, and can be revoked at any time before it is used. Whoever holds a live code can join the wallets it names, so treat it as a key and send it only to the person you mean to invite.</p>
+        <p>There are two kinds of invitation, and either can be revoked at any time before it is used. A <strong>QR code</strong> is for showing face to face: it lasts 15 minutes, can be used once, and whoever scans it joins the wallets it names directly — so treat it as a key and let only the person you mean to invite scan it. A <strong>link</strong> is for sending in a message: it lasts 7 days and lets nobody in on its own — whoever uses it only sends a request to join, and they reach none of your wallets unless you see their display name and approve the request. Only one request can be approved per link, and revoking a link cancels its pending requests too.</p>
         <p>Someone you let in sees that wallet's records in full, and an editor can also add and change them. You remain responsible for what you choose to share; the person you invite is responsible for what they do with it.</p>
         <p>You may remove a member at any time and their access ends immediately, and a member may leave the same way. Removing someone does not undo what they have already seen.</p>
         <p>Both sides of a share need a full account: a guest session can neither invite nor join, because the other person would otherwise be trusting an account that cannot be reached again.</p>
       </section>
-      <section id="s8">
-        <h2><span class="n">8.</span> Pro Subscription and Fees</h2>
+      <section id="s9">
+        <h2><span class="n">9.</span> Pro Subscription and Fees</h2>
         <p>The App can be used free of charge and carries no advertising. Nomad Budget Pro (&quot;Pro&quot;) is an optional, paid subscription that unlocks additional features. What Pro includes is described on the Pro screen in the App at the time you subscribe.</p>
         <p>Pro is offered as a monthly and a yearly plan. The price of each, in your local currency and including any taxes the store applies, is shown in the App before you confirm the purchase. The yearly plan may be offered to new subscribers with a free trial; its length is shown on the Pro screen before you confirm the purchase. The store decides whether you are eligible, and a trial can generally be used once per store account. Nothing is charged during the trial. Unless you cancel before it ends (on the App Store, at least 24 hours before), the subscription converts to the paid yearly plan when the trial ends and the yearly price is charged. If you cancel during the trial, Pro stays active until the trial ends and nothing is charged.</p>
         <p>Payment is taken by Apple (App Store) or Google (Google Play), from the account you use with that store, when you confirm the purchase. The store's own terms of sale apply to the payment. We never see or store your card or bank details.</p>
@@ -333,46 +341,46 @@ footer p { margin: 0 0 4px; }
         <p>If Pro ends (by cancellation, non-renewal or refund), none of your data is deleted: the goals, recurring transactions, shares, budgets and other records you created while on Pro stay in place and can still be viewed and edited. Only creating new ones beyond the free plan's limits is not possible, and Pro-only insights are locked again.</p>
         <p>We may change which features Pro includes. A change that takes away something you are paying for applies no earlier than your next renewal, so that you can cancel before it. Nothing will be charged for use you have already made of a feature while it was free.</p>
       </section>
-      <section id="s9">
-        <h2><span class="n">9.</span> Third-Party Services and Data</h2>
+      <section id="s10">
+        <h2><span class="n">10.</span> Third-Party Services and Data</h2>
         <p>The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, the App Store, Google Play and RevenueCat for Pro subscriptions, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.</p>
         <p>The availability, timeliness and accuracy of these sources are outside our control. See the &quot;Licenses and Data Sources&quot; document for the full list and their licences.</p>
       </section>
-      <section id="s10">
-        <h2><span class="n">10.</span> Availability and Changes</h2>
+      <section id="s11">
+        <h2><span class="n">11.</span> Availability and Changes</h2>
         <p>We do not warrant that the App will be uninterrupted, error-free or always available. Maintenance, updates, infrastructure failures and events beyond our control may cause interruptions.</p>
         <p>We may add, change or remove features. If we discontinue the service entirely, we will give reasonable advance notice by email so that you can export your data.</p>
       </section>
-      <section id="s11">
-        <h2><span class="n">11.</span> Disclaimer of Warranties</h2>
+      <section id="s12">
+        <h2><span class="n">12.</span> Disclaimer of Warranties</h2>
         <p>The App is provided &quot;as is&quot; and &quot;as available&quot;. To the fullest extent permitted by law, no warranties of any kind are given, express or implied, including fitness for a particular purpose, uninterrupted availability and freedom from error.</p>
         <p>The calculations, conversions, estimates and comparisons the App produces are informational. See the &quot;Financial Disclaimer&quot; document for detail.</p>
       </section>
-      <section id="s12">
-        <h2><span class="n">12.</span> Limitation of Liability</h2>
+      <section id="s13">
+        <h2><span class="n">13.</span> Limitation of Liability</h2>
         <p>To the fullest extent permitted by law, we are not liable for loss of profit, loss of data, business interruption, or indirect or consequential damages.</p>
         <p>The consequences of any financial decision you make on the basis of data in the App are yours alone.</p>
         <p>Nothing in this section limits liability for our wilful misconduct or gross negligence, or any non-waivable rights you have under consumer protection law.</p>
       </section>
-      <section id="s13">
-        <h2><span class="n">13.</span> Closing Your Account</h2>
+      <section id="s14">
+        <h2><span class="n">14.</span> Closing Your Account</h2>
         <p>You can close your account at any time from within the App: Settings → Delete Account. This permanently deletes your account and all of your data and cannot be undone. Wallets you had shared disappear for the people you shared them with at the same moment.</p>
         <p>A guest session is closed by signing out of it, which does the same thing: with no email and no password there is nothing left to sign back in with, so signing out erases that account and its records.</p>
         <p>Closing your account does not cancel a Pro subscription. Cancel it in your App Store or Google Play settings first, or the store will keep renewing it. Closing the account does not by itself give rise to a refund.</p>
         <p>We may suspend or terminate an account in case of serious or repeated breach of these Terms. Where legally possible we will notify you first and give you a reasonable opportunity to export your data.</p>
       </section>
-      <section id="s14">
-        <h2><span class="n">14.</span> Changes to These Terms</h2>
+      <section id="s15">
+        <h2><span class="n">15.</span> Changes to These Terms</h2>
         <p>We may update these Terms. For material changes we will notify you in the App or by email before they take effect, and ask for your acceptance again where required.</p>
         <p>Continuing to use the App after such notice means you accept the updated Terms. If you do not accept them, you may close your account.</p>
       </section>
-      <section id="s15">
-        <h2><span class="n">15.</span> Governing Law and Disputes</h2>
+      <section id="s16">
+        <h2><span class="n">16.</span> Governing Law and Disputes</h2>
         <p>These Terms are governed by the laws of the Republic of Türkiye. The courts and enforcement offices of the Republic of Türkiye have jurisdiction over disputes.</p>
         <p>Users who qualify as consumers may, within the applicable monetary thresholds, apply to the Consumer Arbitration Committee or the Consumer Court at their place of residence. Users resident in the European Union retain the rights granted by the mandatory consumer provisions of their own country.</p>
       </section>
-      <section id="s16">
-        <h2><span class="n">16.</span> Contact</h2>
+      <section id="s17">
+        <h2><span class="n">17.</span> Contact</h2>
         <p>For any question or request regarding these Terms, write to <a href="mailto:nomadbudget@rubeeks.co.">nomadbudget@rubeeks.co.</a></p>
       </section>
     </div>

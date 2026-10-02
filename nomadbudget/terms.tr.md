@@ -1,6 +1,6 @@
 # Kullanım Koşulları
 
-_Sürüm 1.9 · Yürürlük tarihi: 2026-09-29_
+_Sürüm 2.1 · Yürürlük tarihi: 2026-10-01_
 
 Bu Kullanım Koşulları ("Koşullar"), Rubeeks (rubeeks.co) ("biz") tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin ("Uygulama") kullanımına ilişkin şartları düzenler.
 
@@ -17,7 +17,7 @@ Hesap oluşturarak veya Uygulamayı kullanarak bu Koşulları okuduğunuzu ve ka
 
 Nomad Budget, çok para birimli kişisel bütçe takibi için bir kayıt ve analiz aracıdır. Kullanıcının kendi girdiği verileri saklar, para birimleri arasında dönüştürür; bunlardan özetler, grafikler, harcama yapılan ülkelerin haritasını ve aralarındaki rotayı üretir.
 
-Uygulama bir banka, ödeme kuruluşu, elektronik para kuruluşu veya yatırım kuruluşu değildir. Herhangi bir banka hesabına bağlanmaz, para transferi yapmaz, para saklamaz ve aracılık faaliyeti yürütmez. Tüm kayıtlar Kullanıcı tarafından manuel olarak girilir.
+Uygulama bir banka, ödeme kuruluşu, elektronik para kuruluşu veya yatırım kuruluşu değildir. Herhangi bir banka hesabına bağlanmaz, para transferi yapmaz, para saklamaz ve aracılık faaliyeti yürütmez. Her kayıt Kullanıcı tarafından girilir ya da onaylanır: Uygulamanın bir bildirimden veya bir Kestirmeler otomasyonundan okuduğu bir ödeme bile, Kullanıcı onaylamadıkça kayıt hâline gelmez (bkz. "Ödemeleri Yakalama").
 
 ## 3. Hesap Oluşturma ve Güvenlik
 
@@ -59,11 +59,21 @@ Kayıtlarınızı bir CSV veya Excel dosyasından — başka bir uygulamanın d�
 
 Pro ile kayıtlarınızı CSV dosyası olarak dışa da aktarabilirsiniz. Dosya cihazınızda oluşturulur ve yalnızca cihazınızın paylaşım menüsünden gönderdiğiniz yere gider; bir kopyası bize ulaşmaz ve saklanmaz. Uygulama içinden dışa aktarma, verilerinizi almanın tek yolu değildir: veri taşınabilirliği hakkınız Pro'ya bağlı değildir (bkz. Gizlilik Politikası).
 
-## 7. Cüzdan Paylaşımı
+## 7. Ödemeleri Yakalama
+
+Dilerseniz Uygulama, bankanızın veya cüzdan uygulamanızın size bildirdiği ödemelerden kayıt taslağı hazırlayabilir. Bu özellik kapalı gelir ve yalnızca siz açarsanız çalışır: Android'de cihazın bildirim erişimi iznini verip Uygulamanın içinde hangi kaynakların (banka SMS'leri ve/veya seçtiğiniz uygulamalar) okunacağını seçerek; iOS'ta Kestirmeler uygulamasında, bir ödemeyi veya mesajı Uygulamaya ileten bir otomasyonu kendiniz kurarak.
+
+Okunan mesaj cihazınızda yorumlanır ve bir taslak olarak bekler. Taslak, siz onu doldurulmuş kayıt formunda kontrol edip kaydedene kadar kayıtlarınıza yazılmaz; onaylanmayan taslaklar 14 gün sonra kendiliğinden silinir.
+
+Mesajların okunması otomatiktir ve hatalı olabilir: tutar, para birimi, satıcı, tarih veya işlemin türü yanlış okunabilir ya da bir ödeme hiç fark edilmeyebilir. Bir taslağı kaydetmeden önce kontrol etmek sizin sorumluluğunuzdadır. Bankalar ve uygulamalar mesaj biçimlerini önceden haber vermeden değiştirebilir; özelliğin belirli bir banka veya uygulamayla çalışacağı taahhüt edilmez. Uygulamanın bu kuruluşlarla bir bağlantısı yoktur.
+
+Özelliği dilediğiniz an Uygulama içindeki anahtarlarla, cihazınızın bildirim erişimi ayarından veya Kestirmeler otomasyonunu silerek kapatabilirsiniz.
+
+## 8. Cüzdan Paylaşımı
 
 Kendi cüzdanlarınıza başka kişileri davet edebilirsiniz. Siz bir davet oluşturmadıkça hiçbir şey paylaşılmaz; varsayılan olarak paylaşım yoktur.
 
-Davet, 15 dakika geçerli olan, tek kullanımlık ve kullanılmadan önce dilediğiniz an iptal edilebilen bir koddur. Geçerli bir kodu elinde tutan kişi, kodun kapsadığı cüzdanlara katılabilir; bu nedenle kodu bir anahtar gibi görün ve yalnızca davet etmek istediğiniz kişiye iletin.
+İki tür davet vardır ve ikisi de kullanılmadan önce dilediğiniz an iptal edilebilir. **QR kod**, yüz yüze gösterilmek içindir: 15 dakika geçerlidir, tek kullanımlıktır ve okutan kişi kodun kapsadığı cüzdanlara doğrudan katılır; bu nedenle onu bir anahtar gibi görün ve yalnızca davet etmek istediğiniz kişiye okutun. **Bağlantı**, bir mesajla gönderilmek içindir: 7 gün geçerlidir ve tek başına kimseyi içeri almaz — bağlantıyı kullanan kişi yalnızca bir katılım isteği gönderir; siz o kişinin görünen adını görüp isteği onaylamadıkça hiçbir cüzdanınıza erişemez. Bir bağlantıyla yalnızca bir istek onaylanabilir; bağlantıyı iptal etmek bekleyen istekleri de iptal eder.
 
 İçeri aldığınız kişi o cüzdanın kayıtlarını eksiksiz görür; düzenleyici olarak davet ettiyseniz kayıt ekleyip değiştirebilir de. Neyi paylaşmayı seçtiğinizden siz, paylaşılanla ne yaptığından davet ettiğiniz kişi sorumludur.
 
@@ -71,7 +81,7 @@ Bir üyeyi dilediğiniz an çıkarabilirsiniz; erişimi o anda sona erer. Üye d
 
 Paylaşımın iki tarafı da tam hesap gerektirir: misafir oturumu ne davet edebilir ne bir davete katılabilir; aksi hâlde karşı taraf bir daha ulaşılamayacak bir hesaba güvenmiş olurdu.
 
-## 8. Pro Abonelik ve Ücretlendirme
+## 9. Pro Abonelik ve Ücretlendirme
 
 Uygulama ücretsiz kullanılabilir ve reklam gösterilmez. Nomad Budget Pro ("Pro"), ek özelliklerin kilidini açan, isteğe bağlı ve ücretli bir aboneliktir. Pro'nun neleri kapsadığı, abone olduğunuz sırada Uygulamadaki Pro ekranında açıklanır.
 
@@ -92,25 +102,25 @@ Pro sona ererse (iptal, yenilenmeme veya iade nedeniyle) hiçbir veriniz silinme
 
 Pro'nun kapsadığı özellikleri değiştirebiliriz. Ücretini ödediğiniz bir şeyi kaldıran bir değişiklik, iptal edebilmeniz için en erken bir sonraki yenilemenizde uygulanır. Bir özelliği ücretsizken kullanmış olmanız nedeniyle geriye dönük hiçbir ücret talep edilmez.
 
-## 9. Üçüncü Taraf Hizmetler ve Veriler
+## 10. Üçüncü Taraf Hizmetler ve Veriler
 
 Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, Pro abonelikleri için App Store, Google Play ve RevenueCat, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri ve küre için NASA ile Natural Earth'ün kamu malı görüntü ve geometrileri.
 
 Bu kaynakların kesintisizliği, güncelliği veya doğruluğu bizim kontrolümüzde değildir. Kaynakların tam listesi ve lisansları için "Lisanslar ve Veri Kaynakları" belgesine bakınız.
 
-## 10. Hizmetin Sürekliliği ve Değişiklikler
+## 11. Hizmetin Sürekliliği ve Değişiklikler
 
 Uygulamanın kesintisiz, hatasız veya her zaman erişilebilir olacağını taahhüt etmiyoruz. Bakım, güncelleme, altyapı arızası veya mücbir sebeplerden kaynaklı kesintiler yaşanabilir.
 
 Özellikleri değiştirme, ekleme veya kaldırma hakkımız saklıdır. Hizmetin tamamen sonlandırılması hâlinde, verilerinizi dışa aktarabilmeniz için makul bir süre önceden e-posta ile bilgilendirme yapılır.
 
-## 11. Garanti Reddi
+## 12. Garanti Reddi
 
 Uygulama "olduğu gibi" ve "mevcut hâliyle" sunulur. Yürürlükteki hukukun izin verdiği azami ölçüde, açık veya zımni hiçbir garanti verilmemektedir; buna belirli bir amaca uygunluk, kesintisizlik ve hatasızlık garantileri dahildir.
 
 Uygulamanın ürettiği hesaplama, dönüştürme, tahmin ve karşılaştırmalar bilgilendirme amaçlıdır. Ayrıntı için "Finansal Sorumluluk Reddi" belgesine bakınız.
 
-## 12. Sorumluluğun Sınırlandırılması
+## 13. Sorumluluğun Sınırlandırılması
 
 Yürürlükteki hukukun izin verdiği azami ölçüde; kâr kaybı, veri kaybı, iş kesintisi veya dolaylı ya da netice kabilinden doğan zararlardan sorumlu değiliz.
 
@@ -118,7 +128,7 @@ Uygulamada yer alan verilere dayanarak aldığınız finansal kararların sonuç
 
 Bu maddedeki sınırlamalar, kastımızdan veya ağır ihmalimizden doğan sorumluluğu ve tüketici mevzuatından kaynaklanan devredilemez haklarınızı ortadan kaldırmaz.
 
-## 13. Hesabın Kapatılması
+## 14. Hesabın Kapatılması
 
 Hesabınızı dilediğiniz zaman Uygulama içinden "Ayarlar → Hesabı Sil" yolunu izleyerek kapatabilirsiniz. Bu işlem hesabınızı ve tüm verilerinizi kalıcı olarak siler ve geri alınamaz. Paylaşmış olduğunuz cüzdanlar da aynı anda paylaştığınız kişiler için ortadan kalkar.
 
@@ -128,18 +138,18 @@ Hesabınızı kapatmak Pro aboneliğini iptal etmez. Aboneliği önce App Store 
 
 Bu Koşulların ağır biçimde veya tekrar tekrar ihlal edilmesi hâlinde, hesabınızı askıya alabilir veya sonlandırabiliriz. Hukuken mümkün olduğu ölçüde bu durumu önceden bildirir ve verilerinizi dışa aktarmanız için makul bir imkân tanırız.
 
-## 14. Koşullarda Değişiklik
+## 15. Koşullarda Değişiklik
 
 Bu Koşulları güncelleyebiliriz. Esaslı değişikliklerde, değişiklik yürürlüğe girmeden önce Uygulama içinde veya e-posta ile bilgilendirme yapılır ve gerektiğinde yeniden onayınız istenir.
 
 Bildirimden sonra Uygulamayı kullanmaya devam etmeniz güncellenmiş Koşulları kabul ettiğiniz anlamına gelir. Kabul etmiyorsanız hesabınızı kapatabilirsiniz.
 
-## 15. Uygulanacak Hukuk ve Uyuşmazlıkların Çözümü
+## 16. Uygulanacak Hukuk ve Uyuşmazlıkların Çözümü
 
 Bu Koşullara Türkiye Cumhuriyeti hukuku uygulanır. Uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri ve icra daireleri yetkilidir.
 
 Tüketici sıfatını haiz kullanıcılar, parasal sınırlar dâhilinde ikametgâhlarının bulunduğu yerdeki Tüketici Hakem Heyetlerine veya Tüketici Mahkemelerine başvurabilir. Avrupa Birliği'nde yerleşik kullanıcıların kendi ülkelerinin emredici tüketici hükümlerinden doğan hakları saklıdır.
 
-## 16. İletişim
+## 17. İletişim
 
 Bu Koşullara ilişkin her türlü soru ve talebinizi nomadbudget@rubeeks.co adresine iletebilirsiniz.

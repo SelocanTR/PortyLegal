@@ -1,6 +1,6 @@
 # Financial Disclaimer
 
-_Version 1.9 · Effective: 2026-09-29_
+_Version 2.1 · Effective: 2026-10-01_
 
 Nomad Budget is a record-keeping and analysis tool. Every number it produces is an estimate derived from the data you entered and from open statistical sources.
 
@@ -14,7 +14,7 @@ Investment advice is provided by licensed institutions taking each person's risk
 
 Rates come from open, free exchange-rate services, are cached, and refresh periodically. They are not real-time, not binding for trading, and not the rate your bank will apply.
 
-While offline, or when the rate service is unreachable, the last known rate is used. Converted amounts may therefore differ from what actually happens on your account.
+While offline, or when the rate service is unreachable, the last known rate is used provisionally; once a connection is back, the entry is recalculated at its own date's rate, unless you have edited it in the meantime. Converted amounts may therefore differ for a while from what actually happens on your account.
 
 For transactions dated in the past, the nearest available historical rate is used where one exists.
 
@@ -41,6 +41,8 @@ The App performs no tax calculation and gives no tax, accounting or legal advice
 ## 6. Data Accuracy and Backups
 
 Every figure in the App rests on the data you entered; missing or mistaken entries affect every summary and chart.
+
+A draft made from a payment notification or message comes from reading its text automatically and may be wrong; check the amount, currency, date and category before you confirm it. Capture may not notice every payment; do not rely on it for the completeness of your records.
 
 We take reasonable technical measures to protect your data, but no absolute guarantee against data loss can be given. Keep a separate copy of records that are critical to you.
 

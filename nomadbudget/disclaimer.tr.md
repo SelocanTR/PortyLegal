@@ -1,6 +1,6 @@
 # Finansal Sorumluluk Reddi
 
-_Sürüm 1.9 · Yürürlük tarihi: 2026-09-29_
+_Sürüm 2.1 · Yürürlük tarihi: 2026-10-01_
 
 Nomad Budget bir kayıt ve analiz aracıdır. Ürettiği her sayı, sizin girdiğiniz verilere ve açık kaynaklı istatistiklere dayanan bir tahmindir.
 
@@ -14,7 +14,7 @@ Yatırım danışmanlığı hizmeti, yetkili kuruluşlar tarafından kişilerin 
 
 Kurlar açık ve ücretsiz kur servislerinden alınır, önbelleğe kaydedilir ve belirli aralıklarla yenilenir. Gerçek zamanlı, alım-satım için bağlayıcı veya bankanızın uygulayacağı kur değildir.
 
-Çevrimdışıyken veya kur servisi erişilemezken, en son bilinen kur kullanılır. Dönüştürülmüş tutarlar bu nedenle gerçekleşen tutarlardan sapabilir.
+Çevrimdışıyken veya kur servisi erişilemezken, en son bilinen kur geçici olarak kullanılır; bağlantı geldiğinde, kaydı o arada değiştirmediyseniz, kaydın tarihine ait kurla yeniden hesaplanır. Dönüştürülmüş tutarlar bu nedenle bir süre gerçekleşen tutarlardan sapabilir.
 
 Geçmiş tarihli işlemlerde, mevcutsa o tarihe en yakın tarihsel kur kullanılır.
 
@@ -41,6 +41,8 @@ Uygulama vergi hesaplaması yapmaz ve vergi, muhasebe veya hukuki tavsiye vermez
 ## 6. Veri Doğruluğu ve Yedekleme
 
 Uygulamadaki tüm kayıtlar sizin girdiğiniz verilere dayanır; eksik veya hatalı girişler tüm özet ve grafikleri etkiler.
+
+Bir ödeme bildiriminden veya mesajdan hazırlanan taslak, metnin otomatik okunmasıyla oluşur ve hatalı olabilir; onaylamadan önce tutarı, para birimini, tarihi ve kategoriyi kontrol ediniz. Yakalama her ödemeyi fark etmeyebilir; kayıtlarınızın eksiksizliği için ona güvenmeyiniz.
 
 Verilerinizi korumak için makul teknik önlemleri alıyoruz; ancak veri kaybına karşı mutlak garanti verilemez. Sizin için kritik olan kayıtların ayrı bir kopyasını bulundurmanızı öneririz.
 

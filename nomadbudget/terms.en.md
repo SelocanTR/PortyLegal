@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Version 1.9 · Effective: 2026-09-29_
+_Version 2.1 · Effective: 2026-10-01_
 
 These Terms of Use ("Terms") govern your use of the Nomad Budget mobile application and its related services (the "App"), provided by Rubeeks (rubeeks.co) ("we", "us").
 
@@ -17,7 +17,7 @@ By creating an account or using the App you confirm that you have read and accep
 
 Nomad Budget is a record-keeping and analysis tool for multi-currency personal budgeting. It stores the data you enter, converts it between currencies, and produces summaries, charts, a map of the countries you have spent in and a route between them from it.
 
-The App is not a bank, payment institution, electronic money institution or investment firm. It does not connect to any bank account, does not move or hold money, and does not act as an intermediary. Every record is entered manually by you.
+The App is not a bank, payment institution, electronic money institution or investment firm. It does not connect to any bank account, does not move or hold money, and does not act as an intermediary. Every record is entered or confirmed by you: even a payment the App reads from a notification or a Shortcuts automation does not become a record until you confirm it (see "Capturing Payments").
 
 ## 3. Accounts and Security
 
@@ -59,11 +59,21 @@ You are responsible for having the right to use the file you import and for the 
 
 With Pro you can also take your records out as a CSV file. The file is created on your device and goes only where you send it from your device's share sheet; we do not receive or keep a copy. Exporting in the App is not the only way to get your data: your right to data portability does not depend on Pro (see the Privacy Policy).
 
-## 7. Sharing a Wallet
+## 7. Capturing Payments
+
+If you wish, the App can prepare draft entries from the payments your bank or wallet app tells you about. The feature is off by default and works only if you turn it on: on Android, by granting the device's notification access and choosing in the App which sources are read (bank text messages and/or apps you pick); on iOS, by setting up a Shortcuts automation yourself that passes a payment or a message to the App.
+
+The message is interpreted on your device and waits as a draft. A draft is not written to your records until you check it in the filled-in entry form and save it; drafts you do not confirm are deleted automatically after 14 days.
+
+Reading messages is automatic and can be wrong: the amount, currency, merchant, date or kind of transaction may be misread, or a payment may not be noticed at all. Checking a draft before you save it is your responsibility. Banks and apps may change their message formats without notice; the feature is not promised to work with any particular bank or app, and the App is not affiliated with them.
+
+You can turn the feature off at any time with the switches in the App, in your device's notification access settings, or by deleting the Shortcuts automation.
+
+## 8. Sharing a Wallet
 
 You can invite other people into wallets of your own. Nothing is shared until you create an invitation yourself; there is no sharing by default.
 
-An invitation is a code that lasts 15 minutes, can be used once, and can be revoked at any time before it is used. Whoever holds a live code can join the wallets it names, so treat it as a key and send it only to the person you mean to invite.
+There are two kinds of invitation, and either can be revoked at any time before it is used. A **QR code** is for showing face to face: it lasts 15 minutes, can be used once, and whoever scans it joins the wallets it names directly — so treat it as a key and let only the person you mean to invite scan it. A **link** is for sending in a message: it lasts 7 days and lets nobody in on its own — whoever uses it only sends a request to join, and they reach none of your wallets unless you see their display name and approve the request. Only one request can be approved per link, and revoking a link cancels its pending requests too.
 
 Someone you let in sees that wallet's records in full, and an editor can also add and change them. You remain responsible for what you choose to share; the person you invite is responsible for what they do with it.
 
@@ -71,7 +81,7 @@ You may remove a member at any time and their access ends immediately, and a mem
 
 Both sides of a share need a full account: a guest session can neither invite nor join, because the other person would otherwise be trusting an account that cannot be reached again.
 
-## 8. Pro Subscription and Fees
+## 9. Pro Subscription and Fees
 
 The App can be used free of charge and carries no advertising. Nomad Budget Pro ("Pro") is an optional, paid subscription that unlocks additional features. What Pro includes is described on the Pro screen in the App at the time you subscribe.
 
@@ -92,25 +102,25 @@ If Pro ends (by cancellation, non-renewal or refund), none of your data is delet
 
 We may change which features Pro includes. A change that takes away something you are paying for applies no earlier than your next renewal, so that you can cancel before it. Nothing will be charged for use you have already made of a feature while it was free.
 
-## 9. Third-Party Services and Data
+## 10. Third-Party Services and Data
 
 The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, the App Store, Google Play and RevenueCat for Pro subscriptions, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.
 
 The availability, timeliness and accuracy of these sources are outside our control. See the "Licenses and Data Sources" document for the full list and their licences.
 
-## 10. Availability and Changes
+## 11. Availability and Changes
 
 We do not warrant that the App will be uninterrupted, error-free or always available. Maintenance, updates, infrastructure failures and events beyond our control may cause interruptions.
 
 We may add, change or remove features. If we discontinue the service entirely, we will give reasonable advance notice by email so that you can export your data.
 
-## 11. Disclaimer of Warranties
+## 12. Disclaimer of Warranties
 
 The App is provided "as is" and "as available". To the fullest extent permitted by law, no warranties of any kind are given, express or implied, including fitness for a particular purpose, uninterrupted availability and freedom from error.
 
 The calculations, conversions, estimates and comparisons the App produces are informational. See the "Financial Disclaimer" document for detail.
 
-## 12. Limitation of Liability
+## 13. Limitation of Liability
 
 To the fullest extent permitted by law, we are not liable for loss of profit, loss of data, business interruption, or indirect or consequential damages.
 
@@ -118,7 +128,7 @@ The consequences of any financial decision you make on the basis of data in the 
 
 Nothing in this section limits liability for our wilful misconduct or gross negligence, or any non-waivable rights you have under consumer protection law.
 
-## 13. Closing Your Account
+## 14. Closing Your Account
 
 You can close your account at any time from within the App: Settings → Delete Account. This permanently deletes your account and all of your data and cannot be undone. Wallets you had shared disappear for the people you shared them with at the same moment.
 
@@ -128,18 +138,18 @@ Closing your account does not cancel a Pro subscription. Cancel it in your App S
 
 We may suspend or terminate an account in case of serious or repeated breach of these Terms. Where legally possible we will notify you first and give you a reasonable opportunity to export your data.
 
-## 14. Changes to These Terms
+## 15. Changes to These Terms
 
 We may update these Terms. For material changes we will notify you in the App or by email before they take effect, and ask for your acceptance again where required.
 
 Continuing to use the App after such notice means you accept the updated Terms. If you do not accept them, you may close your account.
 
-## 15. Governing Law and Disputes
+## 16. Governing Law and Disputes
 
 These Terms are governed by the laws of the Republic of Türkiye. The courts and enforcement offices of the Republic of Türkiye have jurisdiction over disputes.
 
 Users who qualify as consumers may, within the applicable monetary thresholds, apply to the Consumer Arbitration Committee or the Consumer Court at their place of residence. Users resident in the European Union retain the rights granted by the mandatory consumer provisions of their own country.
 
-## 16. Contact
+## 17. Contact
 
 For any question or request regarding these Terms, write to nomadbudget@rubeeks.co.
