@@ -1,10 +1,13 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.nomadbudget.mobile",
       "sha256_cert_fingerprints": [
+        "38:C2:0B:33:33:E0:12:BD:55:7C:19:06:98:1B:57:D5:E4:3F:0B:80:7F:C5:54:14:2C:E4:19:C2:AE:28:A1:13",
         "99:66:3B:82:21:C3:27:D8:2E:6B:36:C0:EA:53:D5:DC:51:F9:81:7E:17:62:60:A2:61:7F:C3:44:FF:06:78:81",
         "FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C"
       ]
