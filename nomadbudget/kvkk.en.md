@@ -1,6 +1,6 @@
 # Data Protection Notice (KVKK)
 
-_Version 2.1 · Effective: 2026-10-01_
+_Version 3.0 · Effective: 2026-10-13_
 
 This notice is issued under Article 10 of Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and the related Communiqué on the Procedures and Principles for Fulfilling the Disclosure Obligation.
 
@@ -19,12 +19,13 @@ Contact address: nomadbudget@rubeeks.co
 - **Travel data:** the visits and crossings you confirm or enter (country, first and last day, where from and where to, means of travel, the transaction that was the ticket) and the countries you mark as visited.
 - **Transaction security data:** the hash of your password (an account created with Sign in with Apple or Sign in with Google has none, because the provider confirms the identity instead), session information, account creation date, and the version and date of your consent.
 - **Device data:** where you have allowed notifications, your device's push token and whether it is an iOS or an Android device.
-- **Usage data:** the random installation ID the App makes on first launch; the screens and steps seen, how sign-in and purchase attempts ended, the answers to the permissions the App asks for and unexpected errors (an error message with personal details stripped out); the App version, operating system, interface language and time; your account, when you are signed in. It contains no amount, note, category, location or contact detail.
-- **Customer request data:** the messages you send us through the App's feedback form or by email, the reply address you give, and the device context attached to them (App version, operating system and version, device model, language).
+- **Usage data:** the random installation ID the App makes on first launch; the screens and steps seen, how sign-in and purchase attempts ended, the answers to the permissions the App asks for and unexpected errors (an error message with personal details stripped out); crash reports — on Android from the system's record, on iOS from MetricKit, which also reports freezes and excessive processor use (the cause, memory in use, the screen's name, a technical trace, and the device's make, model, operating system version and memory size); the App version, operating system, interface language and time; your account, when you are signed in. It contains no amount, note, category, location or contact detail.
+- **Customer request data:** the messages you send us through the App's feedback form or by email, the payment messages you choose to send from a captured payment (masked on your device, with what the App read from them), the reply address you give, and the device context attached to them (App version, operating system and version, device model, language).
+- **Shared format data (optional):** the bank message formats you choose to share — your bank's fixed wording with every figure, the merchant and your name removed — and the app or sender name they came from, linked to your account.
 - **Purchase data:** the identifier your account is registered under with our subscription provider and, if you subscribe to Pro, the plan, the store, the dates of purchase, renewal and expiry, renewal and refund status, the store's transaction identifiers, and the price and currency charged. Card and bank details are never received.
 - **Sharing data:** which of your wallets you have shared with whom and in what role, which wallets you have been invited into and by whom, the requests to join you have sent or received through a link, and which member entered a given record.
 
-When you turn on payment capture, the notification and message texts read, the drafts made from them and the message patterns learned are processed only on your device and are not transferred to us; when you confirm a draft, the transaction you save is processed as customer transaction data.
+When you turn on payment capture, the notification and message texts read, the drafts made from them and the message patterns learned are processed only on your device and are not transferred to us, except the formats you choose to share and the messages you choose to send us; when you confirm a draft, the transaction you save is processed as customer transaction data.
 
 No special categories of personal data are processed. We recommend that you do not write special-category information (health, beliefs and similar) into free-text note fields.
 
@@ -47,7 +48,7 @@ Your personal data is processed on the following grounds under KVKK Art. 5:
 - **Art. 5/2-c** — directly related to the conclusion or performance of a contract: creating the account and providing the service, including the Pro subscription.
 - **Art. 5/2-ç** — compliance with the controller's legal obligations: responding to requests from competent authorities.
 - **Art. 5/2-f** — legitimate interests, provided this does not harm your fundamental rights and freedoms: security, abuse prevention and debugging; improving the App with usage data that holds no content; answering the messages you send us.
-- **Art. 5/1** — explicit consent: deriving your country from your device's location, sending push notifications, and preparing draft entries from your payment notifications. Each is given through a device permission (for payment capture, also through the switches in the App or a Shortcuts automation you set up) and can be withdrawn at any time in the same places.
+- **Art. 5/1** — explicit consent: deriving your country from your device's location, sending push notifications, preparing draft entries from your payment notifications, and sharing the bank message formats your device learned. Each is given through a device permission (for payment capture, also through the switches in the App or a Shortcuts automation you set up; for sharing formats, through the "Share learned formats" switch) and can be withdrawn at any time in the same places.
 
 ## 5. Method of Collection
 
@@ -65,9 +66,11 @@ Where you choose Sign in with Apple or Sign in with Google, the sign-in request 
 
 Where you have allowed notifications, your push token and the text of the notification are transferred to Expo, Apple (APNs) and Google (FCM) in the United States, solely so that the message can be delivered.
 
+When the App starts, its version, platform and release channel, the random identifier its update library creates and your IP address are transferred to Expo in the United States, solely to check for and deliver updates to the App's own code.
+
 Where you have allowed location, your device's operating system transfers your approximate coordinates to Apple Inc. (iOS) or Google LLC (Android) in the United States, solely so that the country you are in can be looked up; for that lookup the provider acts as an independent controller and receives nothing about your records.
 
-Your account identifier and, if you subscribe, your purchase data are transferred to RevenueCat, Inc. in the United States, acting as a data processor, so that Pro purchases can be verified and managed. Where you subscribe, the payment itself is processed by Apple Inc. or Google LLC as an independent controller.
+Your account identifier and, if you subscribe, your purchase data are transferred to RevenueCat, Inc. in the United States, acting as a data processor, so that Pro purchases can be verified and managed. Where you subscribe, the payment itself is processed by Apple Inc. or Google LLC as an independent controller. On Google Play, notifications about the subscription (the store's purchase reference, the plan and the kind of change) pass through Google Cloud Pub/Sub, operated by Google LLC in the United States, on their way to RevenueCat.
 
 Where you share a wallet, its records together with your display name and avatar become visible to the people you invited. That disclosure happens only on your own instruction and you can end it at any time by removing the member. When you send a request to join through a sharing link, your display name and avatar are shown to the link's owner; none of your records are.
 
@@ -77,9 +80,9 @@ Beyond this, your data may be transferred only to legally authorised public auth
 
 Your personal data is retained for as long as your account exists. If you delete your account, the data is permanently deleted; copies in system backups are purged as the backup cycle rolls over, within 30 days at the latest. A guest account is deleted when you sign out of it, since nothing else can reach it. Purchase data is deleted together with the account, and the customer record held by RevenueCat is deleted at our request at the same time; Apple and Google keep their own purchase records under their policies.
 
-Messages sent through the feedback form are kept for up to two years and then deleted, whether or not the account still exists; once an account is deleted they are no longer linked to it.
+Messages sent through the feedback form, and payment messages sent from a captured payment, are kept for up to two years and then deleted, whether or not the account still exists; once an account is deleted they are no longer linked to it. A shared bank message format that has been neither approved nor sent again for a year is deleted; your link to a format is deleted with your account.
 
-Usage data is kept for 90 days and then deleted; once an account is deleted it is no longer linked to it. A sharing invitation is deleted at the latest 14 days after it expires, together with the requests to join sent through it. Payment-capture drafts on your device are kept for 14 days at most.
+Usage data and crash reports are kept for 90 days and then deleted; once an account is deleted it is no longer linked to it. A sharing invitation is deleted at the latest 14 days after it expires, together with the requests to join sent through it. Payment-capture drafts on your device are kept for 14 days at most.
 
 Where a statutory retention obligation applies, the relevant data is kept only for the period and to the extent that obligation requires.
 

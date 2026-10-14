@@ -1,6 +1,6 @@
 # Kullanım Koşulları
 
-_Sürüm 2.1 · Yürürlük tarihi: 2026-10-01_
+_Sürüm 3.0 · Yürürlük tarihi: 2026-10-13_
 
 Bu Kullanım Koşulları ("Koşullar"), Rubeeks (rubeeks.co) ("biz") tarafından sunulan Nomad Budget mobil uygulaması ve buna bağlı hizmetlerin ("Uygulama") kullanımına ilişkin şartları düzenler.
 
@@ -61,11 +61,13 @@ Pro ile kayıtlarınızı CSV dosyası olarak dışa da aktarabilirsiniz. Dosya 
 
 ## 7. Ödemeleri Yakalama
 
-Dilerseniz Uygulama, bankanızın veya cüzdan uygulamanızın size bildirdiği ödemelerden kayıt taslağı hazırlayabilir. Bu özellik kapalı gelir ve yalnızca siz açarsanız çalışır: Android'de cihazın bildirim erişimi iznini verip Uygulamanın içinde hangi kaynakların (banka SMS'leri ve/veya seçtiğiniz uygulamalar) okunacağını seçerek; iOS'ta Kestirmeler uygulamasında, bir ödemeyi veya mesajı Uygulamaya ileten bir otomasyonu kendiniz kurarak.
+Dilerseniz Uygulama, bankanızın veya cüzdan uygulamanızın size bildirdiği ödemelerden kayıt taslağı hazırlayabilir. Bu özellik kapalı gelir ve yalnızca siz açarsanız çalışır: Android'de cihazın bildirim erişimi iznini verip Uygulamanın içinde hangi kaynakların (banka SMS'leri ve/veya listede onayladığınız banka ve cüzdan uygulamaları) okunacağını seçerek; iOS'ta Kestirmeler uygulamasında, bir ödemeyi veya mesajı Uygulamaya ileten bir otomasyonu kendiniz kurarak.
 
-Okunan mesaj cihazınızda yorumlanır ve bir taslak olarak bekler. Taslak, siz onu doldurulmuş kayıt formunda kontrol edip kaydedene kadar kayıtlarınıza yazılmaz; onaylanmayan taslaklar 14 gün sonra kendiliğinden silinir.
+Okunan mesaj cihazınızda yorumlanır ve bir taslak olarak bekler. Taslak, siz onaylayana kadar kayıtlarınıza yazılmaz: doldurulmuş kayıt formunda kontrol edip kaydederek ya da — art arda son iki ödemesini aynı kategoriye kaydettiğiniz bir satıcının ödemesinde — taslağın veya bildiriminin üzerindeki "Ekle"ye basarak. "Ekle", ödemeyi okunduğu hâliyle, o kategoriye ve o para birimindeki tek cüzdanınıza, form açılmadan kaydeder. Bu şekilde eklenen bir kaydı aynı yerden geri alabilir (bildiriminde 24 saat boyunca), diğer kayıtlar gibi düzenleyebilir veya silebilirsiniz. iOS'ta, Uygulama açılmadan bir bildirimden eklenen ödeme, Uygulamayı bir sonraki açışınızda kaydedilir. Onaylanmayan taslaklar 14 gün sonra kendiliğinden silinir.
 
-Mesajların okunması otomatiktir ve hatalı olabilir: tutar, para birimi, satıcı, tarih veya işlemin türü yanlış okunabilir ya da bir ödeme hiç fark edilmeyebilir. Bir taslağı kaydetmeden önce kontrol etmek sizin sorumluluğunuzdadır. Bankalar ve uygulamalar mesaj biçimlerini önceden haber vermeden değiştirebilir; özelliğin belirli bir banka veya uygulamayla çalışacağı taahhüt edilmez. Uygulamanın bu kuruluşlarla bir bağlantısı yoktur.
+Mesajların okunması otomatiktir ve hatalı olabilir: tutar, para birimi, satıcı, tarih veya işlemin türü yanlış okunabilir ya da bir ödeme hiç fark edilmeyebilir. Bir taslağı kaydetmeden ya da "Ekle"ye basmadan önce kontrol etmek sizin sorumluluğunuzdadır. Bankalar ve uygulamalar mesaj biçimlerini önceden haber vermeden değiştirebilir; özelliğin belirli bir banka veya uygulamayla çalışacağı taahhüt edilmez. Uygulamanın bu kuruluşlarla bir bağlantısı yoktur.
+
+Dilerseniz yakalamanın herkes için iyileşmesine yardım edebilirsiniz: Uygulamanın düzeltmelerinizden öğrendiği mesaj biçimlerini paylaşarak ya da yanlış okuduğu bir mesajı bize göndererek. İkisi de siz kullanmadıkça gerçekleşmez; neyin gönderilip neyin gönderilmediği Gizlilik Politikası'nda yazılıdır.
 
 Özelliği dilediğiniz an Uygulama içindeki anahtarlarla, cihazınızın bildirim erişimi ayarından veya Kestirmeler otomasyonunu silerek kapatabilirsiniz.
 
@@ -77,7 +79,7 @@ Kendi cüzdanlarınıza başka kişileri davet edebilirsiniz. Siz bir davet olu�
 
 İçeri aldığınız kişi o cüzdanın kayıtlarını eksiksiz görür; düzenleyici olarak davet ettiyseniz kayıt ekleyip değiştirebilir de. Neyi paylaşmayı seçtiğinizden siz, paylaşılanla ne yaptığından davet ettiğiniz kişi sorumludur.
 
-Bir üyeyi dilediğiniz an çıkarabilirsiniz; erişimi o anda sona erer. Üye de aynı şekilde kendi isteğiyle ayrılabilir. Birini çıkarmak, onun o ana kadar gördüklerini geri almaz.
+Bir üyeyi dilediğiniz an çıkarabilirsiniz; erişimi o anda sona erer. Üye de aynı şekilde kendi isteğiyle ayrılabilir. Birini çıkarmak, onun o ana kadar gördüklerini geri almaz. Cüzdan sahibinin Pro'su sona ererse ve cüzdan ücretsiz planın kapsadığı tek paylaşılan cüzdan değilse, üyeler cüzdanı sahibinin Pro'su geri gelene kadar açamaz; içindeki hiçbir şey silinmez (bkz. "Pro Abonelik ve Ücretlendirme").
 
 Paylaşımın iki tarafı da tam hesap gerektirir: misafir oturumu ne davet edebilir ne bir davete katılabilir; aksi hâlde karşı taraf bir daha ulaşılamayacak bir hesaba güvenmiş olurdu.
 
@@ -91,6 +93,7 @@ Pro, aylık ve yıllık plan olarak sunulur. Her planın fiyatı, yerel para bir
 
 - **Otomatik yenileme:** abonelik, her dönemin sonunda aynı uzunlukta bir dönem için ve o tarihteki güncel fiyattan otomatik olarak yenilenir ve mağaza bu tutarı hesabınızdan tahsil eder — yenilemeden önce iptal etmediğiniz sürece. App Store'da bu, mevcut dönemin bitiminden en az 24 saat önce demektir.
 - **İptal:** aboneliğinizi dilediğiniz an App Store veya Google Play abonelik ayarlarınızdan iptal edebilirsiniz; Pro ekranındaki "Aboneliği yönet" düğmesi bu ayarları açar. İptal, bir sonraki yenilemeyi durdurur; Pro, ödemesini yapmış olduğunuz dönemin sonuna kadar etkin kalır. Uygulamayı ya da hesabınızı silmek aboneliği iptal etmez — iptal mağaza üzerinden yapılmalıdır.
+- **Başarısız ödeme:** mağaza bir yenileme ödemesini tahsil edemezse bir süre denemeye devam eder. Mağazanın bir ek süre tanıdığı durumlarda Pro bu süre boyunca etkin kalır; sonrasında ödeme gerçekleşene kadar askıya alınır (Google Play'de abonelik beklemeye alınır) ve mağaza denemeyi bırakırsa abonelik sona erer. Mağazadaki ödeme yönteminizi güncellemeniz, yeni bir satın alma gerekmeden Pro'yu geri açar.
 - **İade:** ödemeler Apple veya Google tarafından tahsil edildiğinden iade talepleri onlara yapılır ve onların politikalarına göre sonuçlandırılır; doğrudan iade yapamayız. Pro, abone olduğunuz anda ifasına başlanan dijital bir hizmet olduğundan, mevzuatın izin verdiği ölçüde yasal cayma hakkı ifaya başlanmasıyla sona erer. Tüketici mevzuatından doğan emredici haklarınız saklıdır.
 - **Fiyat değişikliği:** bir planın fiyatı değişirse, mağazanın kurallarının gerektirdiği şekilde önceden bilgilendirilirsiniz; mağazanın onayınızı istediği durumlarda yeni fiyat ancak onay verdiğinizde uygulanır.
 
@@ -98,13 +101,13 @@ Pro, abone olduğunuz sırada oturum açık olan Nomad Budget hesabına aittir v
 
 Ücretsiz planın bazı sınırları vardır (örneğin hedef, tekrarlayan işlem veya paylaşılan cüzdan sayısı) ve bazı özellikler yalnızca Pro'ya dahildir (örneğin kategori ve ülke bütçeleri ile kayıtlarınızı CSV dosyası olarak dışa aktarma; aylık toplam bütçe ücretsizdir); güncel sınırlar, bir sınıra ulaştığınızda Uygulamada gösterilir. Kayıt tutma — işlem eklemek, ülke cüzdanları, para birimleri ve çevrimdışı kullanım — hiçbir planda sınırlanmaz.
 
-Pro sona ererse (iptal, yenilenmeme veya iade nedeniyle) hiçbir veriniz silinmez: Pro sırasında oluşturduğunuz hedefler, tekrarlayan işlemler, paylaşımlar, bütçeler ve diğer kayıtlar yerinde kalır, görüntülenebilir ve düzenlenebilir. Yalnızca ücretsiz planın sınırlarını aşan yeni kayıtlar oluşturulamaz ve Pro'ya özel içgörüler yeniden kilitlenir.
+Pro sona ererse (iptal, yenilenmeme veya iade nedeniyle) hiçbir veriniz silinmez. Ücretsiz planın kapsadığı kısım çalışmaya devam eder — oluşturduğunuz ilk hedef ve ilk üç tekrarlayan işlem (kendi duraklattıklarınız sayılmaz) ile ilk paylaştığınız cüzdan — bunun ötesinde oluşturduklarınız ise Pro geri gelene kadar duraklatılır: duraklatılan bir hedefin ilerlemesi izlenmez, ancak birikim cüzdanındaki para tamamen kullanılabilir kalır; duraklatılan bir tekrarlayan işlem kaydedilmez ve hatırlatılmaz, bu sürede vadesi gelenler atlanır ve Pro geri geldiğinde de eklenmez; kategori ve ülke bütçeleri izlenmez ve uyarı göndermez, aylık bütçe ise ücretsiz kalır; duraklatılan bir paylaşılan cüzdanı da üyeleri açamaz. Duraklatılan öğeler yine de silinebilir. Ücretsiz planın sınırlarını aşan yeni kayıtlar oluşturulamaz ve Pro'ya özel içgörüler yeniden kilitlenir.
 
 Pro'nun kapsadığı özellikleri değiştirebiliriz. Ücretini ödediğiniz bir şeyi kaldıran bir değişiklik, iptal edebilmeniz için en erken bir sonraki yenilemenizde uygulanır. Bir özelliği ücretsizken kullanmış olmanız nedeniyle geriye dönük hiçbir ücret talep edilmez.
 
 ## 10. Üçüncü Taraf Hizmetler ve Veriler
 
-Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, Pro abonelikleri için App Store, Google Play ve RevenueCat, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri ve küre için NASA ile Natural Earth'ün kamu malı görüntü ve geometrileri.
+Uygulama, hizmetin sunulması için üçüncü taraf altyapı ve veri kaynaklarından yararlanır: barındırma ve kimlik doğrulama için Supabase Inc., Apple ile Giriş veya Google ile Giriş'i tercih etmeniz hâlinde Apple veya Google, Pro abonelikleri için App Store, Google Play ve RevenueCat, izin verdiğiniz bildirimlerin iletilmesi için Expo ile Apple (APNs) ve Google (FCM), Uygulamanın kendi kodunun güncellemelerini iletmek için Expo, güncel döviz kurları için açık kur servisleri, ülkeler arası fiyat karşılaştırması için resmî istatistik kurumlarının açık verileri ve küre için NASA ile Natural Earth'ün kamu malı görüntü ve geometrileri.
 
 Bu kaynakların kesintisizliği, güncelliği veya doğruluğu bizim kontrolümüzde değildir. Kaynakların tam listesi ve lisansları için "Lisanslar ve Veri Kaynakları" belgesine bakınız.
 
@@ -131,6 +134,8 @@ Bu maddedeki sınırlamalar, kastımızdan veya ağır ihmalimizden doğan sorum
 ## 14. Hesabın Kapatılması
 
 Hesabınızı dilediğiniz zaman Uygulama içinden "Ayarlar → Hesabı Sil" yolunu izleyerek kapatabilirsiniz. Bu işlem hesabınızı ve tüm verilerinizi kalıcı olarak siler ve geri alınamaz. Paylaşmış olduğunuz cüzdanlar da aynı anda paylaştığınız kişiler için ortadan kalkar.
+
+Uygulamayı artık açamıyorsanız, hesabın e-posta adresinden nomadbudget@rubeeks.co adresine yazarak hesabın kapatılmasını isteyebilirsiniz; adımlar Gizlilik Politikası'nda ve https://legal.rubeeks.co/nomadbudget/delete-account sayfasında anlatılır.
 
 Misafir oturumu, oturumdan çıkılarak kapatılır ve sonucu aynıdır: e-posta ve şifre olmadığı için geri dönülecek bir yol kalmaz, dolayısıyla çıkış o hesabı ve kayıtlarını siler.
 

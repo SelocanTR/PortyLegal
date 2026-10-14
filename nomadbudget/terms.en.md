@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Version 2.1 · Effective: 2026-10-01_
+_Version 3.0 · Effective: 2026-10-13_
 
 These Terms of Use ("Terms") govern your use of the Nomad Budget mobile application and its related services (the "App"), provided by Rubeeks (rubeeks.co) ("we", "us").
 
@@ -61,11 +61,13 @@ With Pro you can also take your records out as a CSV file. The file is created o
 
 ## 7. Capturing Payments
 
-If you wish, the App can prepare draft entries from the payments your bank or wallet app tells you about. The feature is off by default and works only if you turn it on: on Android, by granting the device's notification access and choosing in the App which sources are read (bank text messages and/or apps you pick); on iOS, by setting up a Shortcuts automation yourself that passes a payment or a message to the App.
+If you wish, the App can prepare draft entries from the payments your bank or wallet app tells you about. The feature is off by default and works only if you turn it on: on Android, by granting the device's notification access and choosing in the App which sources are read (bank text messages and/or the bank and wallet apps you confirm on a list); on iOS, by setting up a Shortcuts automation yourself that passes a payment or a message to the App.
 
-The message is interpreted on your device and waits as a draft. A draft is not written to your records until you check it in the filled-in entry form and save it; drafts you do not confirm are deleted automatically after 14 days.
+The message is interpreted on your device and waits as a draft. A draft is not written to your records until you confirm it: by checking it in the filled-in entry form and saving it, or — for a payment from a merchant whose last two payments in a row you filed under the same category — by pressing "Add" on the draft or on its notification, which records it as it was read, under that category and in your only wallet in its currency, without opening the form. You can take back an entry added this way from the same place (on its notification, for 24 hours), and edit or delete it like any other record. On iOS, a payment added from a notification without opening the App is recorded the next time you open the App. Drafts you do not confirm are deleted automatically after 14 days.
 
-Reading messages is automatic and can be wrong: the amount, currency, merchant, date or kind of transaction may be misread, or a payment may not be noticed at all. Checking a draft before you save it is your responsibility. Banks and apps may change their message formats without notice; the feature is not promised to work with any particular bank or app, and the App is not affiliated with them.
+Reading messages is automatic and can be wrong: the amount, currency, merchant, date or kind of transaction may be misread, or a payment may not be noticed at all. Checking a draft before you save it, or before you press "Add", is your responsibility. Banks and apps may change their message formats without notice; the feature is not promised to work with any particular bank or app, and the App is not affiliated with them.
+
+If you choose, you can help improve capture for everyone: by sharing the message formats the App learned from your corrections, or by sending us a message it read wrong. Neither happens unless you use it; what is sent, and what is not, is set out in the Privacy Policy.
 
 You can turn the feature off at any time with the switches in the App, in your device's notification access settings, or by deleting the Shortcuts automation.
 
@@ -77,7 +79,7 @@ There are two kinds of invitation, and either can be revoked at any time before 
 
 Someone you let in sees that wallet's records in full, and an editor can also add and change them. You remain responsible for what you choose to share; the person you invite is responsible for what they do with it.
 
-You may remove a member at any time and their access ends immediately, and a member may leave the same way. Removing someone does not undo what they have already seen.
+You may remove a member at any time and their access ends immediately, and a member may leave the same way. Removing someone does not undo what they have already seen. If the owner's Pro ends and the wallet is not the one shared wallet the free plan includes, its members cannot open it until the owner's Pro is back; nothing in it is deleted (see "Pro Subscription and Fees").
 
 Both sides of a share need a full account: a guest session can neither invite nor join, because the other person would otherwise be trusting an account that cannot be reached again.
 
@@ -91,6 +93,7 @@ Payment is taken by Apple (App Store) or Google (Google Play), from the account 
 
 - **Automatic renewal:** a subscription renews automatically at the end of each period, for a period of the same length and at the then-current price, and the store charges your account for it — unless you cancel before the renewal. On the App Store, that means at least 24 hours before the current period ends.
 - **Cancelling:** you can cancel at any time in your App Store or Google Play subscription settings, which the "Manage subscription" button on the Pro screen opens. Cancelling stops the next renewal; Pro stays active until the end of the period you have already paid for. Deleting the App, or your account, does not cancel a subscription — it has to be cancelled in the store.
+- **Failed payments:** if the store cannot collect a renewal, it keeps trying for a while. Where the store offers a grace period, Pro stays active during it; after that Pro is suspended until the payment goes through (on Google Play, the subscription is put on hold), and the subscription ends if the store stops trying. Updating your payment method in the store restores Pro without a new purchase.
 - **Refunds:** payments are collected by Apple or Google, so refund requests are made to them and decided under their policies; we cannot issue refunds directly. Because Pro is a digital service that starts as soon as you subscribe, to the extent the law allows the statutory right of withdrawal ends once that supply has begun. Any mandatory consumer rights you have are unaffected.
 - **Price changes:** if the price of a plan changes, you will be told in advance as the store's rules require, and where the store asks for your agreement the new price applies only once you have given it.
 
@@ -98,13 +101,13 @@ Pro belongs to the Nomad Budget account you are signed into when you subscribe, 
 
 The free plan has some limits (for example the number of goals, recurring transactions or shared wallets), and some features are part of Pro only (for example category and country budgets, and exporting your records as a CSV file; a monthly total budget is free); the current limits are shown in the App when you reach one. Keeping records — adding entries, country wallets, currencies and offline use — is never limited on any plan.
 
-If Pro ends (by cancellation, non-renewal or refund), none of your data is deleted: the goals, recurring transactions, shares, budgets and other records you created while on Pro stay in place and can still be viewed and edited. Only creating new ones beyond the free plan's limits is not possible, and Pro-only insights are locked again.
+If Pro ends (by cancellation, non-renewal or refund), none of your data is deleted. What the free plan includes keeps working — the first goal and the first three recurring transactions you created (ones you have paused yourself do not count), and the first wallet you shared — and what you created beyond it is paused until Pro is back: a paused goal's progress is not tracked, though the money in its savings pot stays fully usable; a paused recurring transaction is not posted and does not remind you, and what falls due meanwhile is skipped — it is not added when Pro is back; category and country budgets are not tracked and send no alerts, while the monthly budget stays free; and the members of a paused shared wallet cannot open it. Paused items can still be deleted. Creating new ones beyond the free plan's limits is not possible, and Pro-only insights are locked again.
 
 We may change which features Pro includes. A change that takes away something you are paying for applies no earlier than your next renewal, so that you can cancel before it. Nothing will be charged for use you have already made of a feature while it was free.
 
 ## 10. Third-Party Services and Data
 
-The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, the App Store, Google Play and RevenueCat for Pro subscriptions, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.
+The App relies on third-party infrastructure and data sources: Supabase Inc. for hosting and authentication, Apple or Google where you choose to sign in with your Apple ID or Google account, the App Store, Google Play and RevenueCat for Pro subscriptions, Expo together with Apple (APNs) and Google (FCM) for delivering notifications you have allowed, Expo for delivering updates to the App's own code, open exchange-rate services for live rates, open data published by official statistical institutions for cross-country price comparisons, and public-domain imagery and geometry from NASA and Natural Earth for the globe.
 
 The availability, timeliness and accuracy of these sources are outside our control. See the "Licenses and Data Sources" document for the full list and their licences.
 
@@ -131,6 +134,8 @@ Nothing in this section limits liability for our wilful misconduct or gross negl
 ## 14. Closing Your Account
 
 You can close your account at any time from within the App: Settings → Delete Account. This permanently deletes your account and all of your data and cannot be undone. Wallets you had shared disappear for the people you shared them with at the same moment.
+
+If you can no longer open the App, you can ask us to close the account by writing to nomadbudget@rubeeks.co from its email address, as described in the Privacy Policy and on https://legal.rubeeks.co/nomadbudget/delete-account.
 
 A guest session is closed by signing out of it, which does the same thing: with no email and no password there is nothing left to sign back in with, so signing out erases that account and its records.
 

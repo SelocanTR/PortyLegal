@@ -1,12 +1,12 @@
 # Nomad Budget — Legal Documents
 
-_Version 2.1 · Effective: 2026-10-01_
+_Version 3.0 · Effective: 2026-10-13_
 
 - [Terms of Use](./terms.en.md) — The rules for using the app
-- [Privacy Policy](./privacy.en.md) — What we collect, why, and where it lives
-- [Data Protection Notice (KVKK)](./kvkk.en.md) — Disclosure under Turkish Law No. 6698
-- [Financial Disclaimer](./disclaimer.en.md) — The numbers are estimates, not advice
-- [Licenses and Data Sources](./licenses.en.md) — Open-source components and data sources
+- [Privacy Policy](./privacy.en.md) — What we collect and why
+- [Data Protection Notice (KVKK)](./kvkk.en.md) — Turkish Law 6698 notice
+- [Financial Disclaimer](./disclaimer.en.md) — Estimates, not advice
+- [Licenses and Data Sources](./licenses.en.md) — Open source and data
 
 [Türkçe](./index.tr.md)
 

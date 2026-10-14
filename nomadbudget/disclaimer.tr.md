@@ -1,6 +1,6 @@
 # Finansal Sorumluluk Reddi
 
-_Sürüm 2.1 · Yürürlük tarihi: 2026-10-01_
+_Sürüm 3.0 · Yürürlük tarihi: 2026-10-13_
 
 Nomad Budget bir kayıt ve analiz aracıdır. Ürettiği her sayı, sizin girdiğiniz verilere ve açık kaynaklı istatistiklere dayanan bir tahmindir.
 

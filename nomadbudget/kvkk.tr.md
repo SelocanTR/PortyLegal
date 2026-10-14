@@ -1,6 +1,6 @@
 # KVKK Aydınlatma Metni
 
-_Sürüm 2.1 · Yürürlük tarihi: 2026-10-01_
+_Sürüm 3.0 · Yürürlük tarihi: 2026-10-13_
 
 Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun ("KVKK") 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca hazırlanmıştır.
 
@@ -19,12 +19,13 @@ Veri sorumlusu: Rubeeks (rubeeks.co)
 - **Seyahat verisi:** onayladığınız veya girdiğiniz ziyaretler ve geçişler (ülke, ilk ve son gün, nereden ve nereye, ulaşım aracı, bilet olan işlem) ile ziyaret edilmiş olarak işaretlediğiniz ülkeler.
 - **İşlem güvenliği verisi:** şifrenizin kriptografik özeti (Apple ile Giriş veya Google ile Giriş kullanılarak açılan hesapta bulunmaz; kimliği sağlayıcı doğrular), oturum bilgileri, hesap oluşturma tarihi, onay sürümü ve tarihi.
 - **Cihaz verisi:** bildirimlere izin verdiyseniz cihazınızın bildirim belirteci ve cihazın iOS mu Android mi olduğu.
-- **Kullanım verisi:** Uygulamanın ilk açılışta ürettiği rastgele kurulum kimliği; görülen ekran ve adımlar, giriş ve satın alma denemelerinin sonucu, Uygulamanın istediği izinlere verilen yanıtlar ve beklenmeyen hatalar (ayıklanmış hata mesajı); Uygulama sürümü, işletim sistemi, arayüz dili ve zaman; oturum açıksa hesabınız. Tutar, not, kategori, konum veya iletişim bilgisi içermez.
-- **Talep verisi:** Uygulamanın geri bildirim formuyla veya e-postayla bize gönderdiğiniz mesajlar, verdiğiniz yanıt adresi ve mesaja eklenen cihaz bilgileri (Uygulama sürümü, işletim sistemi ve sürümü, cihaz modeli, dil).
+- **Kullanım verisi:** Uygulamanın ilk açılışta ürettiği rastgele kurulum kimliği; görülen ekran ve adımlar, giriş ve satın alma denemelerinin sonucu, Uygulamanın istediği izinlere verilen yanıtlar ve beklenmeyen hatalar (ayıklanmış hata mesajı); çökme raporları — Android'de sistemin kaydından, iOS'ta donmaları ve aşırı işlemci kullanımını da bildiren MetricKit'ten (neden, kullanılan bellek, ekranın adı, teknik iz ve cihazın markası, modeli, işletim sistemi sürümü ile bellek boyutu); Uygulama sürümü, işletim sistemi, arayüz dili ve zaman; oturum açıksa hesabınız. Tutar, not, kategori, konum veya iletişim bilgisi içermez.
+- **Talep verisi:** Uygulamanın geri bildirim formuyla veya e-postayla bize gönderdiğiniz mesajlar, yakalanan bir ödemeden göndermeyi seçtiğiniz ödeme mesajları (cihazınızda maskelenmiş, Uygulamanın onlardan okuduklarıyla birlikte), verdiğiniz yanıt adresi ve mesaja eklenen cihaz bilgileri (Uygulama sürümü, işletim sistemi ve sürümü, cihaz modeli, dil).
+- **Paylaşılan biçim verisi (isteğe bağlı):** paylaşmayı seçtiğiniz banka mesajı biçimleri — bankanızın her rakamı, satıcısı ve adınız çıkarılmış sabit ifadesi — ve geldikleri uygulama ya da gönderen adı, hesabınızla ilişkili olarak.
 - **Satın alma verisi:** hesabınızın abonelik sağlayıcımızda kayıtlı olduğu kimlik ve — Pro'ya abone olursanız — plan, mağaza, satın alma, yenileme ve bitiş tarihleri, yenileme ve iade durumu, mağazanın işlem kimlikleri ile tahsil edilen fiyat ve para birimi. Kart ve banka bilgileri hiçbir zaman alınmaz.
 - **Paylaşım verisi:** hangi cüzdanınızı kimle ve hangi rolle paylaştığınız, hangi cüzdanlara kimin daveti ile katıldığınız, bir bağlantıyla gönderdiğiniz veya aldığınız katılım istekleri ve bir kaydı hangi üyenin girdiği.
 
-Ödeme yakalamayı açtığınızda okunan bildirim ve mesaj metinleri, onlardan hazırlanan taslaklar ve öğrenilen mesaj kalıpları yalnızca cihazınızda işlenir ve tarafımıza aktarılmaz; bir taslağı onayladığınızda kaydettiğiniz işlem, müşteri işlem verisi olarak işlenir.
+Ödeme yakalamayı açtığınızda okunan bildirim ve mesaj metinleri, onlardan hazırlanan taslaklar ve öğrenilen mesaj kalıpları yalnızca cihazınızda işlenir ve tarafımıza aktarılmaz — paylaşmayı seçtiğiniz biçimler ve bize göndermeyi seçtiğiniz mesajlar dışında; bir taslağı onayladığınızda kaydettiğiniz işlem, müşteri işlem verisi olarak işlenir.
 
 Özel nitelikli kişisel veri işlenmemektedir. Serbest metin not alanlarına özel nitelikli veri (sağlık, inanç vb. içerikli açıklamalar) yazmamanızı öneririz.
 
@@ -47,7 +48,7 @@ Kişisel verileriniz KVKK m.5 kapsamında aşağıdaki hukuki sebeplere dayanıl
 - **m.5/2-c** — Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması: hesabın oluşturulması ve Pro aboneliği dâhil hizmetin sunulması.
 - **m.5/2-ç** — Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi: yetkili makam taleplerinin karşılanması.
 - **m.5/2-f** — İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla meşru menfaat: güvenlik, kötüye kullanımın önlenmesi ve hata giderme; içerik barındırmayan kullanım verileriyle Uygulamanın geliştirilmesi; bize gönderdiğiniz mesajların yanıtlanması.
-- **m.5/1** — Açık rıza: cihazınızın konumundan ülke bilgisinin türetilmesi, bildirim gönderilmesi ve ödeme bildirimlerinizden kayıt taslağı hazırlanması. Hepsi cihaz izniyle (ödeme yakalamada ayrıca Uygulama içindeki anahtarlarla ya da sizin kurduğunuz Kestirmeler otomasyonuyla) verilir ve aynı yerlerden her an geri alınabilir.
+- **m.5/1** — Açık rıza: cihazınızın konumundan ülke bilgisinin türetilmesi, bildirim gönderilmesi, ödeme bildirimlerinizden kayıt taslağı hazırlanması ve cihazınızın öğrendiği banka mesajı biçimlerinin paylaşılması. Hepsi cihaz izniyle (ödeme yakalamada ayrıca Uygulama içindeki anahtarlarla ya da sizin kurduğunuz Kestirmeler otomasyonuyla; biçim paylaşımında "Öğrenilen biçimleri paylaş" anahtarıyla) verilir ve aynı yerlerden her an geri alınabilir.
 
 ## 5. Toplama Yöntemi
 
@@ -65,9 +66,11 @@ Apple ile Giriş veya Google ile Giriş'i seçmeniz hâlinde, kimliğinizi doğr
 
 Bildirimlere izin verdiyseniz, yalnızca mesajın iletilebilmesi amacıyla bildirim belirteciniz ve bildirimin metni Amerika Birleşik Devletleri'nde bulunan Expo, Apple (APNs) ve Google (FCM) altyapılarına aktarılır.
 
+Uygulama açıldığında, yalnızca Uygulamanın kendi kodunun güncellemelerini denetlemek ve iletmek amacıyla Uygulamanın sürümü, platformu ve yayın kanalı, güncelleme kütüphanesinin ürettiği rastgele kimlik ve IP adresiniz Amerika Birleşik Devletleri'ndeki Expo'ya aktarılır.
+
 Konuma izin verdiyseniz, yalnızca bulunduğunuz ülkenin belirlenebilmesi amacıyla cihazınızın işletim sistemi yaklaşık koordinatlarınızı Amerika Birleşik Devletleri'nde bulunan Apple Inc.'e (iOS) veya Google LLC'ye (Android) aktarır; sağlayıcı bu sorguda bağımsız veri sorumlusu sıfatıyla hareket eder ve kendisine kayıtlarınıza dair hiçbir bilgi iletilmez.
 
-Pro satın alımlarının doğrulanıp yönetilebilmesi için hesap kimliğiniz ve — abone olursanız — satın alma verileriniz, veri işleyen sıfatıyla hareket eden ve Amerika Birleşik Devletleri'nde bulunan RevenueCat, Inc.'e aktarılır. Abone olmanız hâlinde ödemenin kendisi, bağımsız veri sorumlusu sıfatıyla Apple Inc. veya Google LLC tarafından işlenir.
+Pro satın alımlarının doğrulanıp yönetilebilmesi için hesap kimliğiniz ve — abone olursanız — satın alma verileriniz, veri işleyen sıfatıyla hareket eden ve Amerika Birleşik Devletleri'nde bulunan RevenueCat, Inc.'e aktarılır. Abone olmanız hâlinde ödemenin kendisi, bağımsız veri sorumlusu sıfatıyla Apple Inc. veya Google LLC tarafından işlenir. Google Play'de aboneliğe ilişkin bildirimler (mağazanın satın alma referansı, plan ve değişikliğin türü), RevenueCat'e ulaşmadan önce Amerika Birleşik Devletleri'nde Google LLC tarafından işletilen Google Cloud Pub/Sub'dan geçer.
 
 Bir cüzdanı paylaşmanız hâlinde, o cüzdanın kayıtları ile görünen adınız ve avatarınız davet ettiğiniz kişilere görünür olur. Bu aktarım yalnızca sizin talimatınızla gerçekleşir ve üyeyi çıkararak dilediğiniz an sona erdirebilirsiniz. Bir paylaşım bağlantısıyla katılım isteği gönderdiğinizde ise görünen adınız ve avatarınız bağlantının sahibine gösterilir; kayıtlarınızın hiçbiri gösterilmez.
 
@@ -77,9 +80,9 @@ Bunun dışında verileriniz, yalnızca kanunen yetkili kamu kurum ve kuruluşla
 
 Kişisel verileriniz, hesabınız açık kaldığı sürece saklanır. Hesabınızı silmeniz hâlinde veriler kalıcı olarak silinir; sistem yedeklerindeki kopyalar yedek döngüsünün tamamlanmasıyla (en geç 30 gün) tasfiye edilir. Misafir hesabı, ona ulaşan başka bir yol olmadığı için oturumdan çıktığınızda silinir. Satın alma verileri hesapla birlikte silinir; RevenueCat'in tuttuğu müşteri kaydı da aynı anda talebimiz üzerine silinir. Apple ve Google kendi satın alma kayıtlarını kendi politikalarına göre saklar.
 
-Geri bildirim formuyla gönderilen mesajlar, hesap açık olsun olmasın, en fazla iki yıl saklanır ve ardından silinir; hesap silindiğinde artık onunla ilişkilendirilmezler.
+Geri bildirim formuyla gönderilen mesajlar ve yakalanan bir ödemeden gönderilen ödeme mesajları, hesap açık olsun olmasın, en fazla iki yıl saklanır ve ardından silinir; hesap silindiğinde artık onunla ilişkilendirilmezler. Bir yıl boyunca ne onaylanan ne de yeniden gönderilen paylaşılmış bir banka mesajı biçimi silinir; hesabınızla bir biçim arasındaki bağ hesabınızla birlikte silinir.
 
-Kullanım verileri 90 gün saklanır ve ardından silinir; hesap silindiğinde artık onunla ilişkilendirilmezler. Paylaşım davetleri, süreleri dolduktan en geç 14 gün sonra kendileriyle gönderilen katılım istekleriyle birlikte silinir. Ödeme yakalamanın cihazınızdaki taslakları en fazla 14 gün tutulur.
+Kullanım verileri ve çökme raporları 90 gün saklanır ve ardından silinir; hesap silindiğinde artık onunla ilişkilendirilmezler. Paylaşım davetleri, süreleri dolduktan en geç 14 gün sonra kendileriyle gönderilen katılım istekleriyle birlikte silinir. Ödeme yakalamanın cihazınızdaki taslakları en fazla 14 gün tutulur.
 
 Mevzuattan doğan bir saklama yükümlülüğü bulunması hâlinde, ilgili veriler yalnızca bu yükümlülüğün gerektirdiği süre ve kapsamla sınırlı olarak muhafaza edilir.
 
